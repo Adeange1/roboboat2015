@@ -6,4 +6,6 @@ The vision system is run on a pandaboard ES rev b2. The pandaboard runs the VU-R
  
 The IMU is run by a raspberry pi, and the code is written in c.
 
+The acoustic system is run by an arduino due, and the acoustic boom is actuated by a relay circuit wired to the speedgoat.
+
 # roboboat2015
