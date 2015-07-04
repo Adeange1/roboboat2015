@@ -1,0 +1,6352 @@
+Model {
+  Name			  "Lidar_System_July8_Task_Selector"
+  Version		  7.3
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.219"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  Created		  "Tue Aug 07 11:20:23 2012"
+  Creator		  "gclayton"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "wildcat"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Jul 09 17:40:40 2014"
+  RTWModifiedTimeStamp	  326828439
+  ModelVersionFormat	  "1.%<AutoIncrement:219>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  on
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.6.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.6.0"
+	  StartTime		  "0.0"
+	  StopTime		  "inf"
+	  AbsTol		  "auto"
+	  FixedStep		  "0.1"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "0.2"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  SignalSizeVariationType "Allow only fixed size"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.6.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.6.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "none"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.6.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.6.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.6.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateSLWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "rlnx.tlc"
+	  GenCodeOnly		  on
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "rlnx_ubuntu.tmf"
+	  Description		  "Linux Real-Time Target"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "rlnx_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomInclude		  "/usr/local/include/opencv/\n/usr/local/include/"
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		23
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		Cell			"ShowEliminatedStatement"
+		Cell			"ForceParamTrailComments"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      off
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.STFCustomTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		Cell			"SupportNonFinite"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant off
+	      ParMdlRefBuildCompliant off
+	      CompOptLevelCompliant   off
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      SystemTargetFile	      "rlnx.tlc"
+	      DialogCategory	      0
+	      Array {
+		Type			"Handle"
+		Dimension		1
+		Simulink.GRTTargetCC {
+		  $BackupClass		  "Simulink.TargetCC"
+		  $ObjectID		  12
+		  Version		  "1.6.0"
+		  Array {
+		    Type		    "Cell"
+		    Dimension		    16
+		    Cell		    "IncludeMdlTerminateFcn"
+		    Cell		    "CombineOutputUpdateFcns"
+		    Cell		    "SuppressErrorStatus"
+		    Cell		    "ERTCustomFileBanners"
+		    Cell		    "GenerateSampleERTMain"
+		    Cell		    "GenerateTestInterfaces"
+		    Cell		    "ModelStepFunctionPrototypeControlCompliant"
+		    Cell		    "CPPClassGenCompliant"
+		    Cell		    "MultiInstanceERTCode"
+		    Cell		    "PurelyIntegerCode"
+		    Cell		    "SupportComplex"
+		    Cell		    "SupportAbsoluteTime"
+		    Cell		    "SupportContinuousTime"
+		    Cell		    "SupportNonInlinedSFcns"
+		    Cell		    "PortableWordSizes"
+		    Cell		    "SupportNonFinite"
+		    PropName		    "DisabledProps"
+		  }
+		  TargetFcnLib		  "ansi_tfl_table_tmw.mat"
+		  TargetLibSuffix	  ""
+		  TargetPreCompLibLocation ""
+		  TargetFunctionLibrary	  "ANSI_C"
+		  UtilityFuncGeneration	  "Auto"
+		  ERTMultiwordTypeDef	  "System defined"
+		  ERTMultiwordLength	  256
+		  MultiwordLength	  2048
+		  GenerateFullHeader	  on
+		  GenerateSampleERTMain	  off
+		  GenerateTestInterfaces  off
+		  IsPILTarget		  off
+		  ModelReferenceCompliant off
+		  ParMdlRefBuildCompliant off
+		  CompOptLevelCompliant	  off
+		  IncludeMdlTerminateFcn  on
+		  CombineOutputUpdateFcns off
+		  SuppressErrorStatus	  off
+		  ERTFirstTimeCompliant	  off
+		  IncludeFileDelimiter	  "Auto"
+		  ERTCustomFileBanners	  off
+		  SupportAbsoluteTime	  on
+		  LogVarNameModifier	  "rt_"
+		  MatFileLogging	  on
+		  MultiInstanceERTCode	  off
+		  SupportNonFinite	  on
+		  SupportComplex	  on
+		  PurelyIntegerCode	  off
+		  SupportContinuousTime	  on
+		  SupportNonInlinedSFcns  on
+		  EnableShiftOperators	  on
+		  ParenthesesLevel	  "Nominal"
+		  PortableWordSizes	  off
+		  ModelStepFunctionPrototypeControlCompliant off
+		  CPPClassGenCompliant	  off
+		  AutosarCompliant	  off
+		  UseMalloc		  off
+		  ExtMode		  off
+		  ExtModeStaticAlloc	  off
+		  ExtModeTesting	  off
+		  ExtModeStaticAllocSize  1000000
+		  ExtModeTransport	  0
+		  ExtModeMexFile	  "ext_comm"
+		  ExtModeIntrfLevel	  "Level1"
+		  RTWCAPISignals	  off
+		  RTWCAPIParams		  off
+		  RTWCAPIStates		  off
+		  GenerateASAP2		  off
+		}
+		PropName		"Components"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"LinkerOptions"
+		Value			"-lm -ldl /usr/local/lib/libopencv_highgui.so.2.4 /usr/local/lib/libopencv_core.so.2.4 /usr/local/lib/libope"
+		"ncv_imgproc.so.2.4  -lc_urg -lc_urg_connection -lc_urg_system -lphidget21"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_C__RTtools_VU-RLNX_RLNX_rlnx_1TargetArch"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "PC"
+		  Value			  1
+		  String		  "Linux"
+		}
+		Name			"TargetArch"
+		Value			"Linux"
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"Download"
+		Value			on
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"runTarget"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"TIP"
+		Value			"192.168.7.3"
+	      }
+	      CustomProperty {
+		DataType		"int32"
+		Name			"loops"
+		Value			20
+	      }
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      ExtraOptions	      "-aGenerateTraceInfo=0 -aIgnoreTestpoints=0 "
+      CurrentDlgPage	      "Real-Time Workshop/RLNX code generation options"
+      ConfigPrmDlgPosition    " [ 298, 78, 1068, 628 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      BusSelector
+      OutputAsBus	      off
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via back propagation"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      EnablePort
+      StatesWhenEnabling      "held"
+      SignalSizeVariationType "Allow only fixed size"
+      ShowOutputPort	      off
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+      DimensionsMode	      "auto"
+    }
+    Block {
+      BlockType		      MultiPortSwitch
+      Inputs		      "3"
+      zeroidx		      off
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+      DimensionsMode	      "auto"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      UnitDelay
+      X0		      "0"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+  }
+  System {
+    Name		    "Lidar_System_July8_Task_Selector"
+    Location		    [64, 82, 1278, 739]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      "S-Function"
+      Name		      "Activate S-Fun"
+      Ports		      [1]
+      Position		      [575, 290, 635, 320]
+      FunctionName	      "printOut"
+      EnableBusSupport	      off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion"
+      Position		      [430, 288, 505, 322]
+      OutDataTypeMode	      "uint32"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "uint32"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Enabled\nSubsystem1"
+      Ports		      [1, 4, 1]
+      Position		      [15, 205, 130, 405]
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Enabled\nSubsystem1"
+	Location		[64, 82, 1278, 739]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Task"
+	  Position		  [570, 353, 600, 367]
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  EnablePort
+	  Name			  "Enable"
+	  Ports			  []
+	  Position		  [185, 45, 205, 65]
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Data Save Interpolation and Bayes"
+	  Ports			  [3, 4, 1]
+	  Position		  [715, 258, 935, 382]
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Data Save Interpolation and Bayes"
+	    Location		    [64, 82, 1278, 722]
+	    Open		    on
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "LidarData"
+	      Position		      [100, 103, 130, 117]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "UpDown"
+	      Position		      [480, 228, 510, 242]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Task"
+	      Position		      [305, 28, 335, 42]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      Ports		      []
+	      Position		      [235, 20, 255, 40]
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Bayes Filter FSM"
+	      Ports		      [4, 2]
+	      Position		      [1925, 106, 2045, 354]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Bayes Filter FSM"
+		Location		[64, 82, 1278, 739]
+		Open			on
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "CurrentTask"
+		  Position		  [260, 28, 290, 42]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "HMean"
+		  Position		  [260, 58, 290, 72]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "SMean"
+		  Position		  [260, 88, 290, 102]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "VMean"
+		  Position		  [260, 123, 290, 137]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  BusCreator
+		  Name			  "Bus\nCreator"
+		  Ports			  [2, 1]
+		  Position		  [550, 158, 555, 222]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  BusCreator
+		  Name			  "Bus\nCreator1"
+		  Ports			  [2, 1]
+		  Position		  [550, 238, 555, 302]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  BusCreator
+		  Name			  "Bus\nCreator2"
+		  Ports			  [2, 1]
+		  Position		  [550, 318, 555, 382]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  BusCreator
+		  Name			  "Bus\nCreator3"
+		  Ports			  [2, 1]
+		  Position		  [550, 398, 555, 462]
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  BusSelector
+		  Name			  "Bus\nSelector"
+		  Ports			  [1, 2]
+		  Position		  [725, 212, 730, 328]
+		  ShowName		  off
+		  OutputSignals		  "ColorProb,ColorNum"
+		  Port {
+		    PortNumber		    1
+		    Name		    "<ColorProb>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "<ColorNum>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  MultiPortSwitch
+		  Name			  "Multiport\nSwitch"
+		  Ports			  [5, 1]
+		  Position		  [655, 63, 690, 477]
+		  Inputs		  "4"
+		  InputSameDT		  off
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "RG Speedgate Bayes Filter"
+		  Ports			  [4, 2]
+		  Position		  [375, 156, 515, 219]
+		  PermitHierarchicalResolution "ExplicitOnly"
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  MaskType		  "Stateflow"
+		  MaskDescription	  "Embedded MATLAB block"
+		  MaskDisplay		  "disp('BayesFilter');"
+		  MaskSelfModifiable	  on
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "RG Speedgate Bayes Filter"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Task"
+		    Position		    [20, 101, 40, 119]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "HMean"
+		    Position		    [20, 136, 40, 154]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "SMean"
+		    Position		    [20, 171, 40, 189]
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "VMean"
+		    Position		    [20, 206, 40, 224]
+		    Port		    "4"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    Ports		    [1, 1]
+		    Position		    [270, 205, 320, 245]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    Tag			    "Stateflow S-Function Lidar_System_July8_Task_Selector 1"
+		    Ports		    [4, 3]
+		    Position		    [180, 102, 230, 203]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[4 3]"
+		    EnableBusSupport	    on
+		    Port {
+		    PortNumber		    2
+		    Name		    "ColorProb"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    Port {
+		    PortNumber		    3
+		    Name		    "ColorNum"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    Position		    [460, 216, 480, 234]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "ColorProb"
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "ColorNum"
+		    Position		    [460, 136, 480, 154]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Task"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "HMean"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "SMean"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "VMean"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    4
+		    }
+		    Line {
+		    Name		    "ColorProb"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "ColorProb"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "ColorNum"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    3
+		    DstBlock		    "ColorNum"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "RGBYK Acoustic Bayes Filter"
+		  Ports			  [4, 2]
+		  Position		  [375, 396, 515, 459]
+		  PermitHierarchicalResolution "ExplicitOnly"
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  MaskType		  "Stateflow"
+		  MaskDescription	  "Embedded MATLAB block"
+		  MaskDisplay		  "disp('BayesFilter');"
+		  MaskSelfModifiable	  on
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "RGBYK Acoustic Bayes Filter"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Task"
+		    Position		    [20, 101, 40, 119]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "HMean"
+		    Position		    [20, 136, 40, 154]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "SMean"
+		    Position		    [20, 171, 40, 189]
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "VMean"
+		    Position		    [20, 206, 40, 224]
+		    Port		    "4"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    Ports		    [1, 1]
+		    Position		    [270, 205, 320, 245]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    Tag			    "Stateflow S-Function Lidar_System_July8_Task_Selector 3"
+		    Ports		    [4, 3]
+		    Position		    [180, 102, 230, 203]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[4 3]"
+		    EnableBusSupport	    on
+		    Port {
+		    PortNumber		    2
+		    Name		    "ColorProb"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    Port {
+		    PortNumber		    3
+		    Name		    "ColorNum"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    Position		    [460, 216, 480, 234]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "ColorProb"
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "ColorNum"
+		    Position		    [460, 136, 480, 154]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Task"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "HMean"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "SMean"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "VMean"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    4
+		    }
+		    Line {
+		    Name		    "ColorProb"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "ColorProb"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "ColorNum"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    3
+		    DstBlock		    "ColorNum"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "RWG Docking Bayes Filter"
+		  Ports			  [4, 2]
+		  Position		  [375, 236, 515, 299]
+		  PermitHierarchicalResolution "ExplicitOnly"
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  MaskType		  "Stateflow"
+		  MaskDescription	  "Embedded MATLAB block"
+		  MaskDisplay		  "disp('BayesFilter');"
+		  MaskSelfModifiable	  on
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "RWG Docking Bayes Filter"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Task"
+		    Position		    [20, 101, 40, 119]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "HMean"
+		    Position		    [20, 136, 40, 154]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "SMean"
+		    Position		    [20, 171, 40, 189]
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "VMean"
+		    Position		    [20, 206, 40, 224]
+		    Port		    "4"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    Ports		    [1, 1]
+		    Position		    [270, 205, 320, 245]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    Tag			    "Stateflow S-Function Lidar_System_July8_Task_Selector 9"
+		    Ports		    [4, 3]
+		    Position		    [180, 102, 230, 203]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[4 3]"
+		    EnableBusSupport	    on
+		    Port {
+		    PortNumber		    2
+		    Name		    "ColorProb"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    Port {
+		    PortNumber		    3
+		    Name		    "ColorNum"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    Position		    [460, 216, 480, 234]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "ColorProb"
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "ColorNum"
+		    Position		    [460, 136, 480, 154]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Task"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "HMean"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "SMean"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "VMean"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    4
+		    }
+		    Line {
+		    Name		    "ColorProb"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "ColorProb"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "ColorNum"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    3
+		    DstBlock		    "ColorNum"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "RWGYK Avoidance Bayes Filter"
+		  Ports			  [4, 2]
+		  Position		  [375, 316, 515, 379]
+		  PermitHierarchicalResolution "ExplicitOnly"
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  MaskType		  "Stateflow"
+		  MaskDescription	  "Embedded MATLAB block"
+		  MaskDisplay		  "disp('BayesFilter');"
+		  MaskSelfModifiable	  on
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "RWGYK Avoidance Bayes Filter"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Task"
+		    Position		    [20, 101, 40, 119]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "HMean"
+		    Position		    [20, 136, 40, 154]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "SMean"
+		    Position		    [20, 171, 40, 189]
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "VMean"
+		    Position		    [20, 206, 40, 224]
+		    Port		    "4"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    Ports		    [1, 1]
+		    Position		    [270, 205, 320, 245]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    Tag			    "Stateflow S-Function Lidar_System_July8_Task_Selector 2"
+		    Ports		    [4, 3]
+		    Position		    [180, 102, 230, 203]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[4 3]"
+		    EnableBusSupport	    on
+		    Port {
+		    PortNumber		    2
+		    Name		    "ColorProb"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    Port {
+		    PortNumber		    3
+		    Name		    "ColorNum"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    Position		    [460, 216, 480, 234]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "ColorProb"
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "ColorNum"
+		    Position		    [460, 136, 480, 154]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Task"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "HMean"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "SMean"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "VMean"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    4
+		    }
+		    Line {
+		    Name		    "ColorProb"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "ColorProb"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "ColorNum"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    3
+		    DstBlock		    "ColorNum"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "ColorProbability"
+		  Position		  [830, 233, 860, 247]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "ColorNumber"
+		  Position		  [830, 293, 860, 307]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "RG Speedgate Bayes Filter"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "RG Speedgate Bayes Filter"
+		  SrcPort		  2
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "RWG Docking Bayes Filter"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "RWG Docking Bayes Filter"
+		  SrcPort		  2
+		  DstBlock		  "Bus\nCreator1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "RWGYK Avoidance Bayes Filter"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "RWGYK Avoidance Bayes Filter"
+		  SrcPort		  2
+		  DstBlock		  "Bus\nCreator2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "RGBYK Acoustic Bayes Filter"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "RGBYK Acoustic Bayes Filter"
+		  SrcPort		  2
+		  DstBlock		  "Bus\nCreator3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Bus\nCreator"
+		  SrcPort		  1
+		  DstBlock		  "Multiport\nSwitch"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Bus\nCreator1"
+		  SrcPort		  1
+		  DstBlock		  "Multiport\nSwitch"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Bus\nCreator2"
+		  SrcPort		  1
+		  DstBlock		  "Multiport\nSwitch"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "Bus\nCreator3"
+		  SrcPort		  1
+		  DstBlock		  "Multiport\nSwitch"
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "HMean"
+		  SrcPort		  1
+		  Points		  [30, 0; 0, 115]
+		  Branch {
+		    DstBlock		    "RG Speedgate Bayes Filter"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, 80]
+		    Branch {
+		    DstBlock		    "RWG Docking Bayes Filter"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 80]
+		    Branch {
+		    Points		    [0, 80]
+		    DstBlock		    "RGBYK Acoustic Bayes Filter"
+		    DstPort		    2
+		    }
+		    Branch {
+		    DstBlock		    "RWGYK Avoidance Bayes Filter"
+		    DstPort		    2
+		    }
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "SMean"
+		  SrcPort		  1
+		  Points		  [20, 0; 0, 100]
+		  Branch {
+		    DstBlock		    "RG Speedgate Bayes Filter"
+		    DstPort		    3
+		  }
+		  Branch {
+		    Points		    [0, 80]
+		    Branch {
+		    Points		    [0, 80]
+		    Branch {
+		    Points		    [0, 80]
+		    DstBlock		    "RGBYK Acoustic Bayes Filter"
+		    DstPort		    3
+		    }
+		    Branch {
+		    DstBlock		    "RWGYK Avoidance Bayes Filter"
+		    DstPort		    3
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "RWG Docking Bayes Filter"
+		    DstPort		    3
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "VMean"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, 80]
+		  Branch {
+		    DstBlock		    "RG Speedgate Bayes Filter"
+		    DstPort		    4
+		  }
+		  Branch {
+		    Points		    [0, 80]
+		    Branch {
+		    Points		    [0, 80]
+		    Branch {
+		    Points		    [0, 80]
+		    DstBlock		    "RGBYK Acoustic Bayes Filter"
+		    DstPort		    4
+		    }
+		    Branch {
+		    DstBlock		    "RWGYK Avoidance Bayes Filter"
+		    DstPort		    4
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "RWG Docking Bayes Filter"
+		    DstPort		    4
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "Multiport\nSwitch"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nSelector"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "<ColorProb>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector"
+		  SrcPort		  1
+		  DstBlock		  "ColorProbability"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "<ColorNum>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector"
+		  SrcPort		  2
+		  DstBlock		  "ColorNumber"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "CurrentTask"
+		  SrcPort		  1
+		  Points		  [40, 0; 0, 75]
+		  Branch {
+		    Points		    [0, 55]
+		    Branch {
+		    DstBlock		    "RG Speedgate Bayes Filter"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 80]
+		    Branch {
+		    DstBlock		    "RWG Docking Bayes Filter"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 80]
+		    Branch {
+		    DstBlock		    "RWGYK Avoidance Bayes Filter"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 80]
+		    DstBlock		    "RGBYK Acoustic Bayes Filter"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		  }
+		  Branch {
+		    Points		    [0, 0]
+		    DstBlock		    "Multiport\nSwitch"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Compare\nTo Constant"
+	      Ports		      [1, 1]
+	      Position		      [1465, 122, 1525, 158]
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	      SourceType	      "Compare To Constant"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      relop		      "<="
+	      const		      "3000"
+	      LogicOutDataTypeMode    "boolean"
+	      ZeroCross		      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Embedded\nMATLAB Function1"
+	      Ports		      [6, 5]
+	      Position		      [1725, 103, 1855, 517]
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('bbox_hist');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Embedded\nMATLAB Function1"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "bbox"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "BW"
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "uv_d"
+		  Position		  [20, 171, 40, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "H"
+		  Position		  [20, 206, 40, 224]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "S"
+		  Position		  [20, 246, 40, 264]
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "V"
+		  Position		  [20, 281, 40, 299]
+		  Port			  "6"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 245, 320, 285]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function Lidar_System_July8_Task_Selector 8"
+		  Ports			  [6, 6]
+		  Position		  [180, 102, 230, 243]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[6 6]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "HMean"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "SMean"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "VMean"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    5
+		    Name		    "DMean"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    6
+		    Name		    "Angle"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 256, 480, 274]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "HMean"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "SMean"
+		  Position		  [460, 136, 480, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "VMean"
+		  Position		  [460, 171, 480, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "DMean"
+		  Position		  [460, 206, 480, 224]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Angle"
+		  Position		  [460, 246, 480, 264]
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "bbox"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "BW"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "uv_d"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "H"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "S"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "V"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  6
+		}
+		Line {
+		  Name			  "HMean"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "HMean"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "SMean"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  3
+		  DstBlock		  "SMean"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "VMean"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  4
+		  DstBlock		  "VMean"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "DMean"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  5
+		  DstBlock		  "DMean"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "Angle"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  6
+		  DstBlock		  "Angle"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Find Areas of Interest"
+	      Ports		      [1, 1]
+	      Position		      [915, 54, 1015, 96]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Find Areas of Interest"
+		Location		[64, 82, 1278, 739]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "dist_im"
+		  Position		  [15, 108, 45, 122]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Blob Analysis"
+		  Ports			  [1, 2]
+		  Position		  [180, 78, 310, 147]
+		  DialogController	  "vipDDGCreate"
+		  DialogControllerArgs	  "DataTag0"
+		  SourceBlock		  "vipstatistics/Blob Analysis"
+		  SourceType		  "Blob Analysis"
+		  area			  "on"
+		  centroid		  "off"
+		  bBox			  "on"
+		  majorAxis		  "off"
+		  minorAxis		  "off"
+		  angle			  "off"
+		  eccentricity		  "off"
+		  equivDiameterSq	  "off"
+		  extent		  "off"
+		  perimeter		  "off"
+		  maxBlobs		  "8"
+		  warnIfNumBlobsExceeded  "on"
+		  isCount		  "off"
+		  useMinArea		  "on"
+		  minArea		  "30"
+		  useMaxArea		  "off"
+		  maxArea		  "intmax('uint32')"
+		  excludeBorderBlob	  "off"
+		  outDT			  "double"
+		  isOutVarDim		  "off"
+		  isFill		  "on"
+		  fillValues		  "-1"
+		  conn			  "8"
+		  isLabel		  "off"
+		  outputMode		  "Binary point scaling"
+		  outputWordLength	  "32"
+		  outputFracLength	  "16"
+		  memoryMode		  "Same as product output"
+		  memoryWordLength	  "32"
+		  memoryFracLength	  "16"
+		  firstCoeffMode	  "Binary point scaling"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "14"
+		  secondCoeffMode	  "Binary point scaling"
+		  secondCoeffWordLength	  "32"
+		  secondCoeffFracLength	  "16"
+		  accumMode		  "Binary point scaling"
+		  accumWordLength	  "32"
+		  accumFracLength	  "0"
+		  prodOutputMode	  "Binary point scaling"
+		  prodOutputWordLength	  "32"
+		  prodOutputFracLength	  "16"
+		  roundingMode		  "Floor"
+		  overflowMode		  "off"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Distance Threshold"
+		  Ports			  [1, 1]
+		  Position		  [95, 100, 145, 130]
+		  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+		  SourceType		  "Compare To Constant"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  relop			  "<="
+		  const			  "3000"
+		  LogicOutDataTypeMode	  "boolean"
+		  ZeroCross		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Order by largest"
+		  Ports			  [1, 1]
+		  Position		  [350, 136, 415, 174]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag1"
+		  SourceBlock		  "dspstat3/Sort"
+		  SourceType		  "Sort"
+		  otype			  "Index"
+		  dir			  "Descending"
+		  sortAlg		  "Quick sort"
+		  additionalParams	  "off"
+		  allowOverrides	  "on"
+		  accumMode		  "Same as product output"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  prodOutputMode	  "Same as input"
+		  prodOutputWordLength	  "32"
+		  prodOutputFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  "off"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Permute\nMatrix"
+		  Ports			  [2, 1]
+		  Position		  [440, 118, 520, 167]
+		  SourceBlock		  "dspmtrx3/Permute\nMatrix"
+		  SourceType		  "Permute Matrix"
+		  mode			  "Columns"
+		  ZeroOneIdxMode	  "One-based"
+		  errmode		  "Clip index"
+		  checkDims		  "off"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "S-Function"
+		  Ports			  [1]
+		  Position		  [195, 212, 275, 248]
+		  FunctionName		  "distBWExport"
+		  EnableBusSupport	  off
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "S-Function1"
+		  Ports			  [1]
+		  Position		  [405, 80, 465, 110]
+		  FunctionName		  "printBlobV2"
+		  EnableBusSupport	  off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "bboxes"
+		  Position		  [545, 138, 575, 152]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "dist_im"
+		  SrcPort		  1
+		  DstBlock		  "Distance Threshold"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Distance Threshold"
+		  SrcPort		  1
+		  Points		  [5, 0]
+		  Branch {
+		    DstBlock		    "Blob Analysis"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 115]
+		    DstBlock		    "S-Function"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Blob Analysis"
+		  SrcPort		  2
+		  Points		  [65, 0]
+		  Branch {
+		    DstBlock		    "Permute\nMatrix"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -35]
+		    DstBlock		    "S-Function1"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Order by largest"
+		  SrcPort		  1
+		  DstBlock		  "Permute\nMatrix"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Blob Analysis"
+		  SrcPort		  1
+		  Points		  [20, 0]
+		  DstBlock		  "Order by largest"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Permute\nMatrix"
+		  SrcPort		  1
+		  DstBlock		  "bboxes"
+		  DstPort		  1
+		}
+		Annotation {
+		  Name			  "Note: Bounding boxes are returned as columns (each column represents a separate blob)"
+		  Position		  [358, 60]
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Lidar Image Creator"
+	      Ports		      [2, 1]
+	      Position		      [680, 79, 885, 201]
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('scanImages');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Lidar Image Creator"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "lidarData"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "UpDown"
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 220, 320, 260]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function Lidar_System_July8_Task_Selector 10"
+		  Ports			  [2, 2]
+		  Position		  [180, 100, 230, 220]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[2 2]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "dist_image"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 231, 480, 249]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "dist_image"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "lidarData"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "UpDown"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "dist_image"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "dist_image"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Lidar data selector"
+	      Ports		      [1, 1]
+	      Position		      [410, 71, 580, 149]
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('data_selector');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Lidar data selector"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "lidarIn"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 160, 320, 200]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function Lidar_System_July8_Task_Selector 11"
+		  Ports			  [1, 2]
+		  Position		  [180, 100, 230, 160]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[1 2]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "lidarOut"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 171, 480, 189]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "lidarOut"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "lidarIn"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "lidarOut"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "lidarOut"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Raster to UV"
+	      Ports		      [2, 6]
+	      Position		      [1030, 130, 1230, 300]
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('fcn');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Raster to UV"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "bbox"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "dist_im"
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 280, 320, 320]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function Lidar_System_July8_Task_Selector 12"
+		  Ports			  [2, 7]
+		  Position		  [180, 109, 230, 271]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[2 7]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "uv_d"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "Xp"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "Yp"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    5
+		    Name		    "X"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    6
+		    Name		    "Y"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    7
+		    Name		    "Z"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 291, 480, 309]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "uv_d"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Xp"
+		  Position		  [460, 136, 480, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Yp"
+		  Position		  [460, 171, 480, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "X"
+		  Position		  [460, 206, 480, 224]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Y"
+		  Position		  [460, 246, 480, 264]
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Z"
+		  Position		  [460, 281, 480, 299]
+		  Port			  "6"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "bbox"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "dist_im"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "uv_d"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "uv_d"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "Xp"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  3
+		  DstBlock		  "Xp"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "Yp"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  4
+		  DstBlock		  "Yp"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "X"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  5
+		  DstBlock		  "X"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "Y"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  6
+		  DstBlock		  "Y"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "Z"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  7
+		  DstBlock		  "Z"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Resize"
+	      Ports		      [1, 1]
+	      Position		      [1265, 120, 1330, 160]
+	      DialogController	      "vipDDGCreate"
+	      DialogControllerArgs    "DataTag2"
+	      SourceBlock	      "vipgeotforms/Resize"
+	      SourceType	      "Resize"
+	      specify		      "Number of output rows and columns"
+	      rfactor		      "[200 150]"
+	      outCols		      "25"
+	      outRows		      "25"
+	      outRowsCols	      "[480 640]"
+	      interp_method	      "Bilinear"
+	      antialias		      on
+	      useROI		      off
+	      roiFlag		      off
+	      firstCoeffMode	      "Same word length as input"
+	      firstCoeffWordLength    "32"
+	      firstCoeffFracLength    "31"
+	      outputMode	      "Same as input"
+	      outputWordLength	      "32"
+	      outputFracLength	      "10"
+	      accumMode		      "Same as product output"
+	      accumWordLength	      "32"
+	      accumFracLength	      "10"
+	      prodOutputMode	      "Binary point scaling"
+	      prodOutputWordLength    "32"
+	      prodOutputFracLength    "10"
+	      roundingMode	      "Nearest"
+	      overflowMode	      on
+	      LockScale		      off
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function"
+	      Ports		      [3]
+	      Position		      [1335, 320, 1395, 350]
+	      FunctionName	      "xyzExport"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function1"
+	      Ports		      [1]
+	      Position		      [220, 135, 315, 185]
+	      FunctionName	      "lidarExport"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function2"
+	      Ports		      [0, 3]
+	      Position		      [1065, 362, 1175, 468]
+	      NamePlacement	      "alternate"
+	      FunctionName	      "WebcamTest_v2"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function3"
+	      Ports		      [3]
+	      Position		      [1345, 503, 1475, 577]
+	      FunctionName	      "videoExport_v2"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function4"
+	      Ports		      [3, 3]
+	      Position		      [1385, 381, 1490, 449]
+	      FunctionName	      "rgbtohsv_sfun"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function5"
+	      Ports		      [3]
+	      Position		      [1330, 180, 1405, 290]
+	      FunctionName	      "ScanImagesExport"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem"
+	      Ports		      [1, 1]
+	      Position		      [1565, 119, 1665, 161]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Subsystem"
+		Location		[318, 161, 1047, 607]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "BW"
+		  Position		  [30, 108, 60, 122]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Bbox Select"
+		  Ports			  [1, 1]
+		  Position		  [515, 110, 565, 150]
+		  SourceBlock		  "dspmtrx3/Submatrix"
+		  SourceType		  "Submatrix"
+		  RowSpan		  "All rows"
+		  RowStartMode		  "First"
+		  RowStartIndex		  "1"
+		  RowEndMode		  "Last"
+		  RowEndIndex		  "1"
+		  ColSpan		  "One column"
+		  ColStartMode		  "First"
+		  ColStartIndex		  "1"
+		  ColEndMode		  "Last"
+		  ColEndIndex		  "1"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Blob Analysis"
+		  Ports			  [1, 2]
+		  Position		  [120, 78, 250, 147]
+		  DialogController	  "vipDDGCreate"
+		  DialogControllerArgs	  "DataTag3"
+		  SourceBlock		  "vipstatistics/Blob Analysis"
+		  SourceType		  "Blob Analysis"
+		  area			  "on"
+		  centroid		  "off"
+		  bBox			  "on"
+		  majorAxis		  "off"
+		  minorAxis		  "off"
+		  angle			  "off"
+		  eccentricity		  "off"
+		  equivDiameterSq	  "off"
+		  extent		  "off"
+		  perimeter		  "off"
+		  maxBlobs		  "20"
+		  warnIfNumBlobsExceeded  "on"
+		  isCount		  "off"
+		  useMinArea		  "on"
+		  minArea		  "20"
+		  useMaxArea		  "off"
+		  maxArea		  "intmax('uint32')"
+		  excludeBorderBlob	  "off"
+		  outDT			  "double"
+		  isOutVarDim		  "off"
+		  isFill		  "on"
+		  fillValues		  "-1"
+		  conn			  "8"
+		  isLabel		  "off"
+		  outputMode		  "Binary point scaling"
+		  outputWordLength	  "32"
+		  outputFracLength	  "16"
+		  memoryMode		  "Same as product output"
+		  memoryWordLength	  "32"
+		  memoryFracLength	  "16"
+		  firstCoeffMode	  "Binary point scaling"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "14"
+		  secondCoeffMode	  "Binary point scaling"
+		  secondCoeffWordLength	  "32"
+		  secondCoeffFracLength	  "16"
+		  accumMode		  "Binary point scaling"
+		  accumWordLength	  "32"
+		  accumFracLength	  "0"
+		  prodOutputMode	  "Binary point scaling"
+		  prodOutputWordLength	  "32"
+		  prodOutputFracLength	  "16"
+		  roundingMode		  "Floor"
+		  overflowMode		  "off"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Permute\nMatrix"
+		  Ports			  [2, 1]
+		  Position		  [410, 103, 490, 152]
+		  SourceBlock		  "dspmtrx3/Permute\nMatrix"
+		  SourceType		  "Permute Matrix"
+		  mode			  "Columns"
+		  ZeroOneIdxMode	  "One-based"
+		  errmode		  "Clip index"
+		  checkDims		  "off"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Sort"
+		  Ports			  [1, 1]
+		  Position		  [310, 196, 375, 244]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag4"
+		  SourceBlock		  "dspstat3/Sort"
+		  SourceType		  "Sort"
+		  otype			  "Index"
+		  dir			  "Descending"
+		  sortAlg		  "Quick sort"
+		  additionalParams	  "off"
+		  allowOverrides	  "on"
+		  accumMode		  "Same as product output"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  prodOutputMode	  "Same as input"
+		  prodOutputWordLength	  "32"
+		  prodOutputFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  "off"
+		  LockScale		  "off"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Bbox"
+		  Position		  [615, 123, 645, 137]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "BW"
+		  SrcPort		  1
+		  DstBlock		  "Blob Analysis"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Blob Analysis"
+		  SrcPort		  1
+		  Points		  [20, 0; 0, 125]
+		  DstBlock		  "Sort"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sort"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, -80]
+		  DstBlock		  "Permute\nMatrix"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Blob Analysis"
+		  SrcPort		  2
+		  Points		  [140, 0]
+		  DstBlock		  "Permute\nMatrix"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Permute\nMatrix"
+		  SrcPort		  1
+		  DstBlock		  "Bbox Select"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bbox Select"
+		  SrcPort		  1
+		  DstBlock		  "Bbox"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ColorProb"
+	      Position		      [2125, 163, 2155, 177]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ColorNum"
+	      Position		      [2125, 288, 2155, 302]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Dist"
+	      Position		      [2125, 383, 2155, 397]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Angle"
+	      Position		      [2125, 463, 2155, 477]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "Lidar data selector"
+	      SrcPort		      1
+	      DstBlock		      "Lidar Image Creator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "UpDown"
+	      SrcPort		      1
+	      Points		      [110, 0; 0, -65]
+	      DstBlock		      "Lidar Image Creator"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Lidar Image Creator"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		Points			[0, -65]
+		DstBlock		"Find Areas of Interest"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[45, 0; 0, 50]
+		Branch {
+		  Points		  [0, 70]
+		  DstBlock		  "Raster to UV"
+		  DstPort		  2
+		}
+		Branch {
+		  Points		  [375, 0]
+		  DstBlock		  "S-Function5"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Find Areas of Interest"
+	      SrcPort		      1
+	      Points		      [0, 100]
+	      DstBlock		      "Raster to UV"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Compare\nTo Constant"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		DstBlock		"Subsystem"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 65]
+		DstBlock		"Embedded\nMATLAB Function1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Subsystem"
+	      SrcPort		      1
+	      Points		      [40, 0]
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Embedded\nMATLAB Function1"
+	      SrcPort		      3
+	      Points		      [50, 0]
+	      DstBlock		      "Bayes Filter FSM"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Embedded\nMATLAB Function1"
+	      SrcPort		      2
+	      Points		      [50, 0]
+	      DstBlock		      "Bayes Filter FSM"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Embedded\nMATLAB Function1"
+	      SrcPort		      1
+	      Points		      [50, 0]
+	      DstBlock		      "Bayes Filter FSM"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Raster to UV"
+	      SrcPort		      1
+	      DstBlock		      "Resize"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Bayes Filter FSM"
+	      SrcPort		      1
+	      DstBlock		      "ColorProb"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Bayes Filter FSM"
+	      SrcPort		      2
+	      DstBlock		      "ColorNum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Embedded\nMATLAB Function1"
+	      SrcPort		      5
+	      DstBlock		      "Angle"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Embedded\nMATLAB Function1"
+	      SrcPort		      4
+	      DstBlock		      "Dist"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function2"
+	      SrcPort		      1
+	      Points		      [70, 0]
+	      Branch {
+		Points			[20, 0; 0, 15]
+		DstBlock		"S-Function4"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 135]
+		DstBlock		"S-Function3"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "S-Function2"
+	      SrcPort		      2
+	      Points		      [55, 0]
+	      Branch {
+		DstBlock		"S-Function4"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 125]
+		DstBlock		"S-Function3"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "S-Function2"
+	      SrcPort		      3
+	      Points		      [40, 0]
+	      Branch {
+		Points			[55, 0; 0, -15]
+		DstBlock		"S-Function4"
+		DstPort			3
+	      }
+	      Branch {
+		Points			[0, 115]
+		DstBlock		"S-Function3"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "S-Function4"
+	      SrcPort		      1
+	      Points		      [105, 0; 0, -50]
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "S-Function4"
+	      SrcPort		      2
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "S-Function4"
+	      SrcPort		      3
+	      Points		      [105, 0; 0, 50]
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "LidarData"
+	      SrcPort		      1
+	      Points		      [55, 0]
+	      Branch {
+		DstBlock		"Lidar data selector"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 50]
+		DstBlock		"S-Function1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Resize"
+	      SrcPort		      1
+	      Points		      [80, 0]
+	      Branch {
+		DstBlock		"Compare\nTo Constant"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 135]
+		DstBlock		"Embedded\nMATLAB Function1"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Raster to UV"
+	      SrcPort		      2
+	      Points		      [20, 0; 0, 50; 60, 0]
+	      DstBlock		      "S-Function5"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Raster to UV"
+	      SrcPort		      4
+	      Points		      [15, 0; 0, 95]
+	      DstBlock		      "S-Function"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Raster to UV"
+	      SrcPort		      5
+	      Points		      [5, 0; 0, 75]
+	      DstBlock		      "S-Function"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Raster to UV"
+	      SrcPort		      6
+	      Points		      [0, 55]
+	      DstBlock		      "S-Function"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Raster to UV"
+	      SrcPort		      3
+	      Points		      [15, 0; 0, 25; 55, 0; 0, 45]
+	      DstBlock		      "S-Function5"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Task"
+	      SrcPort		      1
+	      Points		      [1570, 0]
+	      DstBlock		      "Bayes Filter FSM"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Position		      [1273, 314]
+	    }
+	    Annotation {
+	      Position		      [1113, 87]
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Down Angle"
+	  Position		  [35, 290, 65, 320]
+	  Value			  "-45"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Embedded\nMATLAB Function"
+	  Ports			  [1, 1]
+	  Position		  [540, 116, 695, 174]
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Embedded MATLAB block"
+	  MaskDisplay		  "disp('check_pot_val');"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Embedded\nMATLAB Function"
+	    Location		    [257, 457, 812, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "potVal"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      Ports		      [1, 1]
+	      Position		      [270, 160, 320, 200]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      " SFunction "
+	      Tag		      "Stateflow S-Function Lidar_System_July8_Task_Selector 13"
+	      Ports		      [1, 2]
+	      Position		      [180, 100, 230, 160]
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[1 2]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"yn"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      Position		      [460, 171, 480, 189]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "yn"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "potVal"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "yn"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "yn"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "S-Function1"
+	  Ports			  [5, 2]
+	  Position		  [395, 187, 535, 293]
+	  FunctionName		  "TT_lidar_zero_test_v1"
+	  EnableBusSupport	  off
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "S-Function4"
+	  Ports			  [0, 1]
+	  Position		  [15, 122, 105, 168]
+	  FunctionName		  "TT_pot_readerV1"
+	  EnableBusSupport	  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Stepper Speed and Postion \nCalculation"
+	  Ports			  [2, 4]
+	  Position		  [150, 215, 325, 335]
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Embedded MATLAB block"
+	  MaskDisplay		  "disp('stepper_calc');"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Stepper Speed and Postion \nCalculation"
+	    Location		    [257, 457, 812, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "UpAngle"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "DownAngle"
+	      Position		      [20, 136, 40, 154]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      Ports		      [1, 1]
+	      Position		      [270, 245, 320, 285]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      " SFunction "
+	      Tag		      "Stateflow S-Function Lidar_System_July8_Task_Selector 14"
+	      Ports		      [2, 5]
+	      Position		      [180, 100, 230, 220]
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[2 5]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"Speed"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"Upos"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"Dpos"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"ScanNum"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      Position		      [460, 256, 480, 274]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Speed"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Upos"
+	      Position		      [460, 136, 480, 154]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Dpos"
+	      Position		      [460, 171, 480, 189]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ScanNum"
+	      Position		      [460, 206, 480, 224]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "UpAngle"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "DownAngle"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "Speed"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "Speed"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "Upos"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      3
+	      DstBlock		      "Upos"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "Dpos"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      4
+	      DstBlock		      "Dpos"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "ScanNum"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      5
+	      DstBlock		      "ScanNum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Up Angle"
+	  Position		  [35, 230, 65, 260]
+	  Value			  "30"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ColorProb"
+	  Position		  [1060, 268, 1090, 282]
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ColorNum"
+	  Position		  [1060, 298, 1090, 312]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Dist"
+	  Position		  [1060, 328, 1090, 342]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Angle"
+	  Position		  [1060, 358, 1090, 372]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "S-Function4"
+	  SrcPort		  1
+	  Points		  [220, 0]
+	  Branch {
+	    Points		    [0, 55]
+	    DstBlock		    "S-Function1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Embedded\nMATLAB Function"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Stepper Speed and Postion \nCalculation"
+	  SrcPort		  1
+	  Points		  [0, -10]
+	  DstBlock		  "S-Function1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Stepper Speed and Postion \nCalculation"
+	  SrcPort		  2
+	  Points		  [25, 0; 0, -20]
+	  DstBlock		  "S-Function1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Stepper Speed and Postion \nCalculation"
+	  SrcPort		  3
+	  Points		  [40, 0; 0, -30]
+	  DstBlock		  "S-Function1"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Stepper Speed and Postion \nCalculation"
+	  SrcPort		  4
+	  Points		  [50, 0]
+	  DstBlock		  "S-Function1"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Embedded\nMATLAB Function"
+	  SrcPort		  1
+	  Points		  [125, 0]
+	  DstBlock		  "Data Save Interpolation and Bayes"
+	  DstPort		  enable
+	}
+	Line {
+	  SrcBlock		  "S-Function1"
+	  SrcPort		  1
+	  Points		  [80, 0; 0, 65]
+	  DstBlock		  "Data Save Interpolation and Bayes"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S-Function1"
+	  SrcPort		  2
+	  Points		  [70, 0; 0, 50]
+	  DstBlock		  "Data Save Interpolation and Bayes"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Data Save Interpolation and Bayes"
+	  SrcPort		  1
+	  DstBlock		  "ColorProb"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Save Interpolation and Bayes"
+	  SrcPort		  2
+	  DstBlock		  "ColorNum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Save Interpolation and Bayes"
+	  SrcPort		  3
+	  DstBlock		  "Dist"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Save Interpolation and Bayes"
+	  SrcPort		  4
+	  DstBlock		  "Angle"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Down Angle"
+	  SrcPort		  1
+	  DstBlock		  "Stepper Speed and Postion \nCalculation"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Up Angle"
+	  SrcPort		  1
+	  DstBlock		  "Stepper Speed and Postion \nCalculation"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Task"
+	  SrcPort		  1
+	  DstBlock		  "Data Save Interpolation and Bayes"
+	  DstPort		  3
+	}
+      }
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "S-Function"
+      Ports		      [4, 1]
+      Position		      [245, 208, 350, 402]
+      FunctionName	      "serialComV3"
+      EnableBusSupport	      off
+    }
+    Block {
+      BlockType		      UnitDelay
+      Name		      "Unit Delay"
+      Position		      [185, 218, 205, 242]
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      UnitDelay
+      Name		      "Unit Delay1"
+      Position		      [185, 268, 205, 292]
+      X0		      "int32(0)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      UnitDelay
+      Name		      "Unit Delay2"
+      Position		      [185, 318, 205, 342]
+      X0		      "int32(0)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      UnitDelay
+      Name		      "Unit Delay3"
+      Position		      [185, 368, 205, 392]
+      X0		      "int32(0)"
+      SampleTime	      "-1"
+    }
+    Line {
+      SrcBlock		      "S-Function"
+      SrcPort		      1
+      DstBlock		      "Data Type Conversion"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Enabled\nSubsystem1"
+      SrcPort		      1
+      DstBlock		      "Unit Delay"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Enabled\nSubsystem1"
+      SrcPort		      2
+      DstBlock		      "Unit Delay1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Enabled\nSubsystem1"
+      SrcPort		      3
+      DstBlock		      "Unit Delay2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Enabled\nSubsystem1"
+      SrcPort		      4
+      DstBlock		      "Unit Delay3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Unit Delay"
+      SrcPort		      1
+      DstBlock		      "S-Function"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Unit Delay1"
+      SrcPort		      1
+      DstBlock		      "S-Function"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Unit Delay2"
+      SrcPort		      1
+      DstBlock		      "S-Function"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Unit Delay3"
+      SrcPort		      1
+      DstBlock		      "S-Function"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion"
+      SrcPort		      1
+      Points		      [30, 0]
+      Branch {
+	DstBlock		"Activate S-Fun"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -115]
+	DstBlock		"Enabled\nSubsystem1"
+	DstPort			enable
+      }
+    }
+  }
+}
+MatData {
+  NumRecords		  5
+  DataRecord {
+    Tag			    DataTag4
+    Data		    "  %)30     .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 4V]R= "
+  }
+  DataRecord {
+    Tag			    DataTag3
+    Data		    "  %)30     .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 0FQO8@"
+  }
+  DataRecord {
+    Tag			    DataTag2
+    Data		    "  %)30     .    :     8    (     0         %    \"     $    !     0         .    .     8    (    !     "
+    "     %    \"     $    (     0         0    \"    %)E<VEZ93)$"
+  }
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 4V]R= "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 0FQO8@"
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.1 (R2009a) dated Jan 28 2009, 04:28:09
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "Lidar_System_July8_Task_Selector"
+    created		    "10-Aug-2012 09:39:56"
+    isLibrary		    0
+    firstTarget		    108
+    sfVersion		    71014000.000008
+  }
+  chart {
+    id			    2
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Bayes Filter FSM/RG Speedgate Bayes Filter"
+    windowPosition	    [368.035 240 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1280 768 1.333333333333333]
+    treeNode		    [0 3 0 0]
+    firstTransition	    5
+    firstJunction	    4
+    viewObj		    2
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    ssIdHighWaterMark	    9
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    6
+    chartFileNumber	    1
+    disableImplicitCasting  1
+    eml {
+      name		      "BayesFilter"
+    }
+  }
+  state {
+    id			    3
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 0 0]
+    superState		    SUBCHART
+    subviewer		    2
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [ColorProb, ColorNum] = BayesFilter(Task, HMean, SMean, VMean)\n%Written by Anderson Leb"
+      "bad on June 20, 2014\n%Last Edited: by Michael Benson on 7/8/2014 for specific RG task\n\n%Treats the histogram "
+      "information as a probability distribution of the\n%color of an object. Uses the Discrete Bayes Filter with the h"
+      "istorgram\n%data as measurements, starting without an input.\n\n%initialize a variable to track previous beliefs"
+      " and one to track number of\n%frames iterated upon. Reset every 10 samples\n\npersistent frames\npersistent Colo"
+      "rProbabilities\n\nif Task ~= 1\n    ColorProb = 0;\n    ColorNum = 0;\nelse\n    \n    if isempty(frames)\n     "
+      "   frames = 0;\n    end\n\n    if isempty(ColorProbabilities) || frames >= 10\n        ColorProbabilities = 1/2*"
+      "ones(2,1);\n        frames = 0;\n    end\n\n    %Histogram based probability from reference\n    Red = [];\n    "
+      "Green = [];\n\n    RedH = Red(:,1);\n    RedS = Red(:,2);\n    RedV = Red(:,3);\n    GreenH = Green(:,1);\n    G"
+      "reenS = Green(:,2);\n    GreenV = Green(:,3);\n\n    %Combine probs into channel matrices\n    ProbH = [RedH, Gr"
+      "eenH];\n    ProbS = [RedS, GreenS];\n    ProbV = [RedV, GreenV];\n\n    %No input, 2 measurements, 2 states\n   "
+      " for i=1:2\n        ColorProbabilities(i) = (ProbH(HMean+1,i)*ProbS(SMean+1,i)*ProbV(VMean+1,i))*ColorProbabilit"
+      "ies(i);\n    end\n\n    %Sum for normalization\n    TotalProb = sum(ColorProbabilities);\n\n    %Update frame co"
+      "unt\n    frames = frames + 1;\n\n    %Check to make sure ColorProbabilities has values, if so normalize\n    if "
+      "(TotalProb == 0)\n        ColorProbabilities = 1/2*ones(2,1);\n        frames = 0;\n    else\n        %Normalize"
+      "\n        ColorProbabilities = ColorProbabilities/TotalProb;\n    end\n\n\n\n    %Output - First element is red "
+      "prob, then green prob\n    [OrderedProbs, Order] = sort(ColorProbabilities,'descend');\n    ColorProb = OrderedP"
+      "robs(1);\n    %ColorProb = 0.6;\n    ColorNum = int32(Order(1));\nend"
+      editorLayout	      "100 M4x1[142 4 1073 728]"
+    }
+  }
+  junction {
+    id			    4
+    position		    [23.5747 49.5747 7]
+    chart		    2
+    linkNode		    [2 0 0]
+    subviewer		    2
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    5
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      4
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    2
+    linkNode		    [2 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    6
+    ssIdNumber		    9
+    name		    "Task"
+    linkNode		    [2 0 7]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    7
+    ssIdNumber		    4
+    name		    "HMean"
+    linkNode		    [2 6 8]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    8
+    ssIdNumber		    5
+    name		    "ColorProb"
+    linkNode		    [2 7 9]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    9
+    ssIdNumber		    6
+    name		    "SMean"
+    linkNode		    [2 8 10]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    10
+    ssIdNumber		    7
+    name		    "VMean"
+    linkNode		    [2 9 11]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    11
+    ssIdNumber		    8
+    name		    "ColorNum"
+    linkNode		    [2 10 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    12
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Bayes Filter FSM/RG Speedgate Bayes Filter"
+    machine		    1
+    chart		    2
+  }
+  chart {
+    id			    13
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Bayes Filter FSM/RWGYK Avoidance Bayes Filter"
+    windowPosition	    [368.035 240 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1280 768 1.333333333333333]
+    treeNode		    [0 14 0 0]
+    firstTransition	    16
+    firstJunction	    15
+    viewObj		    13
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    ssIdHighWaterMark	    9
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    17
+    chartFileNumber	    2
+    disableImplicitCasting  1
+    eml {
+      name		      "BayesFilter"
+    }
+  }
+  state {
+    id			    14
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    13
+    treeNode		    [13 0 0 0]
+    superState		    SUBCHART
+    subviewer		    13
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [ColorProb, ColorNum] = BayesFilter(Task, HMean, SMean, VMean)\n%Written by Anderson Leb"
+      "bad on June 20, 2014\n%Last Edited: by Michael Benson on 7/8/2014 for specific task\n\n%Treats the histogram inf"
+      "ormation as a probability distribution of the\n%color of an object. Uses the Discrete Bayes Filter with the hist"
+      "orgram\n%data as measurements, starting without an input.\n\n%initialize a variable to track previous beliefs an"
+      "d one to track number of\n%frames iterated upon. Reset every 10 samples\npersistent frames\npersistent ColorProb"
+      "abilities\n\nif Task ~= 3\n    ColorProb = 0;\n    ColorNum = 0;\nelse\n    if isempty(frames)\n        frames ="
+      " 0;\n    end\n    if isempty(ColorProbabilities) || frames >= 10\n        ColorProbabilities = 1/5*ones(5,1);\n "
+      "       frames = 0;\n    end\n\n    %Histogram based probability from reference\n    Red = [];\n    White = [];\n"
+      "    Green = [];\n    Yellow = [];\n    Black = [];\n\n\n    RedH = Red(:,1);\n    RedS = Red(:,2);\n    RedV = R"
+      "ed(:,3);\n    WhiteH = White(:,1);\n    WhiteS = White(:,2);\n    WhiteV = White(:,3);\n    GreenH = Green(:,1);"
+      "\n    GreenS = Green(:,2);\n    GreenV = Green(:,3);\n    YellowH = Yellow(:,1);\n    YellowS = Yellow(:,2);\n  "
+      "  YellowV = Yellow(:,3);\n    BlackH = Black(:,1);\n    BlackS = Black(:,2);\n    BlackV = Black(:,3);\n\n    %C"
+      "ombine probs into channel matrices\n    ProbH = [RedH, WhiteH, GreenH, YellowH, BlackH];\n    ProbS = [RedS, Whi"
+      "teS, GreenS, YellowS, BlackS];\n    ProbV = [RedV, WhiteV, GreenV, YellowV, BlackV];\n\n    %No input, 5 measure"
+      "ments, 5 states\n    for i=1:5\n        ColorProbabilities(i) = (ProbH(HMean+1,i)*ProbS(SMean+1,i)*ProbV(VMean+1"
+      ",i))*ColorProbabilities(i);\n    end\n\n    %Sum for normalization\n    TotalProb = sum(ColorProbabilities);\n\n"
+      "    %Update frame count\n    frames = frames + 1;\n\n    %Check to make sure ColorProbabilities has values, if s"
+      "o normalize\n    if (TotalProb == 0)\n        ColorProbabilities = 1/5*ones(5,1);\n        frames = 0;\n    else"
+      "\n        %Normalize\n        ColorProbabilities = ColorProbabilities/TotalProb;\n    end\n\n\n\n    %Output - F"
+      "irst element is red prob, then white prob, then\n    %green prob, then yellow prob, then black prob\n    [Ordere"
+      "dProbs, Order] = sort(ColorProbabilities,'descend');\n    ColorProb = OrderedProbs(1);\n    %ColorProb = 0.6;\n "
+      "   ColorNum = int32(Order(1));\nend"
+      editorLayout	      "100 M4x1[114 15 1119 728]"
+    }
+  }
+  junction {
+    id			    15
+    position		    [23.5747 49.5747 7]
+    chart		    13
+    linkNode		    [13 0 0]
+    subviewer		    13
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    16
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      15
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    13
+    linkNode		    [13 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    13
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    17
+    ssIdNumber		    9
+    name		    "Task"
+    linkNode		    [13 0 18]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    18
+    ssIdNumber		    4
+    name		    "HMean"
+    linkNode		    [13 17 19]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    19
+    ssIdNumber		    5
+    name		    "ColorProb"
+    linkNode		    [13 18 20]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    20
+    ssIdNumber		    6
+    name		    "SMean"
+    linkNode		    [13 19 21]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    21
+    ssIdNumber		    7
+    name		    "VMean"
+    linkNode		    [13 20 22]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    22
+    ssIdNumber		    8
+    name		    "ColorNum"
+    linkNode		    [13 21 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    23
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Bayes Filter FSM/RWGYK Avoidance Bayes Filter"
+    machine		    1
+    chart		    13
+  }
+  chart {
+    id			    24
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Bayes Filter FSM/RGBYK Acoustic Bayes Filter"
+    windowPosition	    [383.035 225 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1280 768 1.333333333333333]
+    treeNode		    [0 25 0 0]
+    firstTransition	    27
+    firstJunction	    26
+    viewObj		    24
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    ssIdHighWaterMark	    9
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    28
+    chartFileNumber	    3
+    disableImplicitCasting  1
+    eml {
+      name		      "BayesFilter"
+    }
+  }
+  state {
+    id			    25
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    24
+    treeNode		    [24 0 0 0]
+    superState		    SUBCHART
+    subviewer		    24
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [ColorProb, ColorNum] = BayesFilter(Task, HMean, SMean, VMean)\n%Written by Anderson Leb"
+      "bad on June 20, 2014\n%Last Edited: by Michael Benson on 7/8/2014 for specific task\n\n%Treats the histogram inf"
+      "ormation as a probability distribution of the\n%color of an object. Uses the Discrete Bayes Filter with the hist"
+      "orgram\n%data as measurements, starting without an input.\n\n%initialize a variable to track previous beliefs an"
+      "d one to track number of\n%frames iterated upon. Reset every 10 samples\npersistent frames\npersistent ColorProb"
+      "abilities\n\nif Task ~= 4\n    ColorProb = 0;\n    ColorNum = 0;\nelse\n    if isempty(frames)\n        frames ="
+      " 0;\n    end\n    if isempty(ColorProbabilities) || frames >= 10\n        ColorProbabilities = 1/5*ones(5,1);\n "
+      "       frames = 0;\n    end\n\n    %Histogram based probability from reference\n    Red = [];\n    Green = [];\n"
+      "    Blue = [];\n    Yellow = [];\n    Black = [];\n\n\n    RedH = Red(:,1);\n    RedS = Red(:,2);\n    RedV = Re"
+      "d(:,3);\n    GreenH = Green(:,1);\n    GreenS = Green(:,2);\n    GreenV = Green(:,3);\n    BlueH = Blue(:,1);\n "
+      "   BlueS = Blue(:,2);\n    BlueV = Blue(:,3);\n    YellowH = Yellow(:,1);\n    YellowS = Yellow(:,2);\n    Yello"
+      "wV = Yellow(:,3);\n    BlackH = Black(:,1);\n    BlackS = Black(:,2);\n    BlackV = Black(:,3);\n\n    %Combine "
+      "probs into channel matrices\n    ProbH = [RedH, GreenH, BlueH, YellowH, BlackH];\n    ProbS = [RedS, GreenS, Blu"
+      "eS, YellowS, BlackS];\n    ProbV = [RedV, GreenV, BlueV, YellowV, BlackV];\n\n    %No input, 5 measurements, 5 s"
+      "tates\n    for i=1:5\n        ColorProbabilities(i) = (ProbH(HMean+1,i)*ProbS(SMean+1,i)*ProbV(VMean+1,i))*Color"
+      "Probabilities(i);\n    end\n\n    %Sum for normalization\n    TotalProb = sum(ColorProbabilities);\n\n    %Updat"
+      "e frame count\n    frames = frames + 1;\n\n    %Check to make sure ColorProbabilities has values, if so normaliz"
+      "e\n    if (TotalProb == 0)\n        ColorProbabilities = 1/5*ones(5,1);\n        frames = 0;\n    else\n        "
+      "%Normalize\n        ColorProbabilities = ColorProbabilities/TotalProb;\n    end\n\n\n\n    %Output - First eleme"
+      "nt is red prob, then white prob, then\n    %green prob, then yellow prob, then black prob\n    [OrderedProbs, Or"
+      "der] = sort(ColorProbabilities,'descend');\n    ColorProb = OrderedProbs(1);\n    %ColorProb = 0.6;\n    ColorNu"
+      "m = int32(Order(1));\nend"
+      editorLayout	      "100 M4x1[114 15 1119 728]"
+    }
+  }
+  junction {
+    id			    26
+    position		    [23.5747 49.5747 7]
+    chart		    24
+    linkNode		    [24 0 0]
+    subviewer		    24
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    27
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      26
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    24
+    linkNode		    [24 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    24
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    28
+    ssIdNumber		    9
+    name		    "Task"
+    linkNode		    [24 0 29]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    29
+    ssIdNumber		    4
+    name		    "HMean"
+    linkNode		    [24 28 30]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    30
+    ssIdNumber		    5
+    name		    "ColorProb"
+    linkNode		    [24 29 31]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    31
+    ssIdNumber		    6
+    name		    "SMean"
+    linkNode		    [24 30 32]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    32
+    ssIdNumber		    7
+    name		    "VMean"
+    linkNode		    [24 31 33]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    33
+    ssIdNumber		    8
+    name		    "ColorNum"
+    linkNode		    [24 32 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    34
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Bayes Filter FSM/RGBYK Acoustic Bayes Filter"
+    machine		    1
+    chart		    24
+  }
+  chart {
+    id			    35
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Embedded\nMATLAB Function1"
+    windowPosition	    [338.035 270 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1280 768 1.333333333333333]
+    treeNode		    [0 36 0 0]
+    firstTransition	    38
+    firstJunction	    37
+    viewObj		    35
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    ssIdHighWaterMark	    14
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    39
+    chartFileNumber	    8
+    disableImplicitCasting  1
+    eml {
+      name		      "bbox_hist"
+    }
+  }
+  state {
+    id			    36
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    35
+    treeNode		    [35 0 0 0]
+    superState		    SUBCHART
+    subviewer		    35
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [HMean, SMean, VMean, DMean, Angle] = bbox_hist(bbox, BW, uv_d, H, S, V)\n%This function"
+      " creates a histogram of the color region of a detected object\n%identified in a binary image within a bounding b"
+      "ox\n\n%Initialize variables\npixels = 0;\nDRunAve = 0;\nHRunAve = 0;\nSRunAve = 0;\nVRunAve = 0;\nCDist = 0;\nFo"
+      "V = 62;\n\n%Parse bbox data\nleft = bbox(2) + 1;\nright = left + bbox(4) - 1;\nbottom = bbox(1) + 1;\ntop = bott"
+      "om + bbox(3) - 1;\nAngle = int32((left + bbox(4)/2-320)/320*FoV/2);\n\n%Check to see if valid bbox is found\nif "
+      "left~=-1\n    %Scan the detected region of the binary image and generate histograms\n    for j=left:right\n     "
+      "   for i=bottom:top\n            if BW(i,j) == 1\n                pixels = pixels + 1;\n                DRunAve "
+      "= ((pixels-1)/pixels)*DRunAve + (1/pixels)*double(uv_d(i,j));\n                HRunAve = ((pixels-1)/pixels)*HRu"
+      "nAve + (1/pixels)*double(H(i,j));\n                SRunAve = ((pixels-1)/pixels)*SRunAve + (1/pixels)*double(S(i"
+      ",j));\n                VRunAve = ((pixels-1)/pixels)*VRunAve + (1/pixels)*double(V(i,j));\n            end\n    "
+      "    end\n    end\n    %CDist = uv_d(left,right);\nend\n\n%Means must be integers to use in Bayes Filter\nDMean ="
+      " int32(DRunAve/10);\n%DMean = int32(CDist);\nHMean = uint8(HRunAve);\nSMean = uint8(SRunAve);\nVMean = uint8(VRu"
+      "nAve);\n\nend"
+      editorLayout	      "100 M4x1[54 15 1234 784]"
+    }
+  }
+  junction {
+    id			    37
+    position		    [23.5747 49.5747 7]
+    chart		    35
+    linkNode		    [35 0 0]
+    subviewer		    35
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    38
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      37
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    35
+    linkNode		    [35 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    35
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    39
+    ssIdNumber		    4
+    name		    "bbox"
+    linkNode		    [35 0 40]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    40
+    ssIdNumber		    5
+    name		    "HMean"
+    linkNode		    [35 39 41]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    41
+    ssIdNumber		    6
+    name		    "BW"
+    linkNode		    [35 40 42]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    42
+    ssIdNumber		    12
+    name		    "uv_d"
+    linkNode		    [35 41 43]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    43
+    ssIdNumber		    7
+    name		    "H"
+    linkNode		    [35 42 44]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    44
+    ssIdNumber		    8
+    name		    "S"
+    linkNode		    [35 43 45]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    45
+    ssIdNumber		    9
+    name		    "V"
+    linkNode		    [35 44 46]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    46
+    ssIdNumber		    10
+    name		    "SMean"
+    linkNode		    [35 45 47]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    47
+    ssIdNumber		    11
+    name		    "VMean"
+    linkNode		    [35 46 48]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    48
+    ssIdNumber		    13
+    name		    "DMean"
+    linkNode		    [35 47 49]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    49
+    ssIdNumber		    14
+    name		    "Angle"
+    linkNode		    [35 48 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    50
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Embedded\nMATLAB Function1"
+    machine		    1
+    chart		    35
+  }
+  chart {
+    id			    51
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Bayes Filter FSM/RWG Docking Bayes Filter"
+    windowPosition	    [353.035 255 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1280 768 1.333333333333333]
+    treeNode		    [0 52 0 0]
+    firstTransition	    54
+    firstJunction	    53
+    viewObj		    51
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    ssIdHighWaterMark	    9
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    55
+    chartFileNumber	    9
+    disableImplicitCasting  1
+    eml {
+      name		      "BayesFilter"
+    }
+  }
+  state {
+    id			    52
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    51
+    treeNode		    [51 0 0 0]
+    superState		    SUBCHART
+    subviewer		    51
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [ColorProb, ColorNum] = BayesFilter(Task, HMean, SMean, VMean)\n%Written by Anderson Leb"
+      "bad on June 20, 2014\n%Last Edited:\n\n%Treats the histogram information as a probability distribution of the\n%"
+      "color of an object. Uses the Discrete Bayes Filter with the historgram\n%data as measurements, starting without "
+      "an input.\n\n%initialize a variable to track previous beliefs and one to track number of\n%frames iterated upon."
+      " Reset every 10 samples\npersistent frames\npersistent ColorProbabilities\n\nif Task ~= 2\n    ColorProb = 0;\n "
+      "   ColorNum = 0;\nelse\n    if isempty(frames)\n        frames = 0;\n    end\n\n    if isempty(ColorProbabilitie"
+      "s) || frames >= 10\n        ColorProbabilities = 1/3*ones(3,1);\n        frames = 0;\n    end\n\n    %Histogram "
+      "based probability from reference\n    Red = [];\n    White = [];\n    Green = [];\n\n    RedH = Red(:,1);\n    R"
+      "edS = Red(:,2);\n    RedV = Red(:,3);\n    WhiteH = White(:,1);\n    WhiteS = White(:,2);\n    WhiteV = White(:,"
+      "3);\n    GreenH = Green(:,1);\n    GreenS = Green(:,2);\n    GreenV = Green(:,3);\n\n    %Combine probs into cha"
+      "nnel matrices\n    ProbH = [RedH, WhiteH, GreenH];\n    ProbS = [RedS, WhiteS, GreenS];\n    ProbV = [RedV, Whit"
+      "eV, GreenV];\n\n    %No input, 3 measurements, 3 states\n    for i=1:3\n        ColorProbabilities(i) = (ProbH(H"
+      "Mean+1,i)*ProbS(SMean+1,i)*ProbV(VMean+1,i))*ColorProbabilities(i);\n    end\n\n    %Sum for normalization\n    "
+      "TotalProb = sum(ColorProbabilities);\n\n    %Update frame count\n    frames = frames + 1;\n\n    %Check to make "
+      "sure ColorProbabilities has values, if so normalize\n    if (TotalProb == 0)\n        ColorProbabilities = 1/3*o"
+      "nes(3,1);\n        frames = 0;\n    else\n        %Normalize\n        ColorProbabilities = ColorProbabilities/To"
+      "talProb;\n    end\n\n\n\n    %Output - First element is red prob, then white prob, then\n    %green prob\n    [O"
+      "rderedProbs, Order] = sort(ColorProbabilities,'descend');\n    ColorProb = OrderedProbs(1);\n    %ColorProb = 0."
+      "6;\n    ColorNum = int32(Order(1));\n    \nend"
+      editorLayout	      "100 M4x1[54 7 1234 784]"
+    }
+  }
+  junction {
+    id			    53
+    position		    [23.5747 49.5747 7]
+    chart		    51
+    linkNode		    [51 0 0]
+    subviewer		    51
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    54
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      53
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    51
+    linkNode		    [51 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    51
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    55
+    ssIdNumber		    9
+    name		    "Task"
+    linkNode		    [51 0 56]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    56
+    ssIdNumber		    4
+    name		    "HMean"
+    linkNode		    [51 55 57]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    57
+    ssIdNumber		    5
+    name		    "ColorProb"
+    linkNode		    [51 56 58]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    58
+    ssIdNumber		    6
+    name		    "SMean"
+    linkNode		    [51 57 59]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    59
+    ssIdNumber		    7
+    name		    "VMean"
+    linkNode		    [51 58 60]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    60
+    ssIdNumber		    8
+    name		    "ColorNum"
+    linkNode		    [51 59 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    61
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Bayes Filter FSM/RWG Docking Bayes Filter"
+    machine		    1
+    chart		    51
+  }
+  chart {
+    id			    62
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Lidar Image Creator"
+    windowPosition	    [352.091 255 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1280 768 1.333333333333333]
+    treeNode		    [0 63 0 0]
+    firstTransition	    65
+    firstJunction	    64
+    viewObj		    62
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    ssIdHighWaterMark	    11
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    66
+    chartFileNumber	    10
+    disableImplicitCasting  1
+    eml {
+      name		      "scanImages"
+    }
+  }
+  state {
+    id			    63
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    62
+    treeNode		    [62 0 0 0]
+    superState		    SUBCHART
+    subviewer		    62
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function dist_image = scanImages(lidarData,UpDown)\n%Written by Anderson Lebbad on July 5, 2014\n"
+      "%Last Edited:\n\n%Converts the one dimensional array of lidarData and the scan settings into\n%frames of distanc"
+      "es and angles for each point\n\n% Set output sizes\ndist_image = zeros(65,540);\n\n% To run through the middle h"
+      "alf of the points horizonatal points, the\n% first quarter must be skipped (of 1080)\nscanOffset = 270-1;\n\n% L"
+      "oop through all points in output matrices\nfor j=1:540\n    for i=1:65\n        % Select the lidarData that will"
+      " be used in analysis and format as\n        % a frame\n        dist_image(i,j) = lidarData(j+scanOffset+1080*(i-"
+      "1));\n    end\nend\n\n% Flip if up scan\nif UpDown\n    dist_image = flipud(dist_image);\nend\n\ndist_image = fl"
+      "iplr(dist_image);\n\nend"
+      editorLayout	      "100 M4x1[110 15 1179 617]"
+    }
+  }
+  junction {
+    id			    64
+    position		    [23.5747 49.5747 7]
+    chart		    62
+    linkNode		    [62 0 0]
+    subviewer		    62
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    65
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      64
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    62
+    linkNode		    [62 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    62
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    66
+    ssIdNumber		    4
+    name		    "lidarData"
+    linkNode		    [62 0 67]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    67
+    ssIdNumber		    5
+    name		    "dist_image"
+    linkNode		    [62 66 68]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    68
+    ssIdNumber		    8
+    name		    "UpDown"
+    linkNode		    [62 67 0]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    69
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Lidar Image Creator"
+    machine		    1
+    chart		    62
+  }
+  chart {
+    id			    70
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Lidar data selector"
+    windowPosition	    [323.98 285 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1280 768 1.333333333333333]
+    treeNode		    [0 71 0 0]
+    firstTransition	    73
+    firstJunction	    72
+    viewObj		    70
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    ssIdHighWaterMark	    6
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    74
+    chartFileNumber	    11
+    disableImplicitCasting  1
+    eml {
+      name		      "data_selector"
+    }
+  }
+  state {
+    id			    71
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    70
+    treeNode		    [70 0 0 0]
+    superState		    SUBCHART
+    subviewer		    70
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function lidarOut = data_selector(lidarIn)\n% Lidar data is always input as a 1x70200 matrix.\n% "
+      "If Scan Number is less than 65 some of this data may be blank\n% Select only the parts of the matrix where data "
+      "has been collected\n\nFullLength = 1080*65;\nDataLength =  1080*65;\nlidarOut = zeros(FullLength,1);\n\n% CloseP"
+      "ts = (lidarIn < 3);\n% lidarOut = (lidarIn + 30000*ClosePts)/10;\n\nfor i = 1:DataLength\n    if (lidarIn(i,1) <"
+      " 3)\n        lidarIn(i,1) = 30000;\n    end\n    lidarOut(i,1) = lidarIn(i,1);\nend\n\n%lidarOut = lidarIn(1,1:D"
+      "ataLength);"
+      editorLayout	      "100 M4x1[110 15 1179 617]"
+    }
+  }
+  junction {
+    id			    72
+    position		    [23.5747 49.5747 7]
+    chart		    70
+    linkNode		    [70 0 0]
+    subviewer		    70
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    73
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      72
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    70
+    linkNode		    [70 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    70
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    74
+    ssIdNumber		    4
+    name		    "lidarIn"
+    linkNode		    [70 0 75]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    75
+    ssIdNumber		    5
+    name		    "lidarOut"
+    linkNode		    [70 74 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    76
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Lidar data selector"
+    machine		    1
+    chart		    70
+  }
+  chart {
+    id			    77
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Raster to UV"
+    windowPosition	    [323.98 285 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1280 768 1.333333333333333]
+    treeNode		    [0 78 0 0]
+    firstTransition	    80
+    firstJunction	    79
+    viewObj		    77
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    ssIdHighWaterMark	    16
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    81
+    chartFileNumber	    12
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    78
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    77
+    treeNode		    [77 0 0 0]
+    superState		    SUBCHART
+    subviewer		    77
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [uv_d,Xp,Yp,X,Y,Z] = fcn(bbox,dist_im)\n% Written by Anderson Lebbad on July 3, 2014\n% "
+      "Last Edited:\n%\n% This function transforms the lidar raster image into u,v coordinates,\n% with an xyz transfor"
+      "mation and change of perspective from the lidar to\n% the camera\n\n%% Set Variables\n\n% Find the number of val"
+      "id bounding boxes\nnumBBox = 8 - sum(bbox(1,:) == -1);\n\nbeyondRange = 30000;\nuv_d = beyondRange*ones(120,160)"
+      ";\n\n% Initialize size of X,Y and Z matrices\nX = zeros(size(dist_im));\nY = zeros(size(dist_im));\nZ = zeros(si"
+      "ze(dist_im));\nXc = zeros(size(dist_im));\nYc = zeros(size(dist_im));\nZc = zeros(size(dist_im));\nXn = zeros(si"
+      "ze(dist_im));\nYn = zeros(size(dist_im));\nXp = zeros(size(dist_im));\nYp = zeros(size(dist_im));\nr2 = zeros(si"
+      "ze(dist_im));\nr6 = zeros(size(dist_im));\nXd = zeros(size(dist_im));\nYd = zeros(size(dist_im));\n\n% Scan angl"
+      "es vector\nscanAngle = [2.74453024876108,2.74016692563110,2.73580360250111,2.73144027937113,2.72707695624114,2.7"
+      "2271363311115,2.71835030998117,2.71398698685118,2.70962366372120,2.70526034059121,2.70089701746123,2.69653369433"
+      "124,2.69217037120125,2.68780704807127,2.68344372494128,2.67908040181130,2.67471707868131,2.67035375555132,2.6659"
+      "9043242134,2.66162710929135,2.65726378616137,2.65290046303138,2.64853713990140,2.64417381677141,2.63981049364142"
+      ",2.63544717051144,2.63108384738145,2.62672052425147,2.62235720112148,2.61799387799149,2.61363055486151,2.6092672"
+      "3173152,2.60490390860154,2.60054058547155,2.59617726234157,2.59181393921158,2.58745061608159,2.58308729295161,2."
+      "57872396982162,2.57436064669164,2.56999732356165,2.56563400043166,2.56127067730168,2.55690735417169,2.5525440310"
+      "4171,2.54818070791172,2.54381738478174,2.53945406165175,2.53509073852176,2.53072741539178,2.52636409226179,2.522"
+      "00076913181,2.51763744600182,2.51327412287183,2.50891079974185,2.50454747661186,2.50018415348188,2.4958208303518"
+      "9,2.49145750722191,2.48709418409192,2.48273086096193,2.47836753783195,2.47400421470196,2.46964089157198,2.465277"
+      "56844199,2.46091424531200,2.45655092218202,2.45218759905203,2.44782427592205,2.44346095279206,2.43909762966208,2"
+      ".43473430653209,2.43037098340210,2.42600766027212,2.42164433714213,2.41728101401215,2.41291769088216,2.408554367"
+      "75217,2.40419104462219,2.39982772149220,2.39546439836222,2.39110107523223,2.38673775210225,2.38237442897226,2.37"
+      "801110584227,2.37364778271229,2.36928445958230,2.36492113645232,2.36055781332233,2.35619449019235,2.351831167062"
+      "36,2.34746784393237,2.34310452080239,2.33874119767240,2.33437787454242,2.33001455141243,2.32565122828244,2.32128"
+      "790515246,2.31692458202247,2.31256125889249,2.30819793576250,2.30383461263252,2.29947128950253,2.29510796637254,"
+      "2.29074464324256,2.28638132011257,2.28201799698259,2.27765467385260,2.27329135072261,2.26892802759263,2.26456470"
+      "446264,2.26020138133266,2.25583805820267,2.25147473507269,2.24711141194270,2.24274808881271,2.23838476568273,2.2"
+      "3402144255274,2.22965811942276,2.22529479629277,2.22093147316278,2.21656815003280,2.21220482690281,2.20784150377"
+      "283,2.20347818064284,2.19911485751286,2.19475153438287,2.19038821125288,2.18602488812290,2.18166156499291,2.1772"
+      "9824186293,2.17293491873294,2.16857159560295,2.16420827247297,2.15984494934298,2.15548162621300,2.15111830308301"
+      ",2.14675497995303,2.14239165682304,2.13802833369305,2.13366501056307,2.12930168743308,2.12493836430310,2.1205750"
+      "4117311,2.11621171804312,2.11184839491314,2.10748507178315,2.10312174865317,2.09875842552318,2.09439510239320,2."
+      "09003177926321,2.08566845613322,2.08130513300324,2.07694180987325,2.07257848674327,2.06821516361328,2.0638518404"
+      "8329,2.05948851735331,2.05512519422332,2.05076187109334,2.04639854796335,2.04203522483337,2.03767190170338,2.033"
+      "30857857339,2.02894525544341,2.02458193231342,2.02021860918344,2.01585528605345,2.01149196292347,2.0071286397934"
+      "8,2.00276531666349,1.99840199353351,1.99403867040352,1.98967534727354,1.98531202414355,1.98094870101356,1.976585"
+      "37788358,1.97222205475359,1.96785873162361,1.96349540849362,1.95913208536364,1.95476876223365,1.95040543910366,1"
+      ".94604211597368,1.94167879284369,1.93731546971371,1.93295214658372,1.92858882345373,1.92422550032375,1.919862177"
+      "19376,1.91549885406378,1.91113553093379,1.90677220780381,1.90240888467382,1.89804556154383,1.89368223841385,1.88"
+      "931891528386,1.88495559215388,1.88059226902389,1.87622894589390,1.87186562276392,1.86750229963393,1.863138976503"
+      "95,1.85877565337396,1.85441233024398,1.85004900711399,1.84568568398400,1.84132236085402,1.83695903772403,1.83259"
+      "571459405,1.82823239146406,1.82386906833407,1.81950574520409,1.81514242207410,1.81077909894412,1.80641577581413,"
+      "1.80205245268415,1.79768912955416,1.79332580642417,1.78896248329419,1.78459916016420,1.78023583703422,1.77587251"
+      "390423,1.77150919077424,1.76714586764426,1.76278254451427,1.75841922138429,1.75405589825430,1.74969257512432,1.7"
+      "4532925199433,1.74096592886434,1.73660260573436,1.73223928260437,1.72787595947439,1.72351263634440,1.71914931321"
+      "441,1.71478599008443,1.71042266695444,1.70605934382446,1.70169602069447,1.69733269756449,1.69296937443450,1.6886"
+      "0605130451,1.68424272817453,1.67987940504454,1.67551608191456,1.67115275878457,1.66678943565458,1.66242611252460"
+      ",1.65806278939461,1.65369946626463,1.64933614313464,1.64497282000466,1.64060949687467,1.63624617374468,1.6318828"
+      "5061470,1.62751952748471,1.62315620435473,1.61879288122474,1.61442955809475,1.61006623496477,1.60570291183478,1."
+      "60133958870480,1.59697626557481,1.59261294244483,1.58824961931484,1.58388629618485,1.57952297305487,1.5751596499"
+      "2488,1.57079632679490,1.56643300366491,1.56206968053493,1.55770635740494,1.55334303427495,1.54897971114497,1.544"
+      "61638801498,1.54025306488500,1.53588974175501,1.53152641862502,1.52716309549504,1.52279977236505,1.5184364492350"
+      "7,1.51407312610508,1.50970980297510,1.50534647984511,1.50098315671512,1.49661983358514,1.49225651045515,1.487893"
+      "18732517,1.48352986419518,1.47916654106519,1.47480321793521,1.47043989480522,1.46607657167524,1.46171324854525,1"
+      ".45734992541527,1.45298660228528,1.44862327915529,1.44425995602531,1.43989663289532,1.43553330976534,1.431169986"
+      "63535,1.42680666350536,1.42244334037538,1.41808001724539,1.41371669411541,1.40935337098542,1.40499004785544,1.40"
+      "062672472545,1.39626340159546,1.39190007846548,1.38753675533549,1.38317343220551,1.37881010907552,1.374446785945"
+      "53,1.37008346281555,1.36572013968556,1.36135681655558,1.35699349342559,1.35263017029561,1.34826684716562,1.34390"
+      "352403563,1.33954020090565,1.33517687777566,1.33081355464568,1.32645023151569,1.32208690838570,1.31772358525572,"
+      "1.31336026212573,1.30899693899575,1.30463361586576,1.30027029273578,1.29590696960579,1.29154364647580,1.28718032"
+      "334582,1.28281700021583,1.27845367708585,1.27409035395586,1.26972703082587,1.26536370769589,1.26100038456590,1.2"
+      "5663706143592,1.25227373830593,1.24791041517595,1.24354709204596,1.23918376891597,1.23482044578599,1.23045712265"
+      "600,1.22609379952602,1.22173047639603,1.21736715326604,1.21300383013606,1.20864050700607,1.20427718387609,1.1999"
+      "1386074610,1.19555053761612,1.19118721448613,1.18682389135614,1.18246056822616,1.17809724509617,1.17373392196619"
+      ",1.16937059883620,1.16500727570621,1.16064395257623,1.15628062944624,1.15191730631626,1.14755398318627,1.1431906"
+      "6005629,1.13882733692630,1.13446401379631,1.13010069066633,1.12573736753634,1.12137404440636,1.11701072127637,1."
+      "11264739814639,1.10828407501640,1.10392075188641,1.09955742875643,1.09519410562644,1.09083078249646,1.0864674593"
+      "6647,1.08210413623648,1.07774081310650,1.07337748997651,1.06901416684653,1.06465084371654,1.06028752058656,1.055"
+      "92419745657,1.05156087432658,1.04719755119660,1.04283422806661,1.03847090493663,1.03410758180664,1.0297442586766"
+      "5,1.02538093554667,1.02101761241668,1.01665428928670,1.01229096615671,1.00792764302673,1.00356431989674,0.999200"
+      "996766754,0.994837673636768,0.990474350506782,0.986111027376796,0.981747704246810,0.977384381116825,0.9730210579"
+      "86839,0.968657734856853,0.964294411726867,0.959931088596881,0.955567765466896,0.951204442336910,0.94684111920692"
+      "4,0.942477796076938,0.938114472946952,0.933751149816966,0.929387826686981,0.925024503556995,0.920661180427009,0."
+      "916297857297023,0.911934534167037,0.907571211037051,0.903207887907065,0.898844564777080,0.894481241647094,0.8901"
+      "17918517108,0.885754595387122,0.881391272257136,0.877027949127151,0.872664625997165,0.868301302867179,0.86393797"
+      "9737193,0.859574656607207,0.855211333477221,0.850848010347236,0.846484687217250,0.842121364087264,0.837758040957"
+      "278,0.833394717827292,0.829031394697307,0.824668071567321,0.820304748437335,0.815941425307349,0.811578102177363,"
+      "0.807214779047377,0.802851455917392,0.798488132787406,0.794124809657420,0.789761486527434,0.785398163397448,0.78"
+      "1034840267463,0.776671517137477,0.772308194007491,0.767944870877505,0.763581547747519,0.759218224617533,0.754854"
+      "901487548,0.750491578357562,0.746128255227576,0.741764932097590,0.737401608967604,0.733038285837618,0.7286749627"
+      "07633,0.724311639577647,0.719948316447661,0.715584993317675,0.711221670187689,0.706858347057704,0.70249502392771"
+      "8,0.698131700797732,0.693768377667746,0.689405054537760,0.685041731407774,0.680678408277789,0.676315085147803,0."
+      "671951762017817,0.667588438887831,0.663225115757845,0.658861792627859,0.654498469497874,0.650135146367888,0.6457"
+      "71823237902,0.641408500107916,0.637045176977930,0.632681853847944,0.628318530717959,0.623955207587973,0.61959188"
+      "4457987,0.615228561328001,0.610865238198015,0.606501915068030,0.602138591938044,0.597775268808058,0.593411945678"
+      "072,0.589048622548086,0.584685299418100,0.580321976288115,0.575958653158129,0.571595330028143,0.567232006898157,"
+      "0.562868683768171,0.558505360638186,0.554142037508200,0.549778714378214,0.545415391248228,0.541052068118242,0.53"
+      "6688744988256,0.532325421858271,0.527962098728285,0.523598775598299,0.519235452468313,0.514872129338327,0.510508"
+      "806208341,0.506145483078356,0.501782159948370,0.497418836818384,0.493055513688398,0.488692190558412,0.4843288674"
+      "28426,0.479965544298441,0.475602221168455,0.471238898038469,0.466875574908483,0.462512251778497,0.45814892864851"
+      "2,0.453785605518526,0.449422282388540,0.445058959258554,0.440695636128568,0.436332312998582,0.431968989868597,0."
+      "427605666738611,0.423242343608625,0.418879020478639,0.414515697348653,0.410152374218667,0.405789051088682,0.4014"
+      "25727958696,0.397062404828710,0.392699081698724];\n% Gimbal angle vector\ngimbalAngle = [0.503460361152210,0.483"
+      "321946706122,0.463183532260034,0.443045117813945,0.422906703367857,0.402768288921768,0.382629874475680,0.3624914"
+      "60029592,0.342353045583503,0.322214631137415,0.302076216691326,0.281937802245238,0.261799387799149,0.24166097335"
+      "3061,0.221522558906973,0.201384144460884,0.181245730014796,0.161107315568707,0.140968901122619,0.120830486676531"
+      ",0.100692072230442,0.0805536577843537,0.0604152433382652,0.0402768288921768,0.0201384144460884,0,-0.020138414446"
+      "0884,-0.0402768288921768,-0.0604152433382652,-0.0805536577843536,-0.100692072230442,-0.120830486676530,-0.140968"
+      "901122619,-0.161107315568707,-0.181245730014796,-0.201384144460884,-0.221522558906973,-0.241660973353061,-0.2617"
+      "99387799149,-0.281937802245238,-0.302076216691326,-0.322214631137415,-0.342353045583503,-0.362491460029592,-0.38"
+      "2629874475680,-0.402768288921768,-0.422906703367857,-0.443045117813945,-0.463183532260034,-0.483321946706122,-0."
+      "503460361152210,-0.523598775598299,-0.543737190044387,-0.563875604490476,-0.584014018936564,-0.604152433382653,-"
+      "0.624290847828741,-0.644429262274829,-0.664567676720918,-0.684706091167006,-0.704844505613095,-0.724982920059183"
+      ",-0.745121334505272,-0.765259748951360,-0.785398163397448];\n\n% Height of the lidar on the gimbal\nh = 36.3;\n\n"
+      "% Translation vector (in milliimeters)\nt = [24; -113; 38];\n\n% Rotation angles\nphi = (-90+6)*pi/180;\ntheta ="
+      " 0*pi/180;\n\n% Rotation about the x-axis\nRx = [1 0 0; 0 cos(phi) sin(phi); 0 -sin(phi) cos(phi)];\n% Followed "
+      "by rotation about the y-axis\nR = [cos(theta) 0 -sin(theta); 0 1 0; sin(theta) 0 cos(theta)]*Rx;\n\n% Transforma"
+      "tion matrix\nT = [R t];\n\n% Radial Distortions\nRadDist = [0.069102182282360,-0.154608606024690,0.0202410535768"
+      "61];\n\n% Intrinsic Matrix\nK = [5.548581600685270e+02,0,0;0,5.523116000564020e+02,0;3.135858904821101e+02,2.190"
+      "392333699872e+02,1];\nKK = K';\n\n% Iterate filling points into XYZ matrices for each valid bbox\nfor i = 1:numB"
+      "Box\n       \n    % Find region to fill\n    minX = bbox(2,i) + 1;\n    maxX = minX + bbox(4,i) - 1;\n    minY ="
+      " bbox(1,i) + 1;\n    maxY = minY + bbox(3,i) - 1;\n    \n    % Loop for each pixel in the bounding box\n    for "
+      "j = minX:maxX\n        for k = minY:maxY  \n            % Convert to XYZ\n            X(k,j) = dist_im(k,j).*cos"
+      "(scanAngle(j));\n            Y(k,j) = dist_im(k,j).*sin(scanAngle(j)).*cos(gimbalAngle(i))-h.*sin(gimbalAngle(i)"
+      ");\n            Z(k,j) = dist_im(k,j).*sin(scanAngle(j)).*sin(gimbalAngle(i))+h.*cos(gimbalAngle(i));\n         "
+      "   \n            % Transformation to camera coordinate frame\n            Xc(k,j) = T(1,1)*X(k,j)+T(1,2)*Y(k,j)+"
+      "T(1,3)*Z(k,j)+T(1,4);\n            Yc(k,j) = T(2,1)*X(k,j)+T(2,2)*Y(k,j)+T(2,3)*Z(k,j)+T(2,4);\n            Zc(k"
+      ",j) = T(3,1)*X(k,j)+T(3,2)*Y(k,j)+T(3,3)*Z(k,j)+T(3,4);\n            \n            % Normalize Coordinates\n    "
+      "        Xn(k,j) = Xc(k,j)./Zc(k,j);\n            Yn(k,j) = Yc(k,j)./Zc(k,j);\n            \n            % Radial"
+      " Vectors\n            r2(k,j) = Xn(k,j).^2+Yn(k,j).^2;\n            r6(k,j) = r2(k,j).^3;\n            \n       "
+      "     % Distorted Coodinates\n            Xd(k,j) = Xn(k,j).*(1+RadDist(1).*r2(k,j)+RadDist(3).*r6(k,j));\n      "
+      "      Yd(k,j) = Yn(k,j).*(1+RadDist(1).*r2(k,j)+RadDist(3).*r6(k,j));\n            \n            % Pixel Coordin"
+      "ates\n            Xp(k,j) = KK(1,1)*Xd(k,j)+KK(1,2)*Yd(k,j)+KK(1,3);\n            Yp(k,j) = KK(2,1)*Xd(k,j)+KK(2"
+      ",2)*Yd(k,j)+KK(2,3);\n        end\n    end\nend\n\n% Depth frame, same aspect ratio as image frame, quarter widt"
+      "h and height\nfor i2 = 1:160\n    for j2 = 1:120\n        % Estimated Closest points\n        xCenter = int32(14"
+      "6+i2*1.55);\n        yCenter = int32(j2/1.8462);\n        \n        % Evaluate once for reference\n        l1nor"
+      "m = abs(Xp(yCenter,xCenter)-i2*4-2)+abs(Yp(yCenter,xCenter)-j2*4-2);\n        uv_d(j2,i2) = dist_im(yCenter,xCen"
+      "ter);\n        \n        % Loop over a region of interest near estimated point\n        for m = xCenter-3:xCente"
+      "r+3\n            for n = yCenter-3:yCenter+3\n                % Check to see if dist coordinate is valid (only n"
+      "eed to check y)\n                if (n > 0) && (n < 65)\n                    % Check if l1norm is smaller than p"
+      "revious smallest\n                    if (abs(Xp(n,m)-i2*4-2)+abs(Yp(n,m)-j2*4-2)) < l1norm\n                   "
+      "     l1norm = abs(Xp(n,m)-i2*4-2)+abs(Yp(n,m)-j2*4-2);\n                        uv_d(j2,i2) = dist_im(n,m);\n   "
+      "                 end\n                end\n            end\n        end\n    end\nend\n\nend"
+      editorLayout	      "100 M4x1[54 25 1234 784]"
+    }
+  }
+  junction {
+    id			    79
+    position		    [23.5747 49.5747 7]
+    chart		    77
+    linkNode		    [77 0 0]
+    subviewer		    77
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    80
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      79
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    77
+    linkNode		    [77 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    77
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    81
+    ssIdNumber		    4
+    name		    "bbox"
+    linkNode		    [77 0 82]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    82
+    ssIdNumber		    5
+    name		    "uv_d"
+    linkNode		    [77 81 83]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    83
+    ssIdNumber		    9
+    name		    "dist_im"
+    linkNode		    [77 82 84]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    84
+    ssIdNumber		    12
+    name		    "Xp"
+    linkNode		    [77 83 85]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    85
+    ssIdNumber		    13
+    name		    "Yp"
+    linkNode		    [77 84 86]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    86
+    ssIdNumber		    14
+    name		    "X"
+    linkNode		    [77 85 87]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    87
+    ssIdNumber		    15
+    name		    "Y"
+    linkNode		    [77 86 88]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    88
+    ssIdNumber		    16
+    name		    "Z"
+    linkNode		    [77 87 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    89
+    name		    "Enabled\nSubsystem1/Data Save Interpolation and Bayes/Raster to UV"
+    machine		    1
+    chart		    77
+  }
+  chart {
+    id			    90
+    name		    "Enabled\nSubsystem1/Embedded\nMATLAB Function"
+    windowPosition	    [323.98 285 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1280 768 1.333333333333333]
+    treeNode		    [0 91 0 0]
+    firstTransition	    93
+    firstJunction	    92
+    viewObj		    90
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    94
+    chartFileNumber	    13
+    disableImplicitCasting  1
+    eml {
+      name		      "check_pot_val"
+    }
+  }
+  state {
+    id			    91
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    90
+    treeNode		    [90 0 0 0]
+    superState		    SUBCHART
+    subviewer		    90
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function yn = check_pot_val(potVal)\n%#eml\n\n% Pot value may initially be zero.\n% Check for thi"
+      "s and output a 1 or zero to \n% control whether the rest of model runs\nif (potVal == 0)\n    yn = 0;\nelse\n   "
+      " yn = 1;\nend"
+      editorLayout	      "100 M4x1[146 214 671 364]"
+    }
+  }
+  junction {
+    id			    92
+    position		    [23.5747 49.5747 7]
+    chart		    90
+    linkNode		    [90 0 0]
+    subviewer		    90
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    93
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      92
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    90
+    linkNode		    [90 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    90
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    94
+    ssIdNumber		    4
+    name		    "potVal"
+    linkNode		    [90 0 95]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    95
+    ssIdNumber		    5
+    name		    "yn"
+    linkNode		    [90 94 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    96
+    name		    "Enabled\nSubsystem1/Embedded\nMATLAB Function"
+    machine		    1
+    chart		    90
+  }
+  chart {
+    id			    97
+    name		    "Enabled\nSubsystem1/Stepper Speed and Postion \nCalculation"
+    windowPosition	    [323.98 285 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1280 768 1.333333333333333]
+    treeNode		    [0 98 0 0]
+    firstTransition	    100
+    firstJunction	    99
+    viewObj		    97
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    ssIdHighWaterMark	    10
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    101
+    chartFileNumber	    14
+    disableImplicitCasting  1
+    eml {
+      name		      "stepper_calc"
+    }
+  }
+  state {
+    id			    98
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    97
+    treeNode		    [97 0 0 0]
+    superState		    SUBCHART
+    subviewer		    97
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [Speed,Upos,Dpos,ScanNum] = stepper_calc(UpAngle,DownAngle)\n% Last Edited by Anderson L"
+      "ebbad on July 7, 2014\n% edits were made to account for new calibration on gimbal\n\n% This function inputs desi"
+      "red positive and negative scan angles\n% and desired number of scans and outputs results positions for\n% the st"
+      "epper and the required speed of the stepper motor to properly\n% move so the desired number of scans is obtained"
+      " over the course of\n% the motion of the stepper\n\n% Scan Number requires no change\nScanNum = 65;\n% Number of"
+      " steps for 180 degree flip\nstepRes = 3950;\n% Parameter to account for slack in the gears with respect to steps"
+      "\nstepGive = 57;\n\n% Transformation of angle to stepper position obtained from stepper calibration\n% Output mu"
+      "st be an integer\n% 57 is added or subtracted due to wobble of gimbal system\nUpos = round(UpAngle*stepRes/180)-"
+      "stepGive;\nDpos = round(DownAngle*stepRes/180)+stepGive;\n\n% Transformation of speed based \n% Output must be a"
+      "n interger\nSpeed = round(abs(UpAngle-DownAngle) * (1214/90));"
+      editorLayout	      "100 M4x1[110 15 1179 617]"
+    }
+  }
+  junction {
+    id			    99
+    position		    [23.5747 49.5747 7]
+    chart		    97
+    linkNode		    [97 0 0]
+    subviewer		    97
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    100
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      99
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    97
+    linkNode		    [97 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    97
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    101
+    ssIdNumber		    4
+    name		    "UpAngle"
+    linkNode		    [97 0 102]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    102
+    ssIdNumber		    5
+    name		    "Speed"
+    linkNode		    [97 101 103]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    103
+    ssIdNumber		    6
+    name		    "DownAngle"
+    linkNode		    [97 102 104]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    104
+    ssIdNumber		    8
+    name		    "Upos"
+    linkNode		    [97 103 105]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    105
+    ssIdNumber		    9
+    name		    "Dpos"
+    linkNode		    [97 104 106]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    106
+    ssIdNumber		    10
+    name		    "ScanNum"
+    linkNode		    [97 105 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    107
+    name		    "Enabled\nSubsystem1/Stepper Speed and Postion \nCalculation"
+    machine		    1
+    chart		    97
+  }
+  target {
+    id			    108
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 109]
+  }
+  target {
+    id			    109
+    name		    "rtw"
+    machine		    1
+    linkNode		    [1 108 0]
+  }
+}

@@ -1,0 +1,1067 @@
+Library {
+  Name			  "Nokia_Arduino_Blocks"
+  Version		  7.5
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "UTF-8"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Thu Jun 25 14:51:46 2009"
+  Creator		  "tyler"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Wildcat"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue May 03 19:42:04 2011"
+  RTWModifiedTimeStamp	  226352519
+  ModelVersionFormat	  "1.%<AutoIncrement:28>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  StrictBusMsg		  "Warning"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 280, 135, 1160, 765 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+  }
+  System {
+    Name		    "Nokia_Arduino_Blocks"
+    Location		    [521, 404, 1216, 702]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    53
+    Block {
+      BlockType		      SubSystem
+      Name		      "Arduino"
+      SID		      52
+      Ports		      [2, 1]
+      Position		      [215, 24, 425, 266]
+      LibraryVersion	      "1.20"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskPromptString	      "Digital Pin 0 : |Digital Pin 1 : |Digital Pin 2 : |Digital Pin 3 : |Digital Pin 4 : |Dig"
+      "ital Pin 5 : |Digital Pin 6 : |Digital Pin 7 : |Digital Pin 8 : |Digital Pin 9 : |Digital Pin 10:|Digital Pin 11"
+      ":|Digital Pin 12:|Digital Pin 13:|Analog Input 0:|Analog Input 1:|Analog Input 2:|Analog Input 3:|Analog Input 4"
+      ":|Analog Input 5:"
+      MaskStyleString	      "popup(Unused|Rx|Logic Write|Logic Read (floating)|Logic Read (pulled high)),popup(Unused|"
+      "Tx|Logic Write|Logic Read (floating)|Logic Read (pulled high)),popup(Unused|Encoder (with pin 4)|Logic Write|Log"
+      "ic Read (floating)|Logic Read (pulled high)),popup(Unused|Encoder (with pin 5)|PWM Write|Logic Write|Logic Read "
+      "(floating)|Logic Read (pulled high)),popup(Unused|Logic Write|Logic Read (floating)|Logic Read (pulled high)),po"
+      "pup(Unused|PWM Write|Logic Write|Logic Read (floating)|Logic Read (pulled high)),popup(Unused|PWM Write|Logic Wr"
+      "ite|Logic Read (floating)|Logic Read (pulled high)),popup(Unused|Logic Write|Logic Read (floating)|Logic Read (p"
+      "ulled high)),popup(Unused|Logic Write|Logic Read (floating)|Logic Read (pulled high)),popup(Unused|PWM Write|Log"
+      "ic Write|Servo Motor #1|Logic Read (floating)|Logic Read (pulled high)),popup(Unused|PWM Write|Logic Write|Servo"
+      " Motor #2|Logic Read (floating)|Logic Read (pulled high)),popup(Unused|PWM Write|Logic Write|Logic Read (floatin"
+      "g)|Logic Read (pulled high)),popup(Unused|PWM Write|Logic Write|Logic Read (floating)|Logic Read (pulled high)),"
+      "popup(Unused|Logic Write|Logic Read (floating)|Logic Read (pulled high)),popup(Unused|Analog Read),popup(Unused|"
+      "Analog Read),popup(Unused|Analog Read),popup(Unused|Analog Read),popup(Unused|Analog Read),popup(Unused|Analog R"
+      "ead)"
+      MaskTunableValueString  "off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off"
+      MaskCallbackString      "||ardInterface('clearAll');\nset_param(gcb, 'LinkStatus', 'none')\nmaskStr = get_param("
+      "gcb,'MaskEnables');\nmaskVals = get_param(gcb,'MaskValues');\nif strcmp(get_param(gcb,'PinConfig2'),'Encoder (wi"
+      "th pin 4)')\n    maskStr{5}='off';\n    maskVals{5}='Unused';\nelse\n    maskStr{5}='on';\nend\n\nset_param(gcb,"
+      "'MaskEnables',maskStr);\nset_param(gcb,'MaskValues',maskVals);\n|ardInterface('clearAll');\nset_param(gcb, 'Link"
+      "Status', 'none')\nmaskStr = get_param(gcb,'MaskEnables');\nmaskVals = get_param(gcb,'MaskValues');\nif strcmp(ge"
+      "t_param(gcb,'PinConfig3'),'Encoder (with pin 5)')\n    maskStr{6}='off';\n    maskVals{6}='Unused';\nelse\n    m"
+      "askStr{6}='on';\nend\n\nset_param(gcb,'MaskEnables',maskStr);\nset_param(gcb,'MaskValues',maskVals);\n||||||||||"
+      "||||||"
+      MaskEnableString	      "off,off,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVariables	      "PinConfig0=&1;PinConfig1=&2;PinConfig2=&3;PinConfig3=&4;PinConfig4=&5;PinConfig5=&6;PinConf"
+      "ig6=&7;PinConfig7=&8;PinConfig8=&9;PinConfig9=&10;PinConfig10=&11;PinConfig11=&12;PinConfig12=&13;PinConfig13=&1"
+      "4;ApinConfig0=&15;ApinConfig1=&16;ApinConfig2=&17;ApinConfig3=&18;ApinConfig4=&19;ApinConfig5=&20;"
+      MaskInitialization      "set_param(gcb, 'LinkStatus', 'none')\nardInterface('all');"
+      MaskSelfModifiable      on
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "Rx|Tx|Unused|Unused|Logic Read (floating)|Unused|Unused|Unused|Unused|Servo Motor #1|Serv"
+      "o Motor #2|Unused|Unused|Unused|Unused|Unused|Unused|Unused|Unused|Unused"
+      MaskTabNameString	      "Digital I/O,Digital I/O,Digital I/O,Digital I/O,Digital I/O,Digital I/O,Digital I/O,Dig"
+      "ital I/O,Digital I/O,Digital I/O,Digital I/O,Digital I/O,Digital I/O,Digital I/O,Analog Output,Analog Output,Ana"
+      "log Output,Analog Output,Analog Output,Analog Output"
+      System {
+	Name			"Arduino"
+	Location		[693, 500, 978, 708]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	6424
+	SIDPrevWatermark	6399
+	Block {
+	  BlockType		  Inport
+	  Name			  "Servo Motor #1@DPin9"
+	  SID			  38
+	  Position		  [15, 20, 25, 30]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Servo Motor #2@DPin10"
+	  SID			  38
+	  Position		  [15, 30, 25, 40]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "InMux"
+	  SID			  6423
+	  Ports			  [2, 1]
+	  Position		  [60, 40, 80, 60]
+	  ShowName		  off
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "OutMux"
+	  SID			  6424
+	  Ports			  [1, 1]
+	  Position		  [190, 40, 210, 60]
+	  ShowName		  off
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "ardController"
+	  SID			  6422
+	  Ports			  [1, 1]
+	  Position		  [100, 30, 170, 70]
+	  FunctionName		  "ardController"
+	  Parameters		  "'[:D4F:M1S:M2S]' '2' '1'"
+	  EnableBusSupport	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Logic Read (floating)@DPin4"
+	  SID			  6418
+	  Position		  [250, 20, 260, 30]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "InMux"
+	  SrcPort		  1
+	  DstBlock		  "ardController"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ardController"
+	  SrcPort		  1
+	  DstBlock		  "OutMux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "OutMux"
+	  SrcPort		  1
+	  DstBlock		  "Logic Read (floating)@DPin4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Servo Motor #1@DPin9"
+	  SrcPort		  1
+	  DstBlock		  "InMux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Servo Motor #2@DPin10"
+	  SrcPort		  1
+	  DstBlock		  "InMux"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Arduino + Motor Shield"
+      SID		      53
+      Ports		      [2, 1]
+      Position		      [455, 25, 660, 265]
+      LibraryVersion	      "1.24"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskPromptString	      "Digital Pin 0 : |Digital Pin 1 : |Digital Pin 2 : |Digital Pin 3 : |Digital Pin 4 : |Dig"
+      "ital Pin 5 : |Digital Pin 6 : |Digital Pin 7 : |Digital Pin 8 : |Digital Pin 9 : |Digital Pin 10:|Digital Pin 11"
+      ":|Digital Pin 12:|Digital Pin 13:|Analog Input 0:|Analog Input 1:|Analog Input 2:|Analog Input 3:|Analog Input 4"
+      ":|Analog Input 5:"
+      MaskStyleString	      "popup(Unused|Rx|Logic Write|Logic Read (floating)|Logic Read (pulled high)),popup(Unused|"
+      "Tx|Logic Write|Logic Read (floating)|Logic Read (pulled high)),popup(Unused|Encoder (with pin 9)|Logic Write|Log"
+      "ic Read (floating)|Logic Read (pulled high)),popup(Unused|Encoder (with pin 10)|PWM Write|Logic Write|Logic Read"
+      " (floating)|Logic Read (pulled high)|DC Motor #2|Stepper Motor #1),popup(Unused|Logic Write|Logic Read (floating"
+      ")|Logic Read (pulled high)),popup(Unused|PWM Write|Logic Write|Logic Read (floating)|Logic Read (pulled high)|DC"
+      " Motor #4|Stepper Motor #2),popup(Unused|PWM Write|Logic Write|Logic Read (floating)|Logic Read (pulled high)|DC"
+      " Motor #3|Stepper Motor #2),popup(Unused|Logic Write|Logic Read (floating)|Logic Read (pulled high)),popup(Unuse"
+      "d|Logic Write|Logic Read (floating)|Logic Read (pulled high)),popup(Unused|PWM Write|Logic Write|Logic Read (flo"
+      "ating)|Logic Read (pulled high)),popup(Unused|PWM Write|Logic Write|Logic Read (floating)|Logic Read (pulled hig"
+      "h)),popup(Unused|PWM Write|Logic Write|Logic Read (floating)|Logic Read (pulled high)|DC Motor #1|Stepper Motor "
+      "#1),popup(Unused|PWM Write|Logic Write|Logic Read (floating)|Logic Read (pulled high)),popup(Unused|Logic Write|"
+      "Logic Read (floating)|Logic Read (pulled high)),popup(Unused|Analog Read),popup(Unused|Analog Read),popup(Unused"
+      "|Analog Read),popup(Unused|Analog Read),popup(Unused|Analog Read),popup(Unused|Analog Read)"
+      MaskTunableValueString  "off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off"
+      MaskCallbackString      "ardInterface('clearAll');|ardInterface('clearAll');|ardInterface('clearAll');\nset_para"
+      "m(gcb, 'LinkStatus', 'none')\nmaskStr = get_param(gcb,'MaskEnables');\nmaskVals = get_param(gcb,'MaskValues');\n"
+      "if strcmp(get_param(gcb,'PinConfig2'),'Encoder (with pin 9)')\n    maskStr{10}='off';\n    maskVals{10}='Unused'"
+      ";\nelse\n    maskStr{10}='on';\nend\n\nset_param(gcb,'MaskEnables',maskStr);\nset_param(gcb,'MaskValues',maskVal"
+      "s);\n|ardInterface('clearAll');\nset_param(gcb, 'LinkStatus', 'none')\nmaskStr = get_param(gcb,'MaskEnables');\n"
+      "maskVals = get_param(gcb,'MaskValues');\nif strcmp(get_param(gcb,'PinConfig3'),'Encoder (with pin 10)')\n    mas"
+      "kStr{11}='off';\n    maskVals{11}='Unused';\nelse\n    maskStr{11}='on';\nend\n\nif strcmp(get_param(gcb,'PinCon"
+      "fig3'),'Stepper Motor #1')\n    maskStr{12}='off';\n    maskVals{12}='Unused';\nelse\n    maskStr{12}='on';\nend"
+      "\nif (sum(cell2mat(strfind(get_param(gcb,'MaskValues'),'Motor'))))\nmaskStr{5}='off';\nmaskVals{5}='Unused';\nma"
+      "skStr{8}='off';\nmaskVals{8}='Unused';\nmaskStr{9}='off';\nmaskVals{9}='Unused';\nmaskStr{13}='off';\nmaskVals{1"
+      "3}='Unused';\nelse\nmaskStr{5}='on';  \nmaskStr{8}='on'; \nmaskStr{9}='on'; \nmaskStr{13}='on'; \nend\nset_param"
+      "(gcb,'MaskEnables',maskStr);\nset_param(gcb,'MaskValues',maskVals);|ardInterface('clearAll');\n|ardInterface('cl"
+      "earAll');\nset_param(gcb, 'LinkStatus', 'none')\nmaskStr = get_param(gcb,'MaskEnables');\nmaskVals = get_param(g"
+      "cb,'MaskValues');\nif strcmp(get_param(gcb,'PinConfig5'),'Stepper Motor #2')\n    maskStr{7}='off';\n    maskVal"
+      "s{7}='Unused';\nelse\n    maskStr{7}='on';\nend\nif (sum(cell2mat(strfind(get_param(gcb,'MaskValues'),'Motor')))"
+      ")\nmaskStr{5}='off';\nmaskVals{5}='Unused';\nmaskStr{8}='off';\nmaskVals{8}='Unused';\nmaskStr{9}='off';\nmaskVa"
+      "ls{9}='Unused';\nmaskStr{13}='off';\nmaskVals{13}='Unused';\nelse\nmaskStr{5}='on';  \nmaskStr{8}='on'; \nmaskSt"
+      "r{9}='on'; \nmaskStr{13}='on'; \nend\nset_param(gcb,'MaskEnables',maskStr);\nset_param(gcb,'MaskValues',maskVals"
+      ");|ardInterface('clearAll');\nset_param(gcb, 'LinkStatus', 'none')\nmaskStr = get_param(gcb,'MaskEnables');\nmas"
+      "kVals = get_param(gcb,'MaskValues');\nmaskVals = get_param(gcb,'MaskValues');\nif strcmp(get_param(gcb,'PinConfi"
+      "g6'),'Stepper Motor #2')\n    maskStr{6}='off';\n    maskVals{6}='Unused';\nelse\n    maskStr{6}='on';\nend\nif "
+      "(sum(cell2mat(strfind(get_param(gcb,'MaskValues'),'Motor'))))\nmaskStr{5}='off';\nmaskVals{5}='Unused';\nmaskStr"
+      "{8}='off';\nmaskVals{8}='Unused';\nmaskStr{9}='off';\nmaskVals{9}='Unused';\nmaskStr{13}='off';\nmaskVals{13}='U"
+      "nused';\nelse\nmaskStr{5}='on';  \nmaskStr{8}='on'; \nmaskStr{9}='on'; \nmaskStr{13}='on'; \nend\nset_param(gcb,"
+      "'MaskEnables',maskStr);\nset_param(gcb,'MaskValues',maskVals);|ardInterface('clearAll');\n|ardInterface('clearAl"
+      "l');\nset_param(gcb, 'LinkStatus', 'none')\nmaskStr = get_param(gcb,'MaskEnables');\nmaskVals = get_param(gcb,'M"
+      "askValues');\nif (sum(cell2mat(strfind(get_param(gcb,'MaskValues'),'Motor'))))\nmaskStr{5}='off';\nmaskVals{5}='"
+      "Unused';\nmaskStr{8}='off';\nmaskVals{8}='Unused';\nmaskStr{9}='off';\nmaskVals{9}='Unused';\nmaskStr{13}='off';"
+      "\nmaskVals{13}='Unused';\nelse\nmaskStr{5}='on';  \nmaskStr{8}='on'; \nmaskStr{9}='on'; \nmaskStr{13}='on'; \nen"
+      "d\nset_param(gcb,'MaskEnables',maskStr);\nset_param(gcb,'MaskValues',maskVals);|ardInterface('clearAll');\n|ardI"
+      "nterface('clearAll');\nset_param(gcb, 'LinkStatus', 'none')\nmaskStr = get_param(gcb,'MaskEnables');\nmaskVals ="
+      " get_param(gcb,'MaskValues');\nif (sum(cell2mat(strfind(get_param(gcb,'MaskValues'),'Motor'))))\nmaskStr{5}='off"
+      "';\nmaskVals{5}='Unused';\nmaskStr{8}='off';\nmaskVals{8}='Unused';\nmaskStr{9}='off';\nmaskVals{9}='Unused';\nm"
+      "askStr{13}='off';\nmaskVals{13}='Unused';\nelse\nmaskStr{5}='on';  \nmaskStr{8}='on'; \nmaskStr{9}='on'; \nmaskS"
+      "tr{13}='on'; \nend\nset_param(gcb,'MaskEnables',maskStr);\nset_param(gcb,'MaskValues',maskVals);|ardInterface('c"
+      "learAll');\nset_param(gcb, 'LinkStatus', 'none')\nmaskStr = get_param(gcb,'MaskEnables');\nmaskVals = get_param("
+      "gcb,'MaskValues');\nif strcmp(get_param(gcb,'PinConfig11'),'Stepper Motor #1')\n    maskStr{4}='off';\n    maskV"
+      "als{4}='Unused';\nelse\n    maskStr{4}='on';\nend\nif (sum(cell2mat(strfind(get_param(gcb,'MaskValues'),'Motor')"
+      ")))\nmaskStr{5}='off';\nmaskVals{5}='Unused';\nmaskStr{8}='off';\nmaskVals{8}='Unused';\nmaskStr{9}='off';\nmask"
+      "Vals{9}='Unused';\nmaskStr{13}='off';\nmaskVals{13}='Unused';\nelse\nmaskStr{5}='on';  \nmaskStr{8}='on'; \nmask"
+      "Str{9}='on'; \nmaskStr{13}='on'; \nend\nset_param(gcb,'MaskEnables',maskStr);\nset_param(gcb,'MaskValues',maskVa"
+      "ls);|ardInterface('clearAll');\n|ardInterface('clearAll');\n|ardInterface('clearAll');\n|ardInterface('clearAll'"
+      ");\n|ardInterface('clearAll');\n|ardInterface('clearAll');\n|ardInterface('clearAll');\n|ardInterface('clearAll'"
+      ");\n"
+      MaskEnableString	      "off,off,on,on,off,on,on,off,off,on,on,on,off,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVariables	      "PinConfig0=&1;PinConfig1=&2;PinConfig2=&3;PinConfig3=&4;PinConfig4=&5;PinConfig5=&6;PinConf"
+      "ig6=&7;PinConfig7=&8;PinConfig8=&9;PinConfig9=&10;PinConfig10=&11;PinConfig11=&12;PinConfig12=&13;PinConfig13=&1"
+      "4;ApinConfig0=&15;ApinConfig1=&16;ApinConfig2=&17;ApinConfig3=&18;ApinConfig4=&19;ApinConfig5=&20;"
+      MaskInitialization      "set_param(gcb, 'LinkStatus', 'none')\nardInterface('all');"
+      MaskSelfModifiable      on
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "Rx|Tx|Unused|DC Motor #2|Unused|Unused|DC Motor #3|Unused|Unused|Unused|Unused|Unused|Unu"
+      "sed|Unused|Analog Read|Unused|Unused|Unused|Unused|Unused"
+      MaskTabNameString	      "Digital I/O,Digital I/O,Digital I/O,Digital I/O,Digital I/O,Digital I/O,Digital I/O,Dig"
+      "ital I/O,Digital I/O,Digital I/O,Digital I/O,Digital I/O,Digital I/O,Digital I/O,Analog Output,Analog Output,Ana"
+      "log Output,Analog Output,Analog Output,Analog Output"
+      System {
+	Name			"Arduino + Motor Shield"
+	Location		[161, 326, 450, 604]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	1178
+	SIDPrevWatermark	1153
+	Block {
+	  BlockType		  Inport
+	  Name			  "DC Motor #2@DPin3"
+	  SID			  1168
+	  Position		  [15, 20, 25, 30]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "DC Motor #3@DPin6"
+	  SID			  1172
+	  Position		  [15, 30, 25, 40]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "InMux"
+	  SID			  1177
+	  Ports			  [2, 1]
+	  Position		  [60, 40, 80, 60]
+	  ShowName		  off
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "OutMux"
+	  SID			  1178
+	  Ports			  [1, 1]
+	  Position		  [190, 40, 210, 60]
+	  ShowName		  off
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "ardController"
+	  SID			  1176
+	  Ports			  [1, 1]
+	  Position		  [100, 30, 170, 70]
+	  FunctionName		  "ardController"
+	  Parameters		  "'[:M2M:M3M:A0A]' '2' '1'"
+	  EnableBusSupport	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Analog Read@APin0"
+	  SID			  21
+	  Position		  [250, 30, 260, 40]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "InMux"
+	  SrcPort		  1
+	  DstBlock		  "ardController"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ardController"
+	  SrcPort		  1
+	  DstBlock		  "OutMux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "DC Motor #2@DPin3"
+	  SrcPort		  1
+	  DstBlock		  "InMux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "DC Motor #3@DPin6"
+	  SrcPort		  1
+	  DstBlock		  "InMux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "OutMux"
+	  SrcPort		  1
+	  DstBlock		  "Analog Read@APin0"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "Recieve RGB\nfrom Webcam"
+      SID		      26
+      Ports		      [0, 3]
+      Position		      [25, 160, 85, 190]
+      FunctionName	      "picOut"
+      Parameters	      "153 104 42 82"
+      EnableBusSupport	      off
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "S-Function"
+      SID		      29
+      Ports		      [1]
+      Position		      [25, 225, 85, 255]
+      FunctionName	      "toIp"
+      Parameters	      "'153.104.47.61','6667'"
+      EnableBusSupport	      off
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "S-Function1"
+      SID		      30
+      Ports		      [0, 1]
+      Position		      [95, 225, 155, 255]
+      FunctionName	      "fromIp"
+      Parameters	      "'6667' 0"
+      EnableBusSupport	      off
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "S-Function2"
+      SID		      31
+      Ports		      [0, 3]
+      Position		      [95, 160, 155, 190]
+      FunctionName	      "localPicOut"
+      Parameters	      "320 240 320 240"
+      EnableBusSupport	      off
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "out1"
+      SID		      27
+      Ports		      [1]
+      Position		      [95, 110, 155, 140]
+      FunctionName	      "printOut"
+      EnableBusSupport	      off
+    }
+  }
+}

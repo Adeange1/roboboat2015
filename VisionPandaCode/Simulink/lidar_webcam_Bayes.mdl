@@ -1,0 +1,3884 @@
+Model {
+  Name			  "lidar_webcam_Bayes"
+  Version		  7.3
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.93"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  Created		  "Tue Aug 07 11:20:23 2012"
+  Creator		  "gclayton"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "wildcat"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Jun 27 11:26:48 2014"
+  RTWModifiedTimeStamp	  325761626
+  ModelVersionFormat	  "1.%<AutoIncrement:93>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.6.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.6.0"
+	  StartTime		  "0.0"
+	  StopTime		  "inf"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "0.2"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  SignalSizeVariationType "Allow only fixed size"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.6.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.6.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "none"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.6.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.6.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.6.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateSLWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "rlnx.tlc"
+	  GenCodeOnly		  on
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "rlnx_ubuntu.tmf"
+	  Description		  "Linux Real-Time Target"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "rlnx_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomInclude		  "/usr/local/include/opencv/\n/usr/local/include/"
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		23
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		Cell			"ShowEliminatedStatement"
+		Cell			"ForceParamTrailComments"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      off
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.STFCustomTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		Cell			"SupportNonFinite"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant off
+	      ParMdlRefBuildCompliant off
+	      CompOptLevelCompliant   off
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      SystemTargetFile	      "rlnx.tlc"
+	      DialogCategory	      0
+	      Array {
+		Type			"Handle"
+		Dimension		1
+		Simulink.GRTTargetCC {
+		  $BackupClass		  "Simulink.TargetCC"
+		  $ObjectID		  12
+		  Version		  "1.6.0"
+		  Array {
+		    Type		    "Cell"
+		    Dimension		    16
+		    Cell		    "IncludeMdlTerminateFcn"
+		    Cell		    "CombineOutputUpdateFcns"
+		    Cell		    "SuppressErrorStatus"
+		    Cell		    "ERTCustomFileBanners"
+		    Cell		    "GenerateSampleERTMain"
+		    Cell		    "GenerateTestInterfaces"
+		    Cell		    "ModelStepFunctionPrototypeControlCompliant"
+		    Cell		    "CPPClassGenCompliant"
+		    Cell		    "MultiInstanceERTCode"
+		    Cell		    "PurelyIntegerCode"
+		    Cell		    "SupportComplex"
+		    Cell		    "SupportAbsoluteTime"
+		    Cell		    "SupportContinuousTime"
+		    Cell		    "SupportNonInlinedSFcns"
+		    Cell		    "PortableWordSizes"
+		    Cell		    "SupportNonFinite"
+		    PropName		    "DisabledProps"
+		  }
+		  TargetFcnLib		  "ansi_tfl_table_tmw.mat"
+		  TargetLibSuffix	  ""
+		  TargetPreCompLibLocation ""
+		  TargetFunctionLibrary	  "ANSI_C"
+		  UtilityFuncGeneration	  "Auto"
+		  ERTMultiwordTypeDef	  "System defined"
+		  ERTMultiwordLength	  256
+		  MultiwordLength	  2048
+		  GenerateFullHeader	  on
+		  GenerateSampleERTMain	  off
+		  GenerateTestInterfaces  off
+		  IsPILTarget		  off
+		  ModelReferenceCompliant off
+		  ParMdlRefBuildCompliant off
+		  CompOptLevelCompliant	  off
+		  IncludeMdlTerminateFcn  on
+		  CombineOutputUpdateFcns off
+		  SuppressErrorStatus	  off
+		  ERTFirstTimeCompliant	  off
+		  IncludeFileDelimiter	  "Auto"
+		  ERTCustomFileBanners	  off
+		  SupportAbsoluteTime	  on
+		  LogVarNameModifier	  "rt_"
+		  MatFileLogging	  on
+		  MultiInstanceERTCode	  off
+		  SupportNonFinite	  on
+		  SupportComplex	  on
+		  PurelyIntegerCode	  off
+		  SupportContinuousTime	  on
+		  SupportNonInlinedSFcns  on
+		  EnableShiftOperators	  on
+		  ParenthesesLevel	  "Nominal"
+		  PortableWordSizes	  off
+		  ModelStepFunctionPrototypeControlCompliant off
+		  CPPClassGenCompliant	  off
+		  AutosarCompliant	  off
+		  UseMalloc		  off
+		  ExtMode		  off
+		  ExtModeStaticAlloc	  off
+		  ExtModeTesting	  off
+		  ExtModeStaticAllocSize  1000000
+		  ExtModeTransport	  0
+		  ExtModeMexFile	  "ext_comm"
+		  ExtModeIntrfLevel	  "Level1"
+		  RTWCAPISignals	  off
+		  RTWCAPIParams		  off
+		  RTWCAPIStates		  off
+		  GenerateASAP2		  off
+		}
+		PropName		"Components"
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"LinkerOptions"
+		Value			"-lm -ldl /usr/local/lib/libopencv_highgui.so.2.4 /usr/local/lib/libopencv_core.so.2.4 /usr/local/lib/libope"
+		"ncv_imgproc.so.2.4 -lc_urg -lc_urg_connection -lc_urg_system -lphidget21"
+	      }
+	      CustomProperty {
+		DataType		"RTWOptions_EnumType_C__RTtools_VU-RLNX_RLNX_rlnx_1TargetArch"
+		EnumStrPairs {
+		  Value			  0
+		  String		  "PC"
+		  Value			  1
+		  String		  "Linux"
+		}
+		Name			"TargetArch"
+		Value			"Linux"
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"Download"
+		Value			on
+	      }
+	      CustomProperty {
+		DataType		"slbool"
+		Name			"runTarget"
+		Value			off
+	      }
+	      CustomProperty {
+		DataType		"string"
+		Name			"TIP"
+		Value			"10.0.0.2"
+	      }
+	      CustomProperty {
+		DataType		"int32"
+		Name			"loops"
+		Value			20
+	      }
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      ExtraOptions	      "-aGenerateTraceInfo=0 -aIgnoreTestpoints=0 "
+      CurrentDlgPage	      "Real-Time Workshop"
+      ConfigPrmDlgPosition    " [ 448, 68, 1329, 618 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      EnablePort
+      StatesWhenEnabling      "held"
+      SignalSizeVariationType "Allow only fixed size"
+      ShowOutputPort	      off
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+      DimensionsMode	      "auto"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+      DimensionsMode	      "auto"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      Selector
+      NumberOfDimensions      "1"
+      IndexMode		      "One-based"
+      InputPortWidth	      "-1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      UnitDelay
+      X0		      "0"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+  }
+  System {
+    Name		    "lidar_webcam_Bayes"
+    Location		    [148, 93, 1111, 677]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      Position		      [95, 65, 125, 95]
+      Value		      "9"
+      OutDataTypeMode	      "int32"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "int32"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      Position		      [95, 115, 125, 145]
+      Value		      "3"
+      OutDataTypeMode	      "int32"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+      OutDataTypeStr	      "int32"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Lidar Testing"
+      Ports		      [0, 0, 1]
+      Position		      [345, 167, 470, 233]
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Lidar Testing"
+	Location		[106, 149, 1209, 689]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  EnablePort
+	  Name			  "Enable"
+	  Ports			  []
+	  Position		  [235, 20, 255, 40]
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Color Detection and Data Save"
+	  Ports			  [1, 0, 1]
+	  Position		  [545, 278, 750, 382]
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Color Detection and Data Save"
+	    Location		    [44, 136, 1245, 647]
+	    Open		    on
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [35, 123, 65, 137]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "fixdt(1, 16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      Ports		      []
+	      Position		      [235, 20, 255, 40]
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Calculate xyz"
+	      Ports		      [1, 3]
+	      Position		      [340, 90, 475, 170]
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('xyz_calc');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Calculate xyz"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "lidarData"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 205, 320, 245]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function lidar_webcam_Bayes 2"
+		  Ports			  [1, 4]
+		  Position		  [180, 102, 230, 203]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[1 4]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "xd"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "yd"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "zd"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 216, 480, 234]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "xd"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "yd"
+		  Position		  [460, 136, 480, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "zd"
+		  Position		  [460, 171, 480, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "lidarData"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "xd"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "xd"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "yd"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  3
+		  DstBlock		  "yd"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "zd"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  4
+		  DstBlock		  "zd"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Compare\nTo Constant"
+	      Ports		      [1, 1]
+	      Position		      [730, 112, 790, 148]
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	      SourceType	      "Compare To Constant"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      relop		      "<="
+	      const		      "5000"
+	      LogicOutDataTypeMode    "uint8"
+	      ZeroCross		      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Create RGB image"
+	      Ports		      [3, 1]
+	      Position		      [340, 263, 480, 337]
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('create_image');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Create RGB image"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "R"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "G"
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "B"
+		  Position		  [20, 171, 40, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 180, 320, 220]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function lidar_webcam_Bayes 3"
+		  Ports			  [3, 2]
+		  Position		  [180, 100, 230, 180]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[3 2]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "image"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 191, 480, 209]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "image"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "R"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "G"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "B"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  3
+		}
+		Line {
+		  Name			  "image"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "image"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Embedded\nMATLAB Function"
+	      Ports		      [3, 1]
+	      Position		      [565, 92, 695, 168]
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('scan2depth');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Embedded\nMATLAB Function"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "xd"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "yd"
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "zd"
+		  Position		  [20, 171, 40, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 180, 320, 220]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function lidar_webcam_Bayes 4"
+		  Ports			  [3, 2]
+		  Position		  [180, 100, 230, 180]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[3 2]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "depth"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 191, 480, 209]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "depth"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "xd"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "yd"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "zd"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  3
+		}
+		Line {
+		  Name			  "depth"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "depth"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Embedded\nMATLAB Function1"
+	      Ports		      [5, 3]
+	      Position		      [990, 110, 1120, 330]
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('bbox_hist');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Embedded\nMATLAB Function1"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "bbox"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "BW"
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "H"
+		  Position		  [20, 171, 40, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "S"
+		  Position		  [20, 206, 40, 224]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "V"
+		  Position		  [20, 246, 40, 264]
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 220, 320, 260]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function lidar_webcam_Bayes 5"
+		  Ports			  [5, 4]
+		  Position		  [180, 100, 230, 220]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[5 4]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "HMean"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "SMean"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "VMean"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 231, 480, 249]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "HMean"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "SMean"
+		  Position		  [460, 136, 480, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "VMean"
+		  Position		  [460, 171, 480, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "bbox"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "BW"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "H"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "S"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "V"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  5
+		}
+		Line {
+		  Name			  "HMean"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "HMean"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "SMean"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  3
+		  DstBlock		  "SMean"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "VMean"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  4
+		  DstBlock		  "VMean"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Embedded\nMATLAB Function2"
+	      Ports		      [3, 1]
+	      Position		      [1170, 97, 1310, 343]
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('BayesFilter');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Embedded\nMATLAB Function2"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "HMean"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "SMean"
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "VMean"
+		  Position		  [20, 171, 40, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 180, 320, 220]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function lidar_webcam_Bayes 6"
+		  Ports			  [3, 2]
+		  Position		  [180, 100, 230, 180]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[3 2]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "ColorProb"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 191, 480, 209]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "ColorProb"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "HMean"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "SMean"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "VMean"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  3
+		}
+		Line {
+		  Name			  "ColorProb"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "ColorProb"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Selector
+	      Name		      "H"
+	      Ports		      [1, 1]
+	      Position		      [685, 242, 715, 268]
+	      NumberOfDimensions      "3"
+	      InputPortWidth	      "3"
+	      IndexOptions	      "Select all,Select all,Index vector (dialog)"
+	      Indices		      "[1 3],1,1"
+	      OutputSizes	      "1,1,1"
+	    }
+	    Block {
+	      BlockType		      Selector
+	      Name		      "S"
+	      Ports		      [1, 1]
+	      Position		      [685, 287, 715, 313]
+	      NumberOfDimensions      "3"
+	      InputPortWidth	      "3"
+	      IndexOptions	      "Select all,Select all,Index vector (dialog)"
+	      Indices		      "[1 3],1,2"
+	      OutputSizes	      "1,1,1"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function"
+	      Ports		      [3]
+	      Position		      [330, 400, 450, 470]
+	      NamePlacement	      "alternate"
+	      FunctionName	      "videoExport_v2"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function1"
+	      Ports		      [1, 1]
+	      Position		      [540, 274, 645, 326]
+	      FunctionName	      "rgbtohsv_int_sfun"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function2"
+	      Ports		      [0, 3]
+	      Position		      [75, 257, 185, 363]
+	      NamePlacement	      "alternate"
+	      FunctionName	      "WebcamTest"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function3"
+	      Ports		      [1]
+	      Position		      [210, 140, 270, 170]
+	      FunctionName	      "lidarExport"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function4"
+	      Ports		      [2]
+	      Position		      [1390, 190, 1520, 250]
+	      FunctionName	      "BayesExport"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem"
+	      Ports		      [1, 1]
+	      Position		      [830, 109, 930, 151]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Subsystem"
+		Location		[93, 174, 822, 620]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "BW"
+		  Position		  [35, 103, 65, 117]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Bbox Select"
+		  Ports			  [1, 1]
+		  Position		  [515, 110, 565, 150]
+		  SourceBlock		  "dspmtrx3/Submatrix"
+		  SourceType		  "Submatrix"
+		  RowSpan		  "One row"
+		  RowStartMode		  "First"
+		  RowStartIndex		  "1"
+		  RowEndMode		  "Last"
+		  RowEndIndex		  "1"
+		  ColSpan		  "All columns"
+		  ColStartMode		  "First"
+		  ColStartIndex		  "1"
+		  ColEndMode		  "Last"
+		  ColEndIndex		  "1"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Blob Analysis"
+		  Ports			  [1, 2]
+		  Position		  [120, 78, 250, 147]
+		  DialogController	  "vipDDGCreate"
+		  DialogControllerArgs	  "DataTag0"
+		  SourceBlock		  "vipstatistics/Blob Analysis"
+		  SourceType		  "Blob Analysis"
+		  area			  on
+		  centroid		  off
+		  bBox			  on
+		  majorAxis		  off
+		  minorAxis		  off
+		  angle			  off
+		  eccentricity		  off
+		  equivDiameterSq	  off
+		  extent		  off
+		  perimeter		  off
+		  maxBlobs		  "20"
+		  warnIfNumBlobsExceeded  on
+		  isCount		  off
+		  useMinArea		  on
+		  minArea		  "20"
+		  useMaxArea		  off
+		  maxArea		  "intmax('uint32')"
+		  excludeBorderBlob	  off
+		  outDT			  "double"
+		  isOutVarDim		  off
+		  isFill		  on
+		  fillValues		  "-1"
+		  conn			  "8"
+		  isLabel		  off
+		  outputMode		  "Binary point scaling"
+		  outputWordLength	  "32"
+		  outputFracLength	  "16"
+		  memoryMode		  "Same as product output"
+		  memoryWordLength	  "32"
+		  memoryFracLength	  "16"
+		  firstCoeffMode	  "Binary point scaling"
+		  firstCoeffWordLength	  "16"
+		  firstCoeffFracLength	  "14"
+		  secondCoeffMode	  "Binary point scaling"
+		  secondCoeffWordLength	  "32"
+		  secondCoeffFracLength	  "16"
+		  accumMode		  "Binary point scaling"
+		  accumWordLength	  "32"
+		  accumFracLength	  "0"
+		  prodOutputMode	  "Binary point scaling"
+		  prodOutputWordLength	  "32"
+		  prodOutputFracLength	  "16"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Permute\nMatrix"
+		  Ports			  [2, 1]
+		  Position		  [410, 103, 490, 152]
+		  SourceBlock		  "dspmtrx3/Permute\nMatrix"
+		  SourceType		  "Permute Matrix"
+		  mode			  "Columns"
+		  ZeroOneIdxMode	  "One-based"
+		  errmode		  "Clip index"
+		  checkDims		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Sort"
+		  Ports			  [1, 1]
+		  Position		  [310, 196, 375, 244]
+		  DialogController	  "dspDDGCreate"
+		  DialogControllerArgs	  "DataTag1"
+		  SourceBlock		  "dspstat3/Sort"
+		  SourceType		  "Sort"
+		  otype			  "Index"
+		  dir			  "Descending"
+		  sortAlg		  "Quick sort"
+		  additionalParams	  off
+		  allowOverrides	  on
+		  accumMode		  "Same as product output"
+		  accumWordLength	  "32"
+		  accumFracLength	  "30"
+		  prodOutputMode	  "Same as input"
+		  prodOutputWordLength	  "32"
+		  prodOutputFracLength	  "30"
+		  roundingMode		  "Floor"
+		  overflowMode		  off
+		  LockScale		  off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Bbox"
+		  Position		  [615, 123, 645, 137]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "fixdt(1, 16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "BW"
+		  SrcPort		  1
+		  DstBlock		  "Blob Analysis"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Blob Analysis"
+		  SrcPort		  1
+		  Points		  [20, 0; 0, 125]
+		  DstBlock		  "Sort"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sort"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, -80]
+		  DstBlock		  "Permute\nMatrix"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Blob Analysis"
+		  SrcPort		  2
+		  Points		  [140, 0]
+		  DstBlock		  "Permute\nMatrix"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Permute\nMatrix"
+		  SrcPort		  1
+		  DstBlock		  "Bbox Select"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bbox Select"
+		  SrcPort		  1
+		  DstBlock		  "Bbox"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Selector
+	      Name		      "V"
+	      Ports		      [1, 1]
+	      Position		      [685, 337, 715, 363]
+	      NumberOfDimensions      "3"
+	      InputPortWidth	      "3"
+	      IndexOptions	      "Select all,Select all,Index vector (dialog)"
+	      Indices		      "[1 3],1,3"
+	      OutputSizes	      "1,1,1"
+	    }
+	    Line {
+	      SrcBlock		      "S-Function2"
+	      SrcPort		      3
+	      Points		      [0, 5]
+	      Branch {
+		Points			[0, 110]
+		DstBlock		"S-Function"
+		DstPort			3
+	      }
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"Create RGB image"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "S-Function2"
+	      SrcPort		      2
+	      Points		      [15, 0]
+	      Branch {
+		Points			[0, 125]
+		DstBlock		"S-Function"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, -10]
+		DstBlock		"Create RGB image"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "S-Function2"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      Branch {
+		Points			[0, 135]
+		DstBlock		"S-Function"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Create RGB image"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [125, 0]
+	      Branch {
+		DstBlock		"S-Function3"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Calculate xyz"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Create RGB image"
+	      SrcPort		      1
+	      DstBlock		      "S-Function1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function1"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		DstBlock		"S"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 50]
+		DstBlock		"V"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -45]
+		DstBlock		"H"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Calculate xyz"
+	      SrcPort		      1
+	      DstBlock		      "Embedded\nMATLAB Function"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Calculate xyz"
+	      SrcPort		      2
+	      DstBlock		      "Embedded\nMATLAB Function"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Calculate xyz"
+	      SrcPort		      3
+	      DstBlock		      "Embedded\nMATLAB Function"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Embedded\nMATLAB Function"
+	      SrcPort		      1
+	      DstBlock		      "Compare\nTo Constant"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Compare\nTo Constant"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		DstBlock		"Subsystem"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 45]
+		DstBlock		"Embedded\nMATLAB Function1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Subsystem"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		DstBlock		"Embedded\nMATLAB Function1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[5, 0; 0, -50; 420, 0]
+		DstBlock		"S-Function4"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "H"
+	      SrcPort		      1
+	      Points		      [125, 0; 0, -35]
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "S"
+	      SrcPort		      1
+	      Points		      [125, 0; 0, -35]
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "V"
+	      SrcPort		      1
+	      Points		      [125, 0; 0, -40]
+	      DstBlock		      "Embedded\nMATLAB Function1"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "Embedded\nMATLAB Function1"
+	      SrcPort		      3
+	      Points		      [30, 0]
+	      DstBlock		      "Embedded\nMATLAB Function2"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Embedded\nMATLAB Function1"
+	      SrcPort		      2
+	      DstBlock		      "Embedded\nMATLAB Function2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Embedded\nMATLAB Function1"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, -5]
+	      DstBlock		      "Embedded\nMATLAB Function2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Embedded\nMATLAB Function2"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, -15]
+	      DstBlock		      "S-Function4"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Down position"
+	  Position		  [80, 350, 110, 380]
+	  Value			  "-1036"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Embedded\nMATLAB Function"
+	  Ports			  [1, 1]
+	  Position		  [415, 151, 570, 209]
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Embedded MATLAB block"
+	  MaskDisplay		  "disp('check_pot_val');"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Embedded\nMATLAB Function"
+	    Location		    [257, 457, 812, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "potVal"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      Ports		      [1, 1]
+	      Position		      [270, 160, 320, 200]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      " SFunction "
+	      Tag		      "Stateflow S-Function lidar_webcam_Bayes 1"
+	      Ports		      [1, 2]
+	      Position		      [180, 100, 230, 160]
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[1 2]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"yn"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      Position		      [460, 171, 480, 189]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "yn"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "potVal"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "yn"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "yn"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "S-Function1"
+	  Ports			  [4, 1]
+	  Position		  [270, 210, 400, 290]
+	  FunctionName		  "lidar_zero_test_v3"
+	  EnableBusSupport	  off
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "S-Function4"
+	  Ports			  [0, 1]
+	  Position		  [60, 157, 150, 203]
+	  FunctionName		  "pot_readerV2"
+	  EnableBusSupport	  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Speed"
+	  Position		  [80, 235, 110, 265]
+	  Value			  "1214"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Up position"
+	  Position		  [80, 295, 110, 325]
+	  Value			  "1036"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "Speed"
+	  SrcPort		  1
+	  Points		  [70, 0; 0, -10]
+	  DstBlock		  "S-Function1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Up position"
+	  SrcPort		  1
+	  Points		  [70, 0; 0, -50]
+	  DstBlock		  "S-Function1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Down position"
+	  SrcPort		  1
+	  Points		  [140, 0]
+	  DstBlock		  "S-Function1"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "S-Function4"
+	  SrcPort		  1
+	  Points		  [50, 0]
+	  Branch {
+	    Points		    [0, 40]
+	    DstBlock		    "S-Function1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Embedded\nMATLAB Function"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "S-Function1"
+	  SrcPort		  1
+	  Points		  [80, 0; 0, 80]
+	  DstBlock		  "Color Detection and Data Save"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Embedded\nMATLAB Function"
+	  SrcPort		  1
+	  Points		  [70, 0]
+	  DstBlock		  "Color Detection and Data Save"
+	  DstPort		  enable
+	}
+      }
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "S-Function4"
+      Ports		      [3, 1]
+      Position		      [210, 73, 285, 107]
+      FunctionName	      "serialMaster3"
+      EnableBusSupport	      off
+    }
+    Block {
+      BlockType		      UnitDelay
+      Name		      "Unit Delay"
+      Position		      [310, 73, 345, 107]
+      SampleTime	      "-1"
+    }
+    Line {
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      Points		      [30, 0; 0, -30]
+      DstBlock		      "S-Function4"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      Points		      [30, 0; 0, 10]
+      DstBlock		      "S-Function4"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "S-Function4"
+      SrcPort		      1
+      DstBlock		      "Unit Delay"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Unit Delay"
+      SrcPort		      1
+      Points		      [0, -5]
+      Branch {
+	Points			[0, -20; -155, 0]
+	DstBlock		"S-Function4"
+	DstPort			1
+      }
+      Branch {
+	Points			[55, 0]
+	DstBlock		"Lidar Testing"
+	DstPort			enable
+      }
+    }
+  }
+}
+MatData {
+  NumRecords		  2
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 4V]R= "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    8     8    (     0         %    \"     $    !     0         .    ,     8    (    !     "
+    "     %    \"     $    $     0         0  0 0FQO8@"
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.1 (R2009a) dated Jan 28 2009, 04:28:09
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "lidar_webcam_Bayes"
+    created		    "10-Aug-2012 09:39:56"
+    isLibrary		    0
+    firstTarget		    58
+    sfVersion		    71014000.000008
+  }
+  chart {
+    id			    2
+    name		    "Lidar Testing/Embedded\nMATLAB Function"
+    windowPosition	    [330.747 300 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1366 768 1.333333333333333]
+    treeNode		    [0 3 0 0]
+    firstTransition	    5
+    firstJunction	    4
+    viewObj		    2
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    subviewS {
+    }
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    6
+    chartFileNumber	    1
+    disableImplicitCasting  1
+    eml {
+      name		      "check_pot_val"
+    }
+  }
+  state {
+    id			    3
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 0 0]
+    superState		    SUBCHART
+    subviewer		    2
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function yn = check_pot_val(potVal)\n%#eml\n\n% Pot value may initially be zero.\n% Check for thi"
+      "s and output a 1 or zero to \n% control whether the rest of model runs\nif (potVal == 0)\n    yn = 0;\nelse\n   "
+      " yn = 1;\nend"
+      editorLayout	      "100 M4x1[146 214 671 364]"
+    }
+  }
+  junction {
+    id			    4
+    position		    [23.5747 49.5747 7]
+    chart		    2
+    linkNode		    [2 0 0]
+    subviewer		    2
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    5
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      4
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    2
+    linkNode		    [2 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    6
+    ssIdNumber		    4
+    name		    "potVal"
+    linkNode		    [2 0 7]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    7
+    ssIdNumber		    5
+    name		    "yn"
+    linkNode		    [2 6 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    8
+    name		    "Lidar Testing/Embedded\nMATLAB Function"
+    machine		    1
+    chart		    2
+  }
+  chart {
+    id			    9
+    name		    "Lidar Testing/Color Detection and Data Save/Calculate xyz"
+    windowPosition	    [315.747 315 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1366 768 1.333333333333333]
+    treeNode		    [0 10 0 0]
+    firstTransition	    12
+    firstJunction	    11
+    viewObj		    9
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    subviewS {
+    }
+    ssIdHighWaterMark	    7
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    13
+    chartFileNumber	    2
+    disableImplicitCasting  1
+    eml {
+      name		      "xyz_calc"
+    }
+  }
+  state {
+    id			    10
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    9
+    treeNode		    [9 0 0 0]
+    superState		    SUBCHART
+    subviewer		    9
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [xd, yd, zd] = xyz_calc(lidarData)\n%#eml\n\n% Define variables based on gimbal system a"
+      "nd scan pattern\nScanNum = 65;\nDataLength = 1080*ScanNum;\nh = 36.3;\n\n% Define Data sizes\nphim = zeros(1,Dat"
+      "aLength);\nthetam = zeros(1,DataLength);\ndistm = zeros(1,DataLength);\nxd = zeros(1,DataLength);\nyd = zeros(1,"
+      "DataLength);\nzd = zeros(1,DataLength);\n\n\n%Define phi_rad: angles corresponding to one lidar scan\nl = 1:1080"
+      ";\nphi_rad = (-45 + 0.25*l)*pi/180;\n\n% Repeat thetam for number of scans\nfor i = 1:ScanNum\n    % phi_start ="
+      " 1+1080*(i-1);\n    % phi_end = 1080*i;\n    \n    for j = 1 : 1080\n        phi_val = 1080*(i-1) + j;\n        "
+      "phim(1,phi_val) = phi_rad(1,j);\n    end\n    % phim = [phim phi_rad]; \nend\n\n% Theta changes from -45 to 45 d"
+      "egrees over the duration of the scan\ntheta_min = -45*pi/180;\ntheta_max = 45*pi/180;\ntheta_step = (theta_max -"
+      " theta_min)/DataLength;\nthetam = [theta_max : -theta_step : (theta_min+theta_step)];\n\n% Distance matrix is di"
+      "rectly from lidar data\ndistm = lidarData';\n\n% Calculate x y and z\nfor k = 1:DataLength\n    % Replace return"
+      "ed zeros with large number\n    if (distm(1,k) == 0)\n        distm = 30000;\n    end\n    xd(1,k) = distm(1,k)*"
+      "cos(phim(1,k));\n    yd(1,k) = distm(1,k)*sin(phim(1,k))*cos(thetam(1,k)) - h*sin(thetam(1,k));\n    zd(1,k) = d"
+      "istm(1,k)*sin(phim(1,k))*sin(thetam(1,k)) + h*cos(thetam(1,k));\nend\n\n"
+      editorLayout	      "100 M4x1[193 73 852 581]"
+    }
+  }
+  junction {
+    id			    11
+    position		    [23.5747 49.5747 7]
+    chart		    9
+    linkNode		    [9 0 0]
+    subviewer		    9
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    12
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      11
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    9
+    linkNode		    [9 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    9
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    13
+    ssIdNumber		    4
+    name		    "lidarData"
+    linkNode		    [9 0 14]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    14
+    ssIdNumber		    5
+    name		    "xd"
+    linkNode		    [9 13 15]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    15
+    ssIdNumber		    6
+    name		    "yd"
+    linkNode		    [9 14 16]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    16
+    ssIdNumber		    7
+    name		    "zd"
+    linkNode		    [9 15 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    17
+    name		    "Lidar Testing/Color Detection and Data Save/Calculate xyz"
+    machine		    1
+    chart		    9
+  }
+  chart {
+    id			    18
+    name		    "Lidar Testing/Color Detection and Data Save/Create RGB image"
+    windowPosition	    [300.747 330 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1366 768 1.333333333333333]
+    treeNode		    [0 19 0 0]
+    firstTransition	    21
+    firstJunction	    20
+    viewObj		    18
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    subviewS {
+    }
+    ssIdHighWaterMark	    7
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    22
+    chartFileNumber	    3
+    disableImplicitCasting  1
+    eml {
+      name		      "create_image"
+    }
+  }
+  state {
+    id			    19
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    18
+    treeNode		    [18 0 0 0]
+    superState		    SUBCHART
+    subviewer		    18
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function image = create_image(R,G,B)\n%#eml\n\n% Create image from R G and B data\nimage = zeros("
+      "480,640,3);\n\nimage(:,:,1) = R;\nimage(:,:,2) = G;\nimage(:,:,3) = B;"
+      editorLayout	      "100 M4x1[146 214 671 364]"
+    }
+  }
+  junction {
+    id			    20
+    position		    [23.5747 49.5747 7]
+    chart		    18
+    linkNode		    [18 0 0]
+    subviewer		    18
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    21
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      20
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    18
+    linkNode		    [18 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    18
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    22
+    ssIdNumber		    4
+    name		    "R"
+    linkNode		    [18 0 23]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    23
+    ssIdNumber		    5
+    name		    "image"
+    linkNode		    [18 22 24]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    24
+    ssIdNumber		    6
+    name		    "G"
+    linkNode		    [18 23 25]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    25
+    ssIdNumber		    7
+    name		    "B"
+    linkNode		    [18 24 0]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    26
+    name		    "Lidar Testing/Color Detection and Data Save/Create RGB image"
+    machine		    1
+    chart		    18
+  }
+  chart {
+    id			    27
+    name		    "Lidar Testing/Color Detection and Data Save/Embedded\nMATLAB Function"
+    windowPosition	    [300.747 330 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1366 768 1.333333333333333]
+    treeNode		    [0 28 0 0]
+    firstTransition	    30
+    firstJunction	    29
+    viewObj		    27
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    subviewS {
+    }
+    ssIdHighWaterMark	    7
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    31
+    chartFileNumber	    4
+    disableImplicitCasting  1
+    eml {
+      name		      "scan2depth"
+    }
+  }
+  state {
+    id			    28
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    27
+    treeNode		    [27 0 0 0]
+    superState		    SUBCHART
+    subviewer		    27
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function depth   = scan2depth(xd, yd, zd )\n\n%Written by Anderson Lebbad on June 19, 2014\n%Last"
+      " Edited:\n\n%Converts xyz coordinates from the Lidar to the video frame. Outputs are\n%uvd, where u is the posit"
+      "ion along the horizontal axis of the image, v is\n%the position along the vertical axis of the image, and d is t"
+      "he depth of\n%at that point - EXPECTS XYZ COORDINATES IN MILLIMETERS\n\n%% Parse inputs\nx = xd';\ny = yd';\nz ="
+      " zd';\n\n%% Transforms the xyz from lidar coordinate frame to image coordinate frame\n\n% Translation vector (in"
+      " meters)\nt = [24;-113;38];\n\n%Rotation angles\nphi = (-90+6)*pi/180;\ntheta = 0*pi/180;\n\n%Rotation about x-a"
+      "xis\nRx = [1 0 0; 0 cos(phi) sin(phi); 0 -sin(phi) cos(phi)];\n%Rotation about y-axis\nR = [cos(theta) 0 -sin(th"
+      "eta); 0 1 0; sin(theta) 0 cos(theta)]*Rx;\n\n%Transformation matrix\nT = [R t];\n\n%-- Transformation:\nXc = T(1"
+      ",1)*x+T(1,2)*y+T(1,3)*z+T(1,4);\nYc = T(2,1)*x+T(2,2)*y+T(2,3)*z+T(2,4);\nZc = T(3,1)*x+T(3,2)*y+T(3,3)*z+T(3,4)"
+      ";\n\n%% Normalized Coordinates\nXn = Xc./Zc;\nYn = Yc./Zc;\nDp = sqrt(Xc.^2+Yc.^2+Zc.^2);\n\n%% Distorted Coordi"
+      "nates\n\n% Radial Distortions\nRadDist = [0.069102182282360,-0.154608606024690,0.020241053576861];\n\n% Tangenti"
+      "al Distortions\nTanDist = [-0.003474414312935,-0.001451647225947];\n\n%-- Radial Vectors\nr2 = Xn.^2+Yn.^2;\nr6 "
+      "= r2.^3;\n\n%-- Transformation (second radial distortion term removed)\nXradDist = Xn.*(1+RadDist(1).*r2+RadDist"
+      "(3).*r6);\nYradDist = Yn.*(1+RadDist(1).*r2+RadDist(3).*r6);\nXd = XradDist+2*TanDist(1).*Xn.*Yn+TanDist(2)*(r2+"
+      "2*Xn.^2);\nYd = YradDist+TanDist(1).*(r2+2*Yn.^2)+2*TanDist(2).*Xn.*Yn;\n\n%% Pixel Frame\n\n% Intrinsic Matrix\n"
+      "K = [5.548581600685270e+02,0,0;0,5.523116000564020e+02,0;3.135858904821101e+02,2.190392333699872e+02,1];\nKK = K"
+      "';\n\n%-- Transformation:\nXp = KK(1,1)*Xd+KK(1,2)*Yd+KK(1,3);\nYp = KK(2,1)*Xd+KK(2,2)*Yd+KK(2,3);\n\n%% Interp"
+      "olation to Pixel Coordinates\n\n% image frame\nu = 1:1:640;\nv = 1:1:480;\n\n% interpolation\n[Ugrid, Vgrid] = m"
+      "eshgrid(u,v);\n% image = griddata(Xp,Yp,Dp,Ugrid,Vgrid);\nF = scatteredInterpolant(Xp,Yp,Dp);\nimage = F(Ugrid,V"
+      "grid);\nimage = uint16(image);\ndepth = image;\n\nend"
+      editorLayout	      "100 M4x1[88 83 888 592]"
+    }
+  }
+  junction {
+    id			    29
+    position		    [23.5747 49.5747 7]
+    chart		    27
+    linkNode		    [27 0 0]
+    subviewer		    27
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    30
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      29
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    27
+    linkNode		    [27 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    27
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    31
+    ssIdNumber		    4
+    name		    "xd"
+    linkNode		    [27 0 32]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    32
+    ssIdNumber		    5
+    name		    "depth"
+    linkNode		    [27 31 33]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    33
+    ssIdNumber		    6
+    name		    "yd"
+    linkNode		    [27 32 34]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    34
+    ssIdNumber		    7
+    name		    "zd"
+    linkNode		    [27 33 0]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    35
+    name		    "Lidar Testing/Color Detection and Data Save/Embedded\nMATLAB Function"
+    machine		    1
+    chart		    27
+  }
+  chart {
+    id			    36
+    name		    "Lidar Testing/Color Detection and Data Save/Embedded\nMATLAB Function1"
+    windowPosition	    [300.747 330 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1366 768 1.333333333333333]
+    treeNode		    [0 37 0 0]
+    firstTransition	    39
+    firstJunction	    38
+    viewObj		    36
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    subviewS {
+    }
+    ssIdHighWaterMark	    11
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    40
+    chartFileNumber	    5
+    disableImplicitCasting  1
+    eml {
+      name		      "bbox_hist"
+    }
+  }
+  state {
+    id			    37
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    36
+    treeNode		    [36 0 0 0]
+    superState		    SUBCHART
+    subviewer		    36
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [HMean, SMean, VMean] = bbox_hist(bbox, BW, H, S, V)\n%This function creates a histogram"
+      " of the color region of a detected object\n%identified in a binary image within a bounding box\n\n%Initialize va"
+      "riables\npixels = 0;\nHRunAve = 0;\nSRunAve = 0;\nVRunAve = 0;\n\n%Parse bbox data\nleft = bbox(1);\nright = lef"
+      "t + bbox(3) - 1;\nbottom = bbox(2);\ntop = bottom + bbox(4) - 1;\n\n%Check to see if valid bbox is found\nif lef"
+      "t~=-1\n    %Scan the detected region of the binary image and generate histograms\n    for j=left:right\n        "
+      "for i=bottom:top\n            if BW(i,j) == 1\n                pixels = pixels + 1;\n                HRunAve = ("
+      "(pixels-1)/pixels)*HRunAve + (1/pixels)*double(H(i,j));\n                SRunAve = ((pixels-1)/pixels)*SRunAve +"
+      " (1/pixels)*double(S(i,j));\n                VRunAve = ((pixels-1)/pixels)*VRunAve + (1/pixels)*double(V(i,j));\n"
+      "            end\n        end\n    end\nend\n\n%Means must be integers to use in Bayes Filter\nHMean = uint8(HRun"
+      "Ave);\nSMean = uint8(SRunAve);\nVMean = uint8(VRunAve);\n\nend"
+      editorLayout	      "100 M4x1[146 214 671 364]"
+    }
+  }
+  junction {
+    id			    38
+    position		    [23.5747 49.5747 7]
+    chart		    36
+    linkNode		    [36 0 0]
+    subviewer		    36
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    39
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      38
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    36
+    linkNode		    [36 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    36
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    40
+    ssIdNumber		    4
+    name		    "bbox"
+    linkNode		    [36 0 41]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    41
+    ssIdNumber		    5
+    name		    "HMean"
+    linkNode		    [36 40 42]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    42
+    ssIdNumber		    6
+    name		    "BW"
+    linkNode		    [36 41 43]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    43
+    ssIdNumber		    7
+    name		    "H"
+    linkNode		    [36 42 44]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    44
+    ssIdNumber		    8
+    name		    "S"
+    linkNode		    [36 43 45]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    45
+    ssIdNumber		    9
+    name		    "V"
+    linkNode		    [36 44 46]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    46
+    ssIdNumber		    10
+    name		    "SMean"
+    linkNode		    [36 45 47]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    47
+    ssIdNumber		    11
+    name		    "VMean"
+    linkNode		    [36 46 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    48
+    name		    "Lidar Testing/Color Detection and Data Save/Embedded\nMATLAB Function1"
+    machine		    1
+    chart		    36
+  }
+  chart {
+    id			    49
+    name		    "Lidar Testing/Color Detection and Data Save/Embedded\nMATLAB Function2"
+    windowPosition	    [300.747 330 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1366 768 1.333333333333333]
+    treeNode		    [0 50 0 0]
+    firstTransition	    52
+    firstJunction	    51
+    viewObj		    49
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    subviewS {
+    }
+    ssIdHighWaterMark	    7
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    53
+    chartFileNumber	    6
+    disableImplicitCasting  1
+    eml {
+      name		      "BayesFilter"
+    }
+  }
+  state {
+    id			    50
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    49
+    treeNode		    [49 0 0 0]
+    superState		    SUBCHART
+    subviewer		    49
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function ColorProb   = BayesFilter(HMean, SMean, VMean)\n%Written by Anderson Lebbad on June 20, "
+      "2014\n%Last Edited:\n\n%Treats the histogram information as a probability distribution of the\n%color of an obje"
+      "ct. Uses the Discrete Bayes Filter with the historgram\n%data as measurements, starting without an input.\n\n%in"
+      "itialize a variable to track previous beliefs and one to track number of\n%frames iterated upon. Reset every 10 "
+      "samples\npersistent frames\nif isempty(frames)\n    frames = 0;\nend\npersistent Prob\nif isempty(Prob) || frame"
+      "s >= 10\n    Prob = 1/3*ones(3,1);\n    frames = 0;\nend\n\n%Histogram based probability from reference\nRed = ["
+      "0.418812802276720,0,0;0.0194722195087532,0.00139298796126768,5.07737098676741e-05;0.0138492497347506,0.001401765"
+      "34989290,9.45642160859260e-06;0.0143797281837155,0.00180194953991997,1.58576916205630e-05;0.0159906356383445,0.0"
+      "0122250995735606,2.63324970946963e-05;0.0183249467601919,0.0568841449810760,1.03293220647704e-05;0.0218752453044"
+      "534,0.00169329388232664,8.72900456177778e-07;0.0234288057788941,0.00992875149521546,9.60190501795556e-06;0.02860"
+      "71400589464,0.000719431497773991,1.22206063864889e-05;0.0312588481153716,0.00160954411981461,1.97857436733630e-0"
+      "5;0.0305670365822222,0.00550438238362406,8.72900456177778e-06;0.0285293249011251,0.000731557411145066,3.85531034"
+      "811852e-05;0.0246239069721655,0.00320793785671861,3.15698998317630e-05;0.0190959095363781,0.000679711664623136,4"
+      ".23356721246223e-05;0.0171575261105718,0.00213992358772399,4.67001744055112e-05;0.0140557162320463,0.00088521625"
+      "1249498,3.52069850658371e-05;0.0120186805075952,0.00203428679112246,2.63324970946963e-05;0.0115340051688313,0.00"
+      "271600247292672,2.63324970946963e-05;0.0103312647530754,0.00180135945137060,3.97169707560889e-05;0.0095419387444"
+      "0829,0.00147605615682423,3.82621366624593e-05;0.00796761104924986,0.00143910311882922,7.97249083309038e-05;0.008"
+      "55603843846525,0.00169327353832533,5.95027144294519e-05;0.00739174923569342,0.00121509145857236,6.66491374325861"
+      "e-05;0.00649026714238162,0.00194416565356162,6.80862355818667e-05;0.00649885840103597,0.00157160944434582,7.2023"
+      "1556068412e-05;0.00596040643778088,0.00194430529700334,5.70294964702815e-05;0.00540944146736658,0.00141314535097"
+      "839,5.80567483079968e-05;0.00524502462779314,0.00125086331058991,5.86298139732741e-05;0.00558708173689933,0.0014"
+      "6083995084940,5.23740273706667e-05;0.00435272303443563,0.00144723614227691,5.44373990182717e-05;0.00549487305614"
+      "555,0.00168817541534780,4.43990437722273e-05;0.00368026680360152,0.00159306007523833,6.41936554177648e-05;0.0040"
+      "9020974372935,0.00205652797615577,7.20586274955393e-05;0.00410089139377623,0.00167926242249156,6.27565572684842e"
+      "-05;0.00326891479557737,0.00159098816892650,6.18091171803395e-05;0.00445211299670090,0.00138590680020840,5.13733"
+      "794494750e-05;0.00283425405617157,0.00136777016626660,6.32107434409221e-05;0.00309300377822649,0.001407701623950"
+      "38,6.94243654895015e-05;0.00307199818048493,0.00150035608420383,8.31823221224837e-05;0.00277542868469595,0.00157"
+      "300356934507,6.40973915794120e-05;0.00278387992211586,0.00154389709907400,0.000110758105837365;0.002299649005949"
+      "54,0.00164260827201308,7.30152979075107e-05;4.44655768338377e-05,0.00139091758695888,7.48245951759911e-05;0.0088"
+      "9813611845503,0.00158720488030872,8.12400052745627e-05;0.00198142826897388,0.00158792071151883,4.90456448996676e"
+      "-05;0.00190651941939485,0.00180907399006750,6.19848003607968e-05;0.00225582125348853,0.00165889477609460,7.16381"
+      "002566071e-05;0.00141288087150997,0.00185423950475477,6.68016758621084e-05;0.00121854137959673,0.001849873664954"
+      "76,7.80571062129265e-05;0.00869650773841455,0.00198002357227974,7.90613499918661e-05;0.00283670519003113,0.00165"
+      "854406467308,9.69855100676161e-05;0.0581372528555002,0.00215529068209603,8.89347029816430e-05;0.0002233636321063"
+      "10,0.00212468619148582,4.85581621453762e-05;0.000196405395428911,0.00200335313100036,5.16998181568990e-05;6.1235"
+      "0551728666e-05,0.00191817479458698,5.29736969524676e-05;0.000453580353416284,0.00186497225294572,4.7050512622988"
+      "6e-05;8.46548161411358e-05,0.00190663827294957,5.95825261790225e-05;0.000422587211366844,0.00199789889288887,4.7"
+      "9903685945255e-05;9.51697405110890e-05,0.00221563798239625,5.55643738535741e-05;6.97094055950642e-05,0.002261561"
+      "24634891,4.37469211133207e-05;0.000352672020849422,0.00250472020727048,4.08346852181048e-05;0.000106693307556525"
+      ",0.00241527118012696,3.37179629390762e-05;7.61772640109071e-05,0.00258882988304447,2.83021726150822e-05;6.655295"
+      "72666487e-05,0.00196684177186773,4.15487469837195e-05;8.60084106627102e-05,0.00233772119111424,5.40230353450440e"
+      "-05;4.93082961912820e-05,0.00227698508497096,6.21985231410858e-05;6.99871626200540e-05,0.00236118701349608,7.773"
+      "81149267738e-05;4.17810794906234e-05,0.00243959790993590,6.65413012187658e-05;9.43059460511410e-05,0.00262381505"
+      "622098,6.25955132216168e-05;4.39327384493303e-05,0.00241272700598437,7.11457377921782e-05;6.77317370658152e-05,0"
+      ".00242356907176823,5.06884893083404e-05;8.80904909050683e-05,0.00234279285042164,4.30549459025671e-05;4.10054710"
+      "162356e-05,0.00202206116654657,5.70360223908153e-05;5.25969928584074e-05,0.00253828795216140,6.09308079112216e-0"
+      "5;5.98094799256230e-05,0.00250010189524607,6.65882087875949e-05;5.27204786738887e-05,0.00246939421035033,7.97439"
+      "281308196e-05;5.88503183894037e-05,0.00237587522755561,9.40260932097212e-05;7.13108537607895e-05,0.0023999054502"
+      "5178,8.51284604812913e-05;6.99192479465926e-05,0.00253939132480483,7.10672098981744e-05;6.26092432317400e-05,0.0"
+      "0246119719969018,5.85516484309226e-05;7.76478903519452e-05,0.00256105193836888,7.05681848178752e-05;4.7202777674"
+      "5463e-05,0.00287320739593677,5.61533324585485e-05;6.22308504878448e-05,0.00278061158556548,5.36609880535855e-05;"
+      "7.84365984049347e-05,0.00319713203504958,3.84505093291548e-05;2.54326892786854e-05,0.00185097795461185,4.5919881"
+      "8278418e-05;0.000151473372383540,0.00271584846618697,3.32438054165253e-05;2.80180039138091e-05,0.002745952926384"
+      "83,3.93912567519695e-05;5.53332462627916e-05,0.00260298523939083,3.34981354982484e-05;3.61831896348111e-05,0.002"
+      "63263624778821,3.35821788510691e-05;5.77372432354937e-05,0.00271640119762721,3.17842872132601e-05;5.271357978256"
+      "79e-05,0.00267032135785430,4.02966389351400e-05;5.05695379036930e-05,0.00268493871523649,3.49858737726195e-05;9."
+      "54953413418300e-05,0.00264011882154095,2.89231439463432e-05;6.33501539846335e-05,0.00290170646338386,3.957666930"
+      "95964e-05;5.50300412672821e-05,0.00283048196980252,4.13286938897529e-05;8.29360851845888e-05,0.00246888746902639"
+      ",4.71112745231836e-05;3.19810588641323e-05,0.00267918261210111,6.12189501224616e-05;5.23961728497560e-05,0.00274"
+      "481937827211,6.51297788425716e-05;3.86472632951297e-05,0.00262356594581976,6.53501341892712e-05;5.22572754598462"
+      "e-05,0.00271370327253989,7.01879791346731e-05;4.60110638382893e-05,0.00275933382763916,7.20086054437621e-05;6.99"
+      "936331887945e-05,0.00223294619925761,6.72752141398318e-05;6.34334042725368e-05,0.00278169157892946,8.54299279338"
+      "030e-05;4.38411398324308e-05,0.00279272622079914,8.12459885466860e-05;9.43428590703418e-05,0.00269523707432427,6"
+      ".17352722085717e-05;4.49809708955904e-05,0.00274871566290032,7.91683701666031e-05;0.000101528135318529,0.0026197"
+      "0779585040,7.44322579682364e-05;4.57463863187916e-05,0.00291387702632575,8.30153401757590e-05;0.0001019984424903"
+      "73,0.00300732388907046,7.40743656836110e-05;8.41092087030208e-05,0.00262624994339149,8.07877210278278e-05;0.0001"
+      "41195946627944,0.00274473037832307,8.91614776125309e-05;0.000127079022997702,0.00270019219328425,8.8023775309258"
+      "5e-05;0.000104131277246489,0.00273021498477153,0.000103968333693197;0.000156109716199346,0.00251020137785535,9.5"
+      "3120858671849e-05;0.000119420105949319,0.00269722007726919,8.52350252231697e-05;0.000153257388529412,0.002446618"
+      "61602097,6.89965399019053e-05;0.000136609073394080,0.00294979261554324,7.26876177839587e-05;0.000155567767174597"
+      ",0.00261027159125617,7.14209306975316e-05;0.000113628465885678,0.00285682877063998,8.11734545471175e-05;0.000125"
+      "949367977156,0.00275960592382486,7.48608642568922e-05;0.000189291966171453,0.00290114176043710,7.82491171704545e"
+      "-05;0.000210477071818512,0.00278464363993004,6.90690232533521e-05;0.000247727879635590,0.00287502885651961,7.248"
+      "44091798863e-05;0.000221224323355267,0.00286507033400682,8.56833035452100e-05;0.000247606435361267,0.00305545204"
+      "943198,6.77579963028754e-05;0.000390223396282197,0.00266116362026216,6.35203500357226e-05;0.000463359252947279,0"
+      ".00291547128955731,7.05580453769359e-05;0.000316948843843813,0.00135623585761069,7.51642949055405e-05;0.00030356"
+      "6796056351,0.00263290137599010,7.01890497048407e-05;0.000100012530563643,0.00270369869106788,8.81672024349243e-0"
+      "5;0.000144023951274503,0.00267933701167384,8.05940886207993e-05;0.000131935473019354,0.00268146392101225,0.00010"
+      "8123357171141;9.93491089135877e-05,0.00268449853401116,0.000112412291673449;4.11202732797045e-05,0.0025971226917"
+      "3432,0.000117932821400504;3.20593145643942e-05,0.00254079690907548,0.000118166954469444;2.02291422820886e-05,0.0"
+      "0233601609979998,0.000134378972572698;2.05342491905928e-05,0.00270755173260891,0.000141445084785627;1.5092883093"
+      "5123e-05,0.00217625541337369,0.000149639455686249;1.30206434737328e-05,0.00259279807425540,0.000176067021727887;"
+      "9.38715409422949e-06,0.00230652974475116,0.000174625858736038;7.05055157224756e-06,0.00251745490097623,0.0001632"
+      "70705387633;3.89785228170570e-06,0.00241470223741854,0.000158378761154729;2.65417325723139e-06,0.002528394835835"
+      "34,0.000146063703891434;5.68799305493382e-06,0.00229740754916477,0.000141062639592320;8.81768428352291e-07,0.002"
+      "44158084725999,0.000139490994673173;2.57076565309001e-06,0.00219131267591570,0.000130534762983653;1.472570037978"
+      "66e-06,0.00247860264745366,0.000148967327526605;2.69851311810395e-06,0.00238203133567418,0.000141371960412823;1."
+      "37142648948826e-06,0.00200835386214405,0.000151771590515841;0,0.00207035940930703,0.000136619032573913;6.4917326"
+      "3627104e-06,0.00222783724179691,0.000152182536243749;0,0.00211111991830051,0.000142728819044803;1.19933916360175"
+      "e-06,0.00176935628873998,0.000171308722220559;1.45483409362963e-07,0.00223939320858555,0.000184828783178880;3.03"
+      "381979770244e-06,0.00217074353330532,0.000183863880543413;1.45483409362963e-07,0.00205145924617477,0.00019748484"
+      "1709011;0,0.00184969041659710,0.000189521008029114;1.18160321925273e-06,0.00203302391019745,0.000185315118782472"
+      ";0,0.00205057741964801,0.000203145053647263;7.36285018989328e-07,0.00191872611987478,0.000201114234986847;0,0.00"
+      "227938125138302,0.000195226313365008;3.09949145749479e-06,0.00212336341397899,0.000213486125996751;0,0.002054129"
+      "21341422,0.000207473566094751;2.99834790900439e-07,0.00185151516359060,0.000207406521624767;8.90636400526803e-07"
+      ",0.00186248859732819,0.000183341482655647;1.68899722473772e-06,0.00193500038779790,0.000211978261985679;0,0.0019"
+      "9879299929424,0.000196068363552520;0,0.00213005077179156,0.000213310677211431;1.45483409362963e-07,0.00226448101"
+      "068235,0.000254057130439161;0,0.00157666277757647,0.000266568758413429;0,0.00240265450950301,0.00028563073568266"
+      "4;9.53352895487022e-06,0.00212217380237139,0.000316744144969953;0,0.00217033136797276,0.000347296809278156;0,0.0"
+      "0195155596397510,0.000350819310353655;0,0.00197136585358172,0.000374224667783579;0,0.00197401567470083,0.0003333"
+      "86251171196;0,0.00225727278194117,0.000376045619823585;4.63054144612427e-07,0.00225500699055331,0.00041333343716"
+      "3438;4.54186172437914e-07,0.00206219785523074,0.000407191651543640;2.99834790900439e-07,0.00214402826730192,0.00"
+      "0456285295707928;0,0.00210716655790327,0.000463388104092460;9.08372344875829e-07,0.00224111576073664,0.000492907"
+      "406114772;0,0.00170207435823317,0.000490017162461332;7.71756907687378e-07,0.00207988071440082,0.0004795323985733"
+      "52;0,0.00201065397987837,0.000516543874663399;2.98947993682987e-06,0.00199450170188781,0.000464866534941865;0,0."
+      "00177671736127319,0.000469246302623159;1.45483409362963e-07,0.00189175987991769,0.000527230176751719;1.543513815"
+      "37476e-07,0.00187401189637039,0.000600250030866361;9.26108289224854e-07,0.00200277400075776,0.000514808246628158"
+      ";0,0.00197953547678507,0.000562698936262369;0,0.00155455061017225,0.000572964589360564;4.22518244040745e-06,0.00"
+      "198779350468226,0.000523625276904511;0,0.00200076476505620,0.000616447190540555;1.54351381537476e-07,0.001763545"
+      "43818283,0.000642568677493060;0,0.00201458246429843,0.000632021564242528;9.26108289224854e-07,0.0019848555233275"
+      "1,0.000689386452587112;0,0.00188631273418289,0.000684597701362130;0,0.00194984914991706,0.00104741783900229;2.41"
+      "641427155253e-06,0.00186793794617886,0.00100164960594678;0,0.00189473075595684,0.000959830770760674;3.0870276307"
+      "4951e-07,0.00190594993204555,0.00112452932795823;0,0.00194085676172101,0.00101608491830048;1.31821865644118e-06,"
+      "0.00170847754263923,0.00108169844026045;0,0.00198170260629892,0.00105383542393514;3.08702763074951e-07,0.0021048"
+      "8869443961,0.00102225981496908;4.63054144612427e-07,0.00196488951978371,0.00142330496824817;1.54351381537476e-07"
+      ",0.00196396824180039,0.00140267367413510;0,0.00190308572363885,0.00120878275630225;0,0.00187071228421696,0.00205"
+      "322784788965;0,0.00198115641717238,0.00173893426378925;0,0.00208977844254468,0.00188806599530812;0,0.00179340738"
+      "821397,0.00167046248806787;1.24298418641064e-05,0.00218935197268131,0.00275908125480616;0,0.00192774256781834,0."
+      "00157355834898318;0,0.00204901563154405,0.00350939920376686;0,0.00202326008635860,0.00632085665053410;0,0.002135"
+      "58501768675,0.00669789463168136;1.08045967076233e-06,0.00207714353839267,0.00627563514000161;0,0.002259955137404"
+      "19,0.00250544981401045;1.45483409362963e-07,0.00223563601660356,0.00628662925532504;0.000107410825605734,0.00228"
+      "770076342562,0.00694054742809225;2.13431542500112e-06,0.00225603417304346,0.00563315640424600;2.90966818725926e-"
+      "07,0.00220257190544410,0.00749520898429996;2.67190920158041e-06,0.00222918142788297,0.0101271846978441;2.9983479"
+      "0900439e-07,0.00234595332802456,0.00694290376571382;1.49030598232768e-06,0.00229601957392332,0.0129468824474908;"
+      "8.90636400526803e-07,0.00258945498766694,0.0159801589818961;4.27093165619752e-05,0.00230717065782069,0.015066703"
+      "5339748;1.31821865644118e-06,0.00237610367689422,0.0144312222281109;3.11722740184381e-06,0.00240501038018950,0.0"
+      "387860160710828;6.85186032983753e-06,0.00230587982511823,0.0142080286927282;5.00851172356233e-06,0.0024083765898"
+      "1136,0.253900841876681;4.50998569025186e-06,0.00258880916558226,0.0183449808209977;4.99964375138782e-06,0.002656"
+      "83863733496,0.0144575158948879;3.75555647575547e-05,0.00342846223898661,0.0170167582050570;1.74294856154943e-05,"
+      "0.00331827817329332,0.0171418698632039;1.37299321687324e-05,0.00339160394932691,0.0174772463377933;1.16501084323"
+      "452e-05,0.00383120615703546,0.0178604644454266;2.10577028773938e-05,0.00404692001829078,0.0196329380603643;2.431"
+      "28295719929e-05,0.00436779279654884,0.0212313110641294;4.08217347279958e-05,0.00609041339337509,0.02289631227909"
+      "07;3.85503035932928e-05,0.00632406275849346,0.0227626430174866;2.26835183505936e-05,0.00663320374789515,0.025491"
+      "7960021599;3.32935187110122e-05,0.0156813466261263,0.0244074642420541;4.90044365398483e-05,0.0242377204839236,0."
+      "0238488375177945;3.74385382082969e-05,0.0254873378699169,0.0202960165575666;3.70503572106603e-05,0.2872379517001"
+      "80,0.0201973404850723;5.25056022033951e-05,0.00590919265813658,0.0192098345312769;9.09691580564597e-05,0.0135465"
+      "726949558,0.0195085996911853;0.000121508740524264,0.00247847860111233,0.0161886324548659;0.000301689558076566,0."
+      "00212561673317700,0.0147470760761275;0.000480987078225832,0.00136429432132458,0.0153705482830582;0.0011673882936"
+      "6397,0.00105211487702614,0.0727297039365956;0.0112209100765555,0.00644597379873206,0.0532084254345464;0,0,0];\nW"
+      "hite = [0.0259474718270482,0,0;0.00113714565575199,0.00685826760266292,6.19407115033066e-05;0.00194691619952661,"
+      "0.0143152851058788,2.97689045140729e-05;0.00244569979686723,0.0232443648205774,6.69180520336396e-05;0.0031165436"
+      "4445230,0.0116247354012886,0.000105458787691137;0.00347650864034170,0.349496631127083,6.87550760443449e-05;0.004"
+      "83746464644678,0.0106889536940308,8.83764177217163e-05;0.00759865214360524,0.0111451641533006,0.0001131538870879"
+      "86;0.00781051261324296,0.00667675764937215,0.000143680019818911;0.0105774264508999,0.00699666586185376,0.0002117"
+      "45685226116;0.0131285404099936,0.00743338427838366,0.000152659497315127;0.0140999379630178,0.00680524726317979,0"
+      ".000223100175080676;0.0173628148050115,0.00710768223751716,0.000218237468882409;0.0167598011032640,0.00781556560"
+      "963579,0.000223283160853503;0.0211895733988867,0.00832631553149382,0.000252566173171467;0.0223261127163810,0.010"
+      "4780284974943,0.000177244274785668;0.0223458589323336,0.00983391000738279,0.000337246089275342;0.022546027094169"
+      "0,0.0115013871100575,0.000245148871093830;0.0224468298014885,0.0107482441836621,0.000278552357406361;0.022809442"
+      "3617012,0.0107110982371657,0.000220777284897445;0.0253065599656483,0.0101454758330918,0.000204846681747075;0.030"
+      "1758486231438,0.00981274071761437,0.000206538704843510;0.0224564212856277,0.00984237533256175,0.0002376968244304"
+      "95;0.0191023956612412,0.00929599944245754,0.000300475662897668;0.0211856957167366,0.00921033358598955,0.00026129"
+      "6185804966;0.0203674617868972,0.00872759432191901,0.000241488751608404;0.0214225923078466,0.00846825270603651,0."
+      "000262051893918002;0.0226044280743026,0.00807652434096595,0.000284362221502674;0.0325584399542689,0.007161609743"
+      "08065,0.000299977564906357;0.0196984838494591,0.00687514948664290,0.000252990046005437;0.0187306414393379,0.0069"
+      "4812162897605,0.000248298102272455;0.0114170729058554,0.00657708875058530,0.000152649234818227;0.008572316467231"
+      "47,0.00732649499656325,0.000153745400139737;0.00805147887500675,0.00687768168213641,0.000135587712412570;0.00385"
+      "567773098488,0.00861490425004808,0.000189820335322131;0.00890265588643940,0.00901475851315357,0.0002911780404456"
+      "35;0.00213106834864905,0.00957931404807183,0.000243658174640421;0.00276608407114158,0.0101103167233727,0.0003479"
+      "87608593790;0.00302174963765647,0.0100977762769770,0.000304127644839312;0.00326652625215217,0.00968321396193085,"
+      "0.000276200338894030;0.000777075179055395,0.00976257604374043,0.000368888774345560;0.000226189029648593,0.009413"
+      "01969572319,0.000376615250713184;5.40362249494569e-06,0.00869917745849373,0.000218548240550947;0.026174234744260"
+      "8,0.00843419422518348,0.000472102416011546;0.000179531778427332,0.00776480266218200,0.000416716139685426;0.00039"
+      "6726377449340,0.00812936426066277,0.000284770439692118;0.00164736573413358,0.00793468809261358,0.000316012027992"
+      "709;0.00198487042495773,0.00768062054278778,0.000409641025374325;0.000594279002929997,0.00689447859652580,0.0003"
+      "66439442144854;0.00164231123478189,0.00693409649320673,0.000414854710717779;0.000884870263014255,0.0055453879293"
+      "5280,0.000347426736780951;0.326544378668528,0.00674041253994017,0.000490675331885397;0.000422427373361296,0.0055"
+      "4316447142253,0.000456996163164730;0.000744438999699504,0.00543059696172839,0.000396458906900175;0.0002980918766"
+      "73014,0.00486164687815459,0.000380085682730641;0.000722198737805544,0.00438563652934333,0.000402889905834747;0.0"
+      "00167723932243925,0.00420867002564918,0.000437277991939680;0.00399678189151401,0.00397888527908642,0.00057545574"
+      "4412872;0.000233050422131015,0.00436783677589557,0.000557349044293832;0.000295005669795455,0.00346066809960731,0"
+      ".000617271668084829;0.00491411583963617,0.00361059080777509,0.000724566660666333;0.000261059753715891,0.00349706"
+      "881612612,0.000707693381756566;0.000322655360035519,0.00326585918846580,0.000648145281534142;6.95781523761505e-0"
+      "5,0.00270407070540728,0.000759664084921150;0.00147006065360322,0.00290661084235298,0.00108836774256990;7.3880412"
+      "7727343e-05,0.00294885169858003,0.000758031093271316;0.000242997077110477,0.00294498667654593,0.0009142143499872"
+      "69;0.000239283174553434,0.00244346454751884,0.000627605557938717;0.00156813145885488,0.00246684304017232,0.00094"
+      "6059990348182;0.000156643066628042,0.00237610331443853,0.000806412145629125;0.000108150429595933,0.0024407542827"
+      "5026,0.00100098611827194;0.00427322328446915,0.00229873091363080,0.00123628877876274;8.08743680601694e-05,0.0021"
+      "3566701765579,0.000996446888312547;0.000168057070784027,0.00210259682814757,0.00103718363979734;9.52158006822918"
+      "e-05,0.00209492419763473,0.000770965046878081;0.000300693984491589,0.00212846461114186,0.00100082547744963;9.329"
+      "60024100498e-05,0.00199092852652212,0.00104843307840732;0.000289036197676307,0.00175749553761679,0.0011833011397"
+      "5879;9.40960469524377e-05,0.00190692463454471,0.00157270493580865;0.000100963272391365,0.00179093033366740,0.001"
+      "23242259644424;5.58507377240467e-05,0.00179516854304583,0.00161431237841374;7.89456985628010e-05,0.0015438216886"
+      "4888,0.00109758294106844;7.59499638246785e-05,0.00171473827549144,0.00142649983203729;3.52394692166318e-05,0.001"
+      "63317207890731,0.00130167625531456;1.59426587435732e-05,0.00123098375882770,0.00147195260584566;0.00347662379128"
+      "781,0.00236840745252009,0.00154418703436308;2.04849799576423e-05,0.00147578967289788,0.00162951383948799;4.07661"
+      "204963192e-05,0.00182215490419798,0.00196414971609884;5.65959577412327e-05,0.00199117602865559,0.001372527961775"
+      "69;6.13053121084763e-05,0.00180175312451304,0.00168037405231814;9.30994497984257e-05,0.00215850780654737,0.00170"
+      "221445026634;6.28500613602858e-05,0.00224391911753282,0.00200822445321844;0.000155487570496880,0.001751017710459"
+      "07,0.00229136214853579;7.42012110522510e-05,0.00145474055191223,0.00179333093941339;9.62062198172934e-05,0.00158"
+      "708705149605,0.00191592121163724;0.000393739454316826,0.00157194204928925,0.00144251399329992;6.16646931766380e-"
+      "05,0.00162895879503913,0.00201792241975644;0.000133513166975812,0.00188700447043209,0.00176887042091848;7.954265"
+      "40430714e-05,0.00135010315867425,0.00227488181019653;0.000552312298128392,0.00128137002032666,0.0026813248021527"
+      "6;9.08935035351477e-05,0.00139866976385275,0.00178274839965335;0.000112476273155323,0.00104982002634650,0.002160"
+      "42077502721;0.000284065226433217,0.00208018966558599,0.00149337284759699;0.000123140220581605,0.0017978567305700"
+      "1,0.00210602573997721;0.000104478683100201,0.00146105504318416,0.00199861251480833;8.99514877950460e-05,0.001534"
+      "56669023362,0.00226132033860543;0.00116749711645904,0.00160554034118395,0.00222793570891990;9.21743055859997e-05"
+      ",0.00148266649820184,0.00266566419434937;0.000128914895282851,0.00188962728689952,0.00209129814548912;0.00012173"
+      "8005228811,0.00147957852143489,0.00191836392064217;0.000187605664218932,0.00156938114547706,0.00246823292847022;"
+      "0.000174676558060687,0.00150340057267090,0.00241485054075681;0.000148599655513468,0.00122413283276501,0.00227428"
+      "767687688;0.000490444687216661,0.00126423435607995,0.00237280623571264;0.000206239585412845,0.00124485368086538,"
+      "0.00288108819230085;0.000269083403052227,0.000978320187120768,0.00248526921338880;0.000359258941405421,0.0010894"
+      "3044084932,0.00206692757417165;0.000465550666202784,0.00105071253549589,0.00276602377711238;0.000421580274547782"
+      ",0.000781458919269882,0.00271645122361864;0.000408256514467147,0.000954368807576392,0.00256329097684587;0.000466"
+      "041428360364,0.00128120467662449,0.00298788497606120;0.000494673635832639,0.00100386384112308,0.0030620339407191"
+      "0;0.000721051860338085,0.000760988842314045,0.00275987235477531;0.000976198230144808,0.00158356928225458,0.00268"
+      "175292630129;0.000992959048702016,0.00125313777664906,0.00332974668986079;0.00102867800006744,0.0007939334902615"
+      "85,0.00309852217460871;0.00159206819857241,0.00103922631101899,0.00275684262540013;0.00161884918232206,0.0015199"
+      "4124833036,0.00312629934966694;0.00423035100653662,0.000673845372498962,0.00313255673950323;0.000518579282226246"
+      ",0.000952354129035096,0.00251368058859351;0.000363858662744623,0.00150526305605289,0.00307200582481727;0.0001371"
+      "16488511609,0.000570481584148076,0.00392745917170822;7.18338921222833e-05,0.00109945716075979,0.0035142771648728"
+      "3;9.08609110691451e-05,0.00109038865746385,0.00288848190470468;4.25038233084319e-05,0.000644685111421676,0.00326"
+      "086810070731;3.85673030211045e-05,0.000643002149920532,0.00353431265934120;6.05180929062609e-05,0.00067221243477"
+      "4074,0.00302147797245271;6.00177970345691e-05,0.000559544189300606,0.00413946178464628;1.37872230710437e-05,0.00"
+      "0541031650139515,0.00286456445789186;9.62803892127295e-05,0.000523812593862022,0.00368214617559151;4.98575937373"
+      "929e-06,0.000526546623611508,0.00355364351108967;3.09737134980254e-05,0.000390851808908212,0.00313839363728534;4"
+      ".50226487830775e-06,0.000506589286086265,0.00384908502595519;0.000184231875971387,0.000363335444831597,0.0033066"
+      "8052790278;7.78452459223296e-06,0.000330643465709078,0.00448627414669940;9.32803840760772e-06,0.0003367019963258"
+      "13,0.00307979566493554;8.64183798047329e-05,0.000361510587876673,0.00352456694703956;1.63612464429724e-05,0.0004"
+      "62542252775033,0.00359240538403153;2.30448710136239e-05,0.000308576315138387,0.00367900136821788;6.1740552614990"
+      "2e-07,0.000391254632235415,0.00340320325919090;0.000324932682455505,0.000408701248233858,0.00332887367878400;1.5"
+      "4351381537476e-07,0.000348534234750324,0.00427311073330959;9.72413703686096e-06,0.000200960796228911,0.003366515"
+      "54118917;2.43466375812829e-05,0.000476566831537625,0.00407376984470572;3.82269419876294e-05,0.000327598888257153"
+      ",0.00315681700320015;1.17137506019200e-05,0.000404924872055176,0.00353963249159352;2.62397348613709e-06,0.000377"
+      "640237269414,0.00331330195704900;9.44912178154443e-05,0.000349179520453302,0.00363883447894886;7.71756907687378e"
+      "-07,0.000364353282066646,0.00422494269265301;1.58368712459027e-05,0.000319119527835307,0.00303840425648204;1.234"
+      "81105229980e-06,0.000261598110986089,0.00426173812204018;5.39559770165346e-05,0.000371124379533281,0.00306144288"
+      "583624;1.69786519691223e-06,0.000263150765998302,0.00404490718703742;4.29935429714829e-05,0.000369422492886578,0"
+      ".00362356478126418;1.97682457626006e-05,0.000282415082752098,0.00336788789320483;1.24820215537164e-05,0.00042566"
+      "9406269683,0.00413731339573139;2.51613726913968e-06,0.000287969112208596,0.00372898953886495;1.91917209380889e-0"
+      "6,0.000316010462128207,0.00345864177293068;4.63054144612427e-07,0.000363601614895575,0.00343468388261241;4.63054"
+      "144612427e-07,4.50384165230324e-05,0.00338899125750191;0,0.000462931821036168,0.00381565850111772;0.000474456885"
+      "884162,0.000386907583027759,0.00412382852701628;0,0.000404570261997638,0.00398715693992449;0,0.00030699184908203"
+      "4,0.00400728555452882;1.54351381537476e-07,0.000637459671036443,0.00357765518905154;3.75658278434133e-07,0.00037"
+      "2811142722713,0.00311918878654136;1.67742484609312e-06,0.000320568291642417,0.00340880556892524;8.19189214728990"
+      "e-06,0.000387266824384999,0.00356562583790625;2.21525695018102e-05,0.000458577206987252,0.00366032047413012;3.80"
+      "077325915210e-05,0.000288125461303237,0.00378131294554836;1.43567759837735e-06,0.000320475111907354,0.0035081789"
+      "0759320;4.36779040129920e-05,0.000269346048278020,0.00349213540687367;0,0.000375101609542204,0.00350908612155696"
+      ";9.20539630269305e-06,0.000297164775221809,0.00370391060300617;1.54351381537476e-07,0.000266975781457804,0.00343"
+      "830406222527;0.000120350317974942,0.000264183645007189,0.00389668565528684;3.08702763074951e-07,0.00026882255790"
+      "3182,0.00399703794032281;9.75230935137020e-06,0.000263311495566126,0.00383440249490351;4.98314679174493e-05,0.00"
+      "0196272702965678,0.00326663594177895;1.34659139332850e-05,0.000265526894064188,0.00340784181536990;3.25264793809"
+      "068e-06,0.000154490248764675,0.00357939071461844;0,0.000324388566319473,0.00318205514558381;0.000372797018611848"
+      ",0.000269593667854391,0.00331063415578740;0,0.000132069783437327,0.00359862990081657;1.24805820923911e-05,0.0001"
+      "78038426221356,0.00381140492002725;1.82211949851122e-05,0.000300144558728203,0.00299965798148391;7.6000761307570"
+      "0e-05,0.000219274361278879,0.00342535026727954;1.81302621568204e-05,0.000232587052009079,0.00300486483958629;1.5"
+      "4351381537476e-07,0.000155449924332705,0.00300237157198475;0.000131896834419574,0.000162165535377062,0.003364970"
+      "18892502;0,0.000195710385854067,0.00327881506725759;2.83343567269993e-05,0.000225827415818244,0.0037020773353312"
+      "8;0,0.000211217806315887,0.00314707599367632;9.25761387107667e-05,4.71104686760237e-05,0.00346812382422955;8.409"
+      "66208207299e-06,0.000209984538370210,0.00310565784706287;9.27376660289766e-05,0.000245895145525367,0.00338313938"
+      "962817;4.45285434013053e-05,0.000168685725845860,0.00402516937157908;5.97803764371438e-05,0.000161856883620210,0"
+      ".00284784713664123;2.70790543176578e-05,0.000167787080825459,0.00418238295966658;1.02949253860255e-05,0.00015778"
+      "2686924429,0.00328919698415434;5.96965175330791e-07,0.000158446730405610,0.00421511972833496;0,0.000188123398728"
+      "302,0.00395637951284235;0,0.000174410140782876,0.00372415390999047;0.000630161039905779,0.000145736220772786,0.0"
+      "0382697944159362;0,0.000154155878645752,0.00354581449796790;0,0.000152291100861394,0.00429263109115696;0,0.00011"
+      "9858959030270,0.00361513313709218;2.40395303189779e-06,0.000131001306187577,0.00416756531782557;2.45168772685045"
+      "e-05,0.000164814403104322,0.00397327695484281;3.66153555614287e-05,0.000152908474526514,0.00360665552663893;3.83"
+      "437456047516e-05,0.000123477846852874,0.00367815324368740;0.000110696235729504,0.000141798555386576,0.0040115423"
+      "8270931;0.000116093608666100,8.36114352414390e-05,0.00410371627432643;2.82665391472866e-05,0.000149693698351549,"
+      "0.00360436570146915;0.000101722077800631,0.000109536443972245,0.00391103421690113;1.06315157962279e-05,0.0001888"
+      "80779963823,0.00340969765022651;0.000146195214034225,0.000160304843948374,0.00362596190860622;7.77797705875491e-"
+      "06,0.000151050721884922,0.00378240910625706;0.000215456253111030,0.000176989776451737,0.00374474457359637;2.8667"
+      "6762891861e-05,0.000125207434634155,0.00446123828203398;0.000125004012368122,0.000172366765169173,0.003241012838"
+      "10437;0.000115839381446876,0.000251703268817468,0.00442343857275961;9.94087973203744e-05,0.000185665984643665,0."
+      "00396014084924743;0.000146385300346771,0.000245098065242571,0.00326859212093856;2.91254959584697e-05,0.000142842"
+      "906754248,0.00432676325940785;0.000560130757534064,0.000196661031932764,0.00399802655566633;5.40739842090618e-05"
+      ",0.000300583609781228,0.00437500340165658;0.000197147503995534,0.000205901833575236,0.00401318562465047;0.000174"
+      "731141107450,0.000170530682232461,0.00364068884881041;0.000408131120332614,0.000308776298046050,0.00391306537949"
+      "426;0.000300916362131359,0.000306477442019421,0.00370067855447912;0.000353204735704071,0.000234748930426792,0.00"
+      "389571095778413;0.000889299831105353,0.000199588620887869,0.00407887412435499;0.000459617398418850,0.00028073445"
+      "7699261,0.00413340244940076;0.000769733212535872,0.000207134620298940,0.00390209952448084;0.000550198382847786,0"
+      ".000207337278900379,0.00585331532942707;0.00110331521206591,0.000139560703883993,0.00385032891572732;0.000905736"
+      "210183723,0.000163920395221069,0.00468165223352395;0.00124421648812931,0.000174699215090099,0.00196484435896613;"
+      "0.00169402588376967,0.000181965136434325,0.00434268356205668;0.00179840569405251,0.000207209970266975,0.00433026"
+      "193611599;0.00171341194872341,0.000266747725513049,0.00529348420526392;0.00167125309231648,0.000138442711981322,"
+      "0.0157260365361164;0.00138711119414173,0.000350625172207280,0.335357937376069;0.00188940760605814,0.005853967670"
+      "41935,0.0540379488623009;0,0,0];\nGreen = [5.64759498395346e-05,0,0;8.59416627992918e-06,2.45547607997977e-05,0;"
+      "1.90299396198432e-05,0.000189685527178437,0;7.55058894593778e-05,0.00117801464937029,6.13869019994942e-07;0.0001"
+      "50397909898761,0.000844683771513040,0;9.14664839792463e-05,0.00123633220626981,3.68321411996965e-06;0.0001424176"
+      "12638826,0.00105892405949127,4.29708313996459e-06;0.000142417612638826,0.000675255921994436,2.51686298197926e-05"
+      ";0.000230200882498103,0.000716999015354092,2.94657129597572e-05;5.58620808195397e-05,0.000726207050654016,7.6119"
+      "7584793728e-05;0.000174952670698558,0.000755672763613773,3.37627960997218e-05;0.000307548379017466,0.00076242532"
+      "2833718,4.54263074796257e-05;0.000289420246980742,0.000736028954973935,3.58923417228313e-05;0.000283281556780793"
+      ",0.000649473423154648,3.83478178028111e-05;0.000301947574050020,0.000649473423154648,4.87835911427251e-05;0.0002"
+      "37779265513676,0.000776544310293601,3.40507346628465e-05;0.000173361010307953,0.000828109307973176,7.42401595256"
+      "423e-05;0.000331261319434795,0.000915892577832453,5.21788666995701e-05;0.000165804622599285,0.000850822461712989"
+      ",0.000112799932104087;0.000142515591733223,0.000728662526733996,0.000107964963731619;0.000126077099181502,0.0007"
+      "74088834213622,0.000156172677748094;0.000280310190775215,0.00100981453789168,0.000176104424951057;0.000179141776"
+      "877351,0.00102884447751152,0.000198567632021491;0.000183416864710410,0.000995081681411801,0.000159893883761809;0"
+      ".000187561980275393,0.000963160492372064,0.000188093866787831;0.000176126420257962,0.000984645908071887,0.000233"
+      "808112830582;0.000169699791494888,0.000979121086891932,0.000234134043287452;0.000165152761685545,0.0009404473386"
+      "32251,0.000341735084668454;0.000275899131954013,0.00103158789215463,0.000340545338522210;0.000205804087993353,0."
+      "000976627618918207,0.000348085729644037;0.000196997966937790,0.000945858184130968,0.000355028248332710;0.0001679"
+      "72160116140,0.000945532253674098,0.000319885746618016;0.000253761855340450,0.00109054131338105,0.000496392085813"
+      "434;0.000193102798042187,0.00119077592652211,0.000510571060473969;0.000251958240174211,0.000954822271481579,0.00"
+      "0559756565861055;0.000292821521257652,0.00100104240958315,0.000399460767854884;0.000216603783683883,0.0008022628"
+      "22786028,0.000345462289402235;0.000247433205671772,0.00112734746012713,0.000326954238428055;0.000271374097451575"
+      ",0.00105585071524459,0.000470067702594433;0.000214132311017063,0.000976313685901467,0.000380170883698887;0.00025"
+      "5799420589228,0.00102051225534110,0.000468302079321939;0.000195814219511611,0.00120690048605709,0.00038226243742"
+      "8251;5.46343427795498e-05,0.00122639232712195,0.000474576740510031;0.000634540609339266,0.00120941594933772,0.00"
+      "0488929678052453;0.000230402839406961,0.00127995089943649,0.000496432077280535;0.000306788541142554,0.0013955482"
+      "3466427,0.000576544983749907;0.000232276439640627,0.00107708018555497,0.000476190396207542;0.000381278647337575,"
+      "0.00125351054096290,0.000658461505385519;0.000403187972588665,0.00128177051118957,0.000565849265873839;0.0004518"
+      "73584636993,0.00120901803424007,0.000655072228548739;0.000473472976018053,0.00147160200722292,0.0006587334473618"
+      "03;0.000478671866741137,0.00150686448333892,0.000719778422317587;0.000394169896757469,0.00146907654607552,0.0007"
+      "08184896005109;0.000446984627783939,0.00155343254720427,0.000867698860829463;0.000383484176748176,0.001655546759"
+      "29906,0.000687889226451530;0.000318300084947475,0.00148379340596856,0.000647765787509451;0.000330577465347374,0."
+      "00148435928522803,0.000645038369453187;0.000727000881275964,0.00169511231727509,0.000608924075087947;0.000416845"
+      "058603536,0.00166131752800169,0.000503936476081971;0.000389872813617504,0.00179897215690882,0.000514638192678105"
+      ";0.000464476895493762,0.00182383685157865,0.000661174926428298;0.000589940125655269,0.00182472266257493,0.000630"
+      "039569717089;0.000625148613290679,0.00182507258791206,0.00100136834004002;0.000750883785428471,0.001592268260905"
+      "71,0.000557341081248176;0.00109448847118388,0.00189448977650537,0.000580316179097498;0.000913545078713645,0.0020"
+      "7851651108906,0.000418236761658638;0.00103039814600838,0.00216843532529151,0.000525267924633457;0.00123675611582"
+      "108,0.00226885989790130,0.000374706049719583;0.00168685807846551,0.00262634762146070,0.000329915606566858;0.0021"
+      "0315525396977,0.00263831906713728,0.000310559736490145;0.00238629284146900,0.00270115366024582,0.000276606980921"
+      "695;0.00273374270678614,0.00255027185359514,0.000275705173338575;0.00279548953198954,0.00267357354495986,0.00032"
+      "0599594305762;0.00372449131273758,0.00295677911795316,0.000381584582060895;0.00487414401364010,0.002989614112016"
+      "15,0.000429814291384276;0.00514913134014422,0.00286661635580140,0.000472975082252650;0.00569852411730614,0.00282"
+      "401944461914,0.000615186738835908;0.00815310038927614,0.00330093168680785,0.000720202331868854;0.010750862110053"
+      "3,0.00271035769639904,0.000653366592476897;0.0115851920907340,0.00328122189224730,0.000633918742025852;0.0129208"
+      "710995752,0.00336854725980827,0.000759473952561690;0.0153363777077613,0.00311447946974450,0.000764488882536111;0"
+      ".0193231670544919,0.00336194266901660,0.000708648797023477;0.0214687792495091,0.00330959383858185,0.000838291135"
+      "497001;0.0255558092081009,0.00254408917278138,0.000688787034887940;0.0774038724905344,0.00347457663653222,0.0008"
+      "84309316689717;0.0413451982577381,0.00313356339784493,0.000861360213294010;0.0338858518435638,0.0035629657771180"
+      "7,0.000977741381276960;0.0301487272263692,0.00324231019475837,0.000817907484715801;0.0306436356287532,0.00325953"
+      "451963861,0.00108866371400067;0.0332230312682644,0.00367098872847698,0.00111743557500623;0.0374729024817433,0.00"
+      "364719180597874,0.00113174852108155;0.0397526880484565,0.00340957450590682,0.00121187742413777;0.037874004899322"
+      "7,0.00349219087821670,0.00114813702429940;0.0324405302289461,0.00340957050676011,0.00135120969508978;0.029066678"
+      "1010269,0.00342488923823302,0.00136713029814255;0.0296407496125367,0.00402534911930911,0.00145728906114760;0.035"
+      "6849959637812,0.00483235493009328,0.00157320432853883;0.0395630245165850,0.00437495852384968,0.00216359435819898"
+      ";0.0407753598430210,0.00424826955522154,0.00160306195787617;0.0380115275563884,0.00498365264800180,0.00154762978"
+      "532796;0.0368282500299476,0.00354253613614970,0.00173022282581610;0.0298285795356416,0.00453824568359498,0.00184"
+      "178502201342;0.0210234802620634,0.00409398047557389,0.00244841958560986;0.0164048057394090,0.00364579410420357,0"
+      ".00298893225750208;0.0110889379754820,0.00403142982188177,0.00338672938032558;0.00908992650056243,0.004265399900"
+      "15410,0.00347458863397235;0.00814236268035962,0.00379832955801887,0.00359348926438264;0.00720789806520562,0.0039"
+      "9952462942887,0.00441631969869853;0.00639686311411107,0.00335357445452579,0.00372866442232954;0.0060848276924849"
+      "1,0.00376550256224930,0.00491582312065239;0.00572428861998573,0.00361931575383624,0.00333207504181248;0.00615469"
+      "278550974,0.00392753598950099,0.00435011382491341;0.00583404720101681,0.00396643968869650,0.00353824505172980;0."
+      "00481320501607213,0.00425503011273491,0.00490912654948639;0.00461989626197437,0.00435664443149094,0.004847687658"
+      "57967;0.00432509116394853,0.00436277512339747,0.00482097135898308;0.00428296615207806,0.00417634890078774,0.0056"
+      "1831723088908;0.00444561344834975,0.00412345618640042,0.00479221749413771;0.00485890926424811,0.0039927580731954"
+      "4,0.00541906774435352;0.00455306652130248,0.00426289643431360,0.00456264647724644;0.00445239200202331,0.00371740"
+      "082562064,0.00514094308725536;0.00292324427321591,0.00381317639017998,0.00458484774020737;0.00228359275438118,0."
+      "00371428549033350,0.00516145271115793;0.00206628312130297,0.00351831730367355,0.00523129580887585;0.000976665610"
+      "811952,0.00422639422271749,0.00480587058100587;0.000291587784497597,0.00461505529488184,0.00559332656309789;7.91"
+      "891035793475e-05,0.00283711465052125,0.00483196501328904;8.53277937792969e-05,0.00437326288564462,0.006018257896"
+      "34917;1.22773803998988e-06,0.00408650607037278,0.00495514673025246;5.52482117995448e-06,0.00400633717584946,0.00"
+      "554387111530787;2.51686298197926e-05,0.00408818171284429,0.00567739662523687;2.27131537398128e-05,0.003985387645"
+      "80879,0.00608597144844399;6.75255921994436e-06,0.00380842940303513,0.00558363463104604;9.20803529992413e-06,0.00"
+      "384641129891397,0.00604918729700481;9.20803529992413e-06,0.00372969820175409,0.00621786330694192;9.2080352999241"
+      "3e-06,0.00400794083368020,0.00606026093424498;6.75255921994436e-06,0.00380664578360244,0.00669104834439685;4.910"
+      "95215995953e-06,0.00358835036086020,0.00605819537496923;3.06934509997471e-06,0.00360229738501155,0.0059668868572"
+      "8503;6.13869019994942e-07,0.00382027287601699,0.00535548930995691;1.22773803998988e-06,0.00353426790032664,0.005"
+      "76435607087387;0,0.00335357845367250,0.00644283730468997;0,0.00337721740987569,0.00604661584567024;6.13869019994"
+      "942e-07,0.00348590621916183,0.00699461157371774;0,0.00342531714693099,0.00635565390683721;0,0.00372344753544626,"
+      "0.00619957920818351;0,0.00347543045435482,0.00658468703849597;0,0.00366662365984295,0.00592171649519485;0,0.0035"
+      "6604711965817,0.00645419688091991;1.22773803998988e-06,0.00406898380906263,0.00567350145634126;0,0.0044805919850"
+      "4933,0.00693635800316558;0,0.00382477591521252,0.00621570576729184;0,0.00485564995967940,0.00668098449170098;0,0"
+      ".00517649750108119,0.00584956788939857;0,0.00467551439484460,0.00502189248884344;0,0.00470294254255558,0.0060350"
+      "7630783835;6.13869019994942e-07,0.00552914425754806,0.00536562514729357;0,0.00472664748467949,0.0075336645570607"
+      "9;0,0.00517075072725883,0.00610449549600501;0,0.00517506380698563,0.00765498067208396;0,0.00434342525204082,0.00"
+      "595371766716879;0,0.00474935463969924,0.00645238526746025;0,0.00471952700396222,0.00584119767533441;0,0.00432027"
+      "819088297,0.00574709575367323;0,0.00484209285233228,0.00581612102588895;0,0.00462894233183254,0.0049340412334900"
+      "9;0,0.00456246051692442,0.00575447817850001;0,0.00473505769021076,0.00554162559443017;0,0.00386035432391861,0.00"
+      "732101193032645;0,0.00599809619821038,0.00634392640910994;0,0.00479977788099309,0.00704802417717736;0,0.00466920"
+      "774048283,0.00625805473137808;0,0.00440997905158972,0.00624668115813465;0,0.00465340111311130,0.0062474469947296"
+      "3;0,0.00439547214689896,0.00589866341398469;0,0.00439056919303242,0.00600098558170840;0,0.00443649139470410,0.00"
+      "569505485753516;0,0.00431867253347888,0.00691925765183334;0,0.00421240320795233,0.00662945348676844;0,0.00467333"
+      "485988762,0.00705019171469422;0,0.00447672281060735,0.00597042010340338;0,0.00395828742812804,0.0062359914389786"
+      "5;0,0.00482459858504911,0.00539866009869206;0,0.00454055319124669,0.00583414118096450;0,0.00432886035972277,0.00"
+      "486946501198932;0,0.00410780752532394,0.00582520308806751;0,0.00422122332602137,0.00548064260624839;0,0.00439713"
+      "979107706,0.00544155894545093;0,0.00428031071866258,0.00533965668813177;0,0.00470300053018288,0.0052570683098488"
+      "6;0,0.00393274687766421,0.00520099427425369;0,0.00555682835064848,0.00487591563563266;0,0.00457001690463309,0.00"
+      "531875714742497;0,0.00420474884114926,0.00495514273110575;0,0.00465595856743238,0.00519652322823184;0,0.00463093"
+      "190732080,0.00500288454453050;0,0.00492873236623248,0.00567429128781650;0,0.00419772034080632,0.0048900226256524"
+      "1;0,0.00421868386786048,0.00526393884389676;0,0.00511469268825049,0.00488106053787516;0,0.00526538453543245,0.00"
+      "467656817000270;0,0.00490855467150685,0.00456539389103626;0,0.00345000987829229,0.00406302308089128;0,0.00462860"
+      "640350890,0.00453736787089212;0,0.00456198261889257,0.00404162364684572;0,0.00493546293014552,0.0044407344893634"
+      "7;0,0.00467908963200340,0.00422475257299301;0,0.00431227789788948,0.00444271006783825;0,0.00409613001693055,0.00"
+      "467503049809268;0,0.00461236786829268,0.00474394579377387;0,0.00445775885690822,0.00499614998147075;0,0.00446023"
+      "832786846,0.00474439969692547;0,0.00442528378604914,0.00438825968580736;0,0.00448351736086775,0.0042312911778639"
+      "6;0,0.00422702608789768,0.00380091500636692;0,0.00387561106861751,0.00360495081885368;0,0.00415454955207117,0.00"
+      "351548590780282;0,0.00432765461698968,0.00405649247431374;0,0.00442837912560273,0.00426218858534592;0,0.00455286"
+      "256482027,0.00456368025667100;0,0.00571846186322917,0.00474052852291012;0,0.00489332192168821,0.0050178173583458"
+      "9;0,0.00554325124756781,0.00511884980125561;0,0.00539161360218893,0.00499287468031521;0,0.00647129923182551,0.00"
+      "466519459675928;0,0.00636939897407970,0.00441318636725119;0,0.00595304181137479,0.00406295109625050;0,0.00726374"
+      "015029161,0.00375835808665177;0,0.00718969594895476,0.00381996294214696;0,0.00701155595832828,0.0038233762138640"
+      "0;0,0.00928017990657369,0.00394267875851865;0,0.0100841063743911,0.00444330794027140;0,0.0117657975553072,0.0045"
+      "2831980146060;0,0.0148302077082417,0.00453800173564567;0,0.0193894089205974,0.00453077327796723;0,0.017891432540"
+      "8216,0.00495280522985372;0,0.0176311900682375,0.00464262341272767;0,0.0178718387215157,0.00506823460091967;0,0.0"
+      "170407240547899,0.00615487874583176;0,0.0155849946608592,0.00678355260694736;0,0.0125271870991430,0.008284308393"
+      "68666;0,0.0100083805318627,0.00895988224784454;0,0.00969168610431929,0.0101424999150781;0,0.00543921344590547,0."
+      "0115618850637077;0,0.00547018083845486,0.0133732605741378;0,0.00277857314140596,0.0144005813767528;0,0.003809917"
+      "08561128,0.0166686794372058;0,0.00173858704116020,0.0182121861022757;0,0.00213851570918016,0.0186627399684984;0,"
+      "0.00181987169761562,0.0195606703788826;0,0.00113063075957609,0.0184694192169605;0,0.00161016844157996,0.01542635"
+      "85087377;0,0.000453611213882516,0.0122882820738305;0,0.0290299159448947,0.0333400223061206;0,0,0];\n\nRedH = Red"
+      "(:,1);\nRedS = Red(:,2);\nRedV = Red(:,3);\nWhiteH = White(:,1);\nWhiteS = White(:,2);\nWhiteV = White(:,3);\nGr"
+      "eenH = Green(:,1);\nGreenS = Green(:,2);\nGreenV = Green(:,3);\n\n%Combine probs into channel matrices\nProbH = "
+      "[RedH, WhiteH, GreenH];\nProbS = [RedS, WhiteS, GreenS];\nProbV = [RedV, WhiteV, GreenV];\n\n%No input, 3 measur"
+      "ements, 3 states\nfor i=1:3\n    Prob(i) = (ProbH(HMean+1,i)*ProbS(SMean+1,i)*ProbV(VMean+1,i))*Prob(i);\nend\n\n"
+      "%Normalize\nProb = Prob/sum(Prob);\n\n%Update frame count\nframes = frames + 1;\n\n%Output - First element is re"
+      "d prob, then white prob, then\n%green prob\nColorProb = Prob';"
+      editorLayout	      "100 M4x1[146 214 671 364]"
+    }
+  }
+  junction {
+    id			    51
+    position		    [23.5747 49.5747 7]
+    chart		    49
+    linkNode		    [49 0 0]
+    subviewer		    49
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    52
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      51
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    49
+    linkNode		    [49 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    49
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    53
+    ssIdNumber		    4
+    name		    "HMean"
+    linkNode		    [49 0 54]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    54
+    ssIdNumber		    5
+    name		    "ColorProb"
+    linkNode		    [49 53 55]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    55
+    ssIdNumber		    6
+    name		    "SMean"
+    linkNode		    [49 54 56]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    56
+    ssIdNumber		    7
+    name		    "VMean"
+    linkNode		    [49 55 0]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  instance {
+    id			    57
+    name		    "Lidar Testing/Color Detection and Data Save/Embedded\nMATLAB Function2"
+    machine		    1
+    chart		    49
+  }
+  target {
+    id			    58
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 59]
+  }
+  target {
+    id			    59
+    name		    "rtw"
+    machine		    1
+    linkNode		    [1 58 0]
+  }
+}
